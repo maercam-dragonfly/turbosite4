@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <?php 
+        echo $this->headMeta();
+        echo $this->headLink();
+        //echo '<link rel="alternate stylesheet" href="' . $this->baseUrl . '/css/styl_1.css" type="text/css" title="styl2"/>';
+        //echo '<link rel="alternate stylesheet" href="' . $this->baseUrl . '/css/styl_2.css" type="text/css" title="styl3"/>';
+        echo $this->JQuery();
+        echo $this->headScript();
+           
+    ?>
+        <link href="/img/favicon.ico" rel="shortcut icon" />
+        <title><?php echo $this->title;?> - Prawo jazdy - Ośrodek Szkolenia Kierowców - Auto Turbo</title>
+        <style>
+            #menu{background: #880B80}
+        </style>
+    </head>
+    <body>
+        
+        <div id="header_background">
+            <header>
+                <?php echo $this->partial('partials/wyloguj.phtml', 'admin') ?>
+		<div id="header-image-back"></div>
+                    <div id="header-content">
+			<div id="logo"></div>
+                        <h1 class="title">PANEL ADMINISTRATORA</h1>
+			<h1 class="title title-osk">OSK AUTO TURBO</h1>
+			<nav class="nav-top">
+                            <?php echo $this->navigation()
+                                    ->menu()
+                                    ->setPartial(array('partials/menu.phtml','admin')); 
+                            ?>
+                        </nav>
+                        <div id="baner"> 
+                            <?php echo $this->partial('partials/banerki.phtml', 'default') ?> 
+                        </div>
+                        
+                        <!--
+			<div class="slider_auto">
+                            <div id="slider_text_top">
+				Hyundai i20
+                            </div>
+                            <div id="slider_text_bottom">
+                                Samochody identyczne </br>jak na egzaminie państwowym
+                            </div>
+			</div>
+                        -->
+                        <div id="baner_buttons">
+
+                            <?php echo $this->partial('partials/baner_buttons.phtml', 'default') ?>
+                        </div>
+			<div id="info">
+                            <?php echo $this->partial('partials/informacja.phtml', 'default') ?>
+                        </div>
+                    </div>
+                    <div id="header-image-front"></div>
+            </header>
+            
+        </div>
+			
+	<div id="content-padding">
+            <div id="content_new">
+                <div id="left_new">                  
+                    <h1><?php echo $this->title; ?></h1>
+                            <?php echo $this->layout()->content; ?>
+                </div>
+					
+		<div id="right_new">
+                    <div id="lead-boxy">
+                        <?php echo $this->partial('partials/lead_boxy.phtml', 'default', array('karteczki' => $this->karteczki)) ?>
+                    </div>
+                    <div id="opinie">
+                        <?php echo $this->partial('partials/opinie.phtml', 'default') ?>
+                    </div>
+                    <div id="linki">
+                        <?php echo $this->partial('partials/linki.phtml', 'admin') ?>
+                    </div>
+                    <div id="facebook">
+                        <?php
+                                if (APPLICATION_ENV != 'development') {
+                                    echo $this->partial('partials/facebook.phtml', 'admin');
+                                }
+                                ?> 
+                    </div>
+                </div>
+                <div class="clear">
+                    
+                </div>
+                
+            </div>
+            <!----------------------------------->
+        </div>
+			<footer>
+			
+				<div id="bottom_padding">
+					<div id="bottom_content">
+						<div id="bottom_left">
+                                                    <div id="menu_bottom">
+                                                        <?php
+                                                        echo $this->navigation()
+                                                                ->menu()
+                                                                ->setPartial(array('partials/menu.phtml', 'admin'));
+                                                        ?>
+                                                    </div>
+                                                </div>
+					
+						<div id="bottom_right">
+							<?php echo $this->partial('partials/adres.phtml', 'admin') ?>
+						</div>
+						
+						<div id="bottom_copyright">
+							Copyright © <b>OSK AUTO TURBO</b>. Wszelkie prawa zastrzeżone.
+						</div>
+					</div> 
+				</div>
+			</footer>
+        
+        
+        <!----------------------------------------------------------------->
+        
+          
+    </body>
+</html>

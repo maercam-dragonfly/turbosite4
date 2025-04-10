@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/turbo/!svn/ver/80/trunk/application/modules/admin/views/scripts/zapisy
+END
+delete.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/turbo/!svn/ver/43/trunk/application/modules/admin/views/scripts/zapisy/delete.phtml
+END
+edit.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/turbo/!svn/ver/43/trunk/application/modules/admin/views/scripts/zapisy/edit.phtml
+END
+index.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/turbo/!svn/ver/80/trunk/application/modules/admin/views/scripts/zapisy/index.phtml
+END
+add.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/turbo/!svn/ver/43/trunk/application/modules/admin/views/scripts/zapisy/add.phtml
+END

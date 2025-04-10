@@ -1,0 +1,56 @@
+<?php ?>
+<a href="<?php echo $this->url(array('module' => 'admin', 'controller' => 'migration', 'action' => 'initializemigration')) ?>">Initalize</a>
+<a href="<?php echo $this->url(array('module' => 'admin', 'controller' => 'migration', 'action' => 'migrate')) ?>">Migrate</a>
+<a href="<?php echo $this->url(array('module' => 'admin', 'controller' => 'migration', 'action' => 'resetmigration')) ?>">Reset</a>
+<form method="post" action="<?php echo $this->url(array('action' => 'initializemigration')); ?>">
+<?php
+$schemas = $this->schemas;
+
+echo '<br /><br />Bieżący schemat: ' . $schemas['currSchema']['name'];
+echo '<br>';
+?>
+   <?php
+$allSchemas = $schemas['allSchemas'];
+
+if (empty($allSchemas)) {
+    return;
+}
+?>
+<style>
+    table, tr, td{
+        border: 1px solid #000
+    }
+</style>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Lp. </th>
+                <th>Nazwa</th>
+                <th>Wersja</th>
+                <th>From</th>
+                <th>To</th>
+            </tr>
+        </thead>
+        <?php
+        $i = 0;
+        foreach ($schemas['allSchemas'] as $schema) {
+            ?>
+            <tr>
+                <td><?php echo $i++; ?></td>
+                <td><?php echo $schema['name'] . '<br>'; ?></td>
+                <td><?php echo $schema['version'] . '<br>'; ?></td>
+                <td><input type="radio" name="oldSchema" value="<?php echo $schema['name']; ?>" /></td>
+                <td><input type="radio" name="newSchema" value="<?php echo $schema['name']; ?>" /></td>
+
+            </tr>
+        <?php }
+        ?>
+    </table>
+    <input type="submit" value="przygotuj migrację"/>
+</form>
+<?php
+    
+    
+        
+       

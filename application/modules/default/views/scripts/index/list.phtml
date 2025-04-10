@@ -1,0 +1,48 @@
+<div id="articles">
+<?php
+foreach ($this->articles as $article) {
+    $date = strtotime($article['date']);
+    ?>
+
+    <div class="artukul">
+        <h2><a href="<?php echo $this->escape($this->baseUrl('aktualnosci/' . $article['slug'])) . '.html' ?>"><?php echo $article['title'] ?></a></h2>
+        <div class="data">
+            <small class="dzien"><?php echo date("d", $date) ?></small>
+            <small class="miesac"><?php echo date("m", $date) ?></small>
+            <small class="rok"><?php echo date("Y", $date) ?></small>
+        </div>
+        <div class="tresc">
+            <?php echo $article['content']; ?>
+        </div>
+        <a href="<?php echo $this->baseUrl('aktualnosci/' . $article['slug']) . '.html' ?>">Więcej</a> 
+    </div><!--artykuł-->
+    <?php
+}
+?>
+</div>   
+<?php
+
+class UrlProvider{
+    private $_view;
+    
+    public function __construct($view){
+        $this->_view = $view;
+        
+    }
+    
+    public function getUrl($page){
+        return $this->_view->baseUrl('aktualnosci/strona/').$page;
+    }
+    
+}
+?>
+<div id="pag-wrapper" style="margin: 0 auto;width: 330px;">
+    <?php
+      echo $this->Paginate($this->pagesCount,$this->currentPage,new UrlProvider($this),5);  
+      ?> 
+</div>
+
+
+
+
+

@@ -1,0 +1,16 @@
+<ul class="adresikonki">
+    <?php echo $this->partial('partials/adresTelefon.phtml', 'default') ?>
+       
+    <li class="i_www">
+        www.oskautoturbo.pl
+    </li>
+    <li class="i_gg">
+        <a title="numer gg" href="gg:1682934">
+            <img class="gg" title=gg:1682934 src="http://www.gadu-gadu.pl/users/status.asp?id=1682934&amp" border=0>1682934
+        </a>
+    </li>
+    
+</ul>
+
+
+

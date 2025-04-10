@@ -1,0 +1,70 @@
+
+<div class="karteczka">
+                <dl>
+                    <dt>
+                    PROMOCJE
+                    </dt>
+                    <dd class="_news">
+                        <a href="http://www.oskautoturbo.pl/zapisy" title="Promocje">
+                            <img id='myImage' src="<?php $this->baseUrl ?>/img/promocje/napis_42_3.png" />
+                        </a>
+                        
+                    </dd>
+                </dl>
+            </div>
+
+<?php
+
+if (isset($this->karteczki)) {
+    //foreach ($this->karteczki as $karteczka) {
+        $karteczka = $this->karteczki[0];
+        if ($karteczka['active']) {
+            ?>
+            <div class="karteczka" id="<?php echo $karteczka['name'] ?>" >
+                <dl>
+                    <dt>
+                    <?php echo $karteczka['title'] ?>
+                    </dt>
+                    <dd class="_news">
+                        <?php echo $karteczka['content'] ?> 
+                        <div class="online_button">
+                            <a href="http://www.oskautoturbo.pl/zapisy#zapisy" title="Promocje">Zapisz się on-line</a>
+                        </div> 
+                    </dd>
+                </dl>
+            </div>
+
+            
+
+            <?php
+        }
+    //} 
+}
+?>
+
+
+<script type="text/javascript"> 
+var myImages = [
+    "<?php $this->baseUrl ?>/img/promocje/napis_42_3.png",
+    "<?php $this->baseUrl ?>/img/promocje/napis_47.png",
+    "<?php $this->baseUrl ?>/img/promocje/napis_45.png",
+    "<?php $this->baseUrl ?>/img/promocje/napis_44.png",
+    "<?php $this->baseUrl ?>/img/promocje/napis_46.png"
+];
+var counter = 1;  // Start at number 2 since the HTML tag has the first
+
+function switchImage() {
+    if (counter == myImages.length) {
+        counter = 0;
+    }
+    $('#myImage').attr('src', myImages[counter]);
+    counter += 1;
+
+    
+}
+
+$(document).ready(function() {
+    setInterval(switchImage, 2000); 
+});
+
+</script>

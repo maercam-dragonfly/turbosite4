@@ -1,0 +1,100 @@
+<?php
+
+class admin_IndexController extends My_Controller_Action {
+
+    public function init() {
+        parent::init();
+        Zend_Layout::startMvc();
+        $user = Zend_Auth::getInstance()->getIdentity();
+        if ($user == null) {
+
+            //$this -> _helper->layout()->disableLayout();
+            // $this -> _helper->layout()->setLayout('layout_1');
+        }
+    }
+
+    public function indexAction() {
+        $this->view->title = 'Panel Adminstratora';
+        $user = Zend_Auth::getInstance()->getIdentity();
+        if ($user == null) {
+
+            $this->_helper->redirector->gotoRoute(
+                    array(
+                        'controller' => 'index',
+                        'action' => 'login',
+                    )
+            );
+        } else {
+            My_StaticLibrary::clearCaptcha();
+        }
+    }
+
+    public function loginAction() {
+        $user = Zend_Auth::getInstance()->getIdentity();
+        if ($user != null) {
+
+            $this->_helper->redirector->gotoRoute(
+                    array(
+                        'controller' => 'index',
+                        'action' => 'index',
+                    )
+            );
+        }
+
+        // zapisanie do sesji informacji o adresie powrotu
+        $session = new Zend_Session_Namespace('signreferer');
+        if (!isset($session->referer) && isset($_SERVER['HTTP_REFERER'])) {
+            // sprawdzenie, czy referer pochodzi z tej samej domeny
+            if (parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST) == $_SERVER['HTTP_HOST']) {
+                $session->referer = $_SERVER['HTTP_REFERER'];
+            }
+        }
+
+        $this->_helper->layout()->disableLayout();
+        $this->_helper->layout()->setLayout('layout_1');
+        $form = new Form_Login();
+        $request = $this->getRequest();
+        if ($request->isPost()) {
+            if ($form->isValid($request->getPost())) {
+                $user = new Application_Model_Adapter();
+                $user->login = $form->getValue('login');
+                $user->pass = $form->getValue('password');
+                $result = Zend_Auth::getInstance()->authenticate($user);
+                $auth = Zend_Auth::getInstance();
+                if ($result->isValid()) {
+
+                    ///////////////////////////////////////////////////////////
+                    // zapisanie danych uzytkownika do sesji
+                    // $auth->getStorage()->write($user);
+
+                    /* $returnUrl = '/';
+                      if(isset($session->referer)) {
+                      $returnUrl = $session->referer;
+                      }
+                      unset($session->referer);
+                      $this->_redirect($returnUrl); */
+                    ///////////////////////////////////////////////////////////
+                    My_StaticLibrary::clearCaptcha();
+                    $this->_helper->redirector->gotoRoute(
+                            array(
+                                'module' => 'admin',
+                                'controller' => 'article',
+                                'action' => 'index',
+                            )
+                    );
+                } else {
+                    $form->login->addError('Podano niepoprawny login i/lub hasło.');
+                }
+            }
+        }
+
+        $this->view->loginForm = $form;
+    }
+
+    public function logoutAction() {
+        Zend_Auth::getInstance()->clearIdentity();
+        $this->_redirect('/');
+    }
+
+}
+

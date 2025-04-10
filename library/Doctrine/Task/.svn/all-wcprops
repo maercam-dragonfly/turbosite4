@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task
+END
+GenerateMigrationsModels.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/GenerateMigrationsModels.php
+END
+RebuildDb.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/RebuildDb.php
+END
+GenerateMigrationsDb.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/GenerateMigrationsDb.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/Exception.php
+END
+CreateTables.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/CreateTables.php
+END
+DumpData.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/DumpData.php
+END
+GenerateModelsDb.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/GenerateModelsDb.php
+END
+GenerateMigration.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/GenerateMigration.php
+END
+CreateDb.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/CreateDb.php
+END
+LoadData.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/LoadData.php
+END
+DropDb.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/DropDb.php
+END
+GenerateSql.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/GenerateSql.php
+END
+BuildAllReload.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/BuildAllReload.php
+END
+GenerateMigrationsDiff.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/GenerateMigrationsDiff.php
+END
+Dql.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/Dql.php
+END
+GenerateModelsYaml.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/GenerateModelsYaml.php
+END
+GenerateYamlModels.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/GenerateYamlModels.php
+END
+GenerateYamlDb.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/GenerateYamlDb.php
+END
+Compile.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/Compile.php
+END
+BuildAllLoad.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/BuildAllLoad.php
+END
+BuildAll.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/BuildAll.php
+END
+Migrate.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task/Migrate.php
+END

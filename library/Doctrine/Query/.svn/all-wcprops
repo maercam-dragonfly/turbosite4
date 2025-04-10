@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query
+END
+Forupdate.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query/Forupdate.php
+END
+Set.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query/Set.php
+END
+Parser.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query/Parser.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query/Exception.php
+END
+From.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query/From.php
+END
+Abstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query/Abstract.php
+END
+Part.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query/Part.php
+END
+Orderby.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query/Orderby.php
+END
+JoinCondition.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query/JoinCondition.php
+END
+Registry.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query/Registry.php
+END
+Tokenizer.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query/Tokenizer.php
+END
+Where.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query/Where.php
+END
+Having.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query/Having.php
+END
+Check.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query/Check.php
+END
+Limit.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query/Limit.php
+END
+Select.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query/Select.php
+END
+Filter.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query/Filter.php
+END
+Offset.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query/Offset.php
+END
+Condition.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query/Condition.php
+END
+Groupby.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query/Groupby.php
+END

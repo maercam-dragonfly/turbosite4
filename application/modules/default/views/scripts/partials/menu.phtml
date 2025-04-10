@@ -1,0 +1,5 @@
+<ul>
+    <?php foreach($this->container as $page):?>
+    <li><a <?php  ;?> href="<?php echo $page->href;?>" title="<?php echo $page->label;?>"  ><span <?php echo $page->isActive()?'class="active ">':'>'; echo $page->label;?></span></a></li>
+    <?php endforeach; ?>
+</ul>

@@ -1,0 +1,23 @@
+<?php
+$this->headLink()->appendStylesheet('/css/gallery.css')
+        ->appendStylesheet('http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css');
+$this->headScript()->appendFile('/js/jquery.form.js');
+$gallery = $this->gallery;
+$photos = $gallery->getPhotosList();
+?>
+<?php
+foreach ($photos as $photo) {
+    ?>
+    <a class="grouped_elements" href="<?php echo $photo['content']; ?>" rel="group1" ><img border="0" src="<?php echo $photo['mini'] ?>" /></a> 
+        <?php
+    }
+    ?>
+
+<script type="text/javascript">
+    $("a.grouped_elements").fancybox();
+</script>
+<div>
+    <a href="<?php echo $this->url(array('action' => '', 'slug' => ''), null, true); ?>"/>Powrót</a>
+</div>
+    <?php
+

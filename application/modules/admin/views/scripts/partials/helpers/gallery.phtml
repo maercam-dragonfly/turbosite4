@@ -1,0 +1,64 @@
+<?php
+$this->headLink()
+        ->appendStylesheet('/css/turbo.gallery.css');
+$this->headScript()
+        ->appendFile('/js/jquery.form.js')
+        ->appendFile('/js/turbo.utils.js');
+?>
+
+<div class="minifotka"> 
+    <a class="lightbox" href="<?php echo $this->gallery['add_url']; ?>"> 
+        <table class="empty-content"><tr><td>+</td></tr></table>
+    </a> 
+    <p><?php echo $this->gallery['add_description']; ?>
+    </p> 
+</div>
+<div id="photosAdded">
+    <?php
+    if (isset($this->gallery['photos'])) {
+        echo $this->Photos($this->gallery['photos']);
+    }
+    ?>
+</div>
+<script type="text/javascript">
+    $(".photo_name img").click(deleteImage);
+    function deleteImage(){
+        var name = $(this).parent().children('span').html();
+        var id = $(this).parent().children('input').val();
+        var image = $(this).parent().parent();
+        $('body').remove('#dialog-confirm');
+        $('body').append(' \
+    <div id="dialog-confirm" title="Uwaga"> \
+    <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span> \
+      Zostanie to całkowicie usunięte. Jesteś pewny? \
+    </p> \
+    </div>');
+            $( "#dialog-confirm" ).dialog({
+                resizable: false,
+                modal: true,
+                buttons: {
+                    "OK": function() {
+                        $.post('<?php echo $this->gallery['delete_url']; ?>',
+                        {'name':name,
+                            'id_gallery': id }, 
+                        function(){
+                            image.remove();
+                               
+                        });
+                    
+                        $( this ).dialog( "close" );
+                    },
+                    "Anuluj": function() {
+                        $( this ).dialog( "close" );
+                    }
+                }
+              
+            });
+                
+            
+        }
+</script>
+
+
+
+

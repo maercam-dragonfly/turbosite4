@@ -1,0 +1,81 @@
+<?php
+foreach ($this->kateczkiFormArray as $value){
+    echo $value;
+}
+?>
+<script type="text/javascript" src="../js/edytor.js" ></script>
+<script type="text/javascript" src="http://codemirror.net/lib/util/closetag.js"></script>
+<script type="text/javascript">
+var editors = new Array();
+var ctrl_down = false;
+var ctrl_key = 17;
+var s_key = 83;
+
+$(document).keydown(function(e) {
+    if (e.keyCode == ctrl_key) ctrl_down = true;
+}).keyup(function(e) {
+    if (e.keyCode == ctrl_key) ctrl_down = false;
+});
+
+$(document).keydown(function(e) {
+    if (ctrl_down && (e.keyCode == s_key)) {
+        alert('Ctrl-s pressed');
+        // Your code
+        e.preventDefault();
+        return false;
+    }
+}); 
+$(window).keypress(function(event) {
+    if (!(event.which == 115 && event.ctrlKey) && !(event.which == 19)) return true;
+    event.preventDefault();
+    return false;
+});
+
+    $('textarea').each(function(){
+        var editor = CodeMirror.fromTextArea(this, {
+            lineNumbers: true,
+            matchBrackets: true,
+            mode: 'text/html',
+            indentUnit: 4,
+            indentWithTabs: true,
+            enterMode: "keep",
+            tabMode: "shift",
+            onChange: function(){
+                editor.save();
+                var textarea = editor.getTextArea();
+                b['from'] = $(textarea);
+                b['where'] = '#' +$(textarea).closest('form').attr('class') +' dd';
+                $(b['where']).html(b['from'].val());
+                },
+                extraKeys: {
+                                "'>'": function(cm) { cm.closeTag(cm, '>'); },
+                                "'/'": function(cm) { cm.closeTag(cm, '/'); }
+                        },
+  lineWrapping:true,
+  theme: 'rubyblue'
+        });
+        
+       
+      editors.push(editor);
+    });
+var a = new Array();
+var b = new Array();
+var text = null;
+
+    $(':text').click(function(){
+   
+        a['from'] = $(this);
+        a['where'] = '#' + $(this).closest('form').attr('class') +' dt';
+        text = htmlEntities(a['from'].val());
+        
+    })
+    function transfer(){
+        $(a['where']).html(a['from'].val()); 
+    }
+
+    $(document).keydown(transfer);
+    $(document).keyup(transfer);
+    $(document).keypress(transfer);
+    
+</script>
+<?php

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<confingdata>
+    <nav>
+        <home>
+            <label>Home</label>
+            <route>admin</route>
+        </home>
+        <content>
+            <label>Treść</label>
+            <controller>content</controller>
+            <route>admin</route>
+        </content>
+        <article>
+            <label>Aktualności</label>
+            <controller>article</controller>
+            <route>admin</route>
+        </article>    
+        <zapisy>
+            <label>Zapisy</label>
+            <controller>zapisy</controller>
+            <route>admin</route>
+        </zapisy>
+        <konkurs>
+            <label>Konkurs</label>
+            <controller>konkurs</controller>
+            <route>admin</route>
+        </konkurs>
+	<strona>
+            <label>Strona</label>
+            <controller>index</controller>
+            <action>index</action>
+            <route>default</route>
+        </strona>
+    </nav>
+</confingdata>

@@ -1,0 +1,293 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine
+END
+Parser.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Parser.php
+END
+Hydrator.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Hydrator.php
+END
+Overloadable.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Overloadable.php
+END
+Configurable.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Configurable.php
+END
+Formatter.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Formatter.php
+END
+Cli.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Cli.php
+END
+AuditLog.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/AuditLog.php
+END
+RawSql.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/RawSql.php
+END
+Null.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Null.php
+END
+Import.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Import.php
+END
+Manager.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Manager.php
+END
+Template.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Template.php
+END
+Util.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Util.php
+END
+Relation.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Relation.php
+END
+DataDict.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/DataDict.php
+END
+Export.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Export.php
+END
+Validator.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Validator.php
+END
+Inflector.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Inflector.php
+END
+EventListener.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/EventListener.php
+END
+Core.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Core.php
+END
+Migration.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Migration.php
+END
+Collection.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Collection.php
+END
+Column.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Column.php
+END
+Pager.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Pager.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Exception.php
+END
+Connection.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Connection.php
+END
+Expression.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Expression.php
+END
+Tree.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Tree.php
+END
+Hook.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Hook.php
+END
+Access.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Access.php
+END
+Task.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Task.php
+END
+Locator.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Locator.php
+END
+Query.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Query.php
+END
+Search.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Search.php
+END
+Lib.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Lib.php
+END
+Sequence.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Sequence.php
+END
+Data.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Data.php
+END
+Compiler.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Compiler.php
+END
+View.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/View.php
+END
+Record.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Record.php
+END
+File.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/File.php
+END
+I18n.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/I18n.php
+END
+Event.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Event.php
+END
+IntegrityMapper.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/IntegrityMapper.php
+END
+Node.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Node.php
+END
+Transaction.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Transaction.php
+END
+Builder.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Builder.php
+END
+Table.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/Table.php
+END

@@ -1,0 +1,60 @@
+<div class="lead-box">
+    <div class="lead-box-top">
+        PROMOCJE
+    </div>
+    <div class="lead-box-content">
+        <a href="http://www.oskautoturbo.pl/zapisy" title="Promocje">
+            <img id='myImage' src="<?php $this->baseUrl ?>/img/promocje/napis_47.png" />
+        </a>
+    </div>
+</div>
+                      
+<?php
+
+if (isset($this->karteczki)) {
+    //foreach ($this->karteczki as $karteczka) {
+        $karteczka = $this->karteczki[0];
+        if ($karteczka['active']) {
+            ?>
+            <div class="lead-box" id="<?php echo $karteczka['name'] ?>" >
+                    <div class="lead-box-top">
+                    <?php echo $karteczka['title'] ?>
+                    </div>
+                    <div class="lead-box-content">
+                        <?php echo $karteczka['content'] ?> 
+                        <div class="lead-box-content-button">
+                            <?php echo $this->partial('partials/zapis_online_button.phtml', 'default') ?>
+                        </div>
+                    </div>
+                </dl>
+            </div>
+            <?php
+        }
+}
+?>
+
+
+<script type="text/javascript"> 
+var myImages = [
+    "<?php $this->baseUrl ?>/img/promocje/napis_47.png",
+    "<?php $this->baseUrl ?>/img/promocje/napis_45.png",
+    "<?php $this->baseUrl ?>/img/promocje/napis_44.png",
+    "<?php $this->baseUrl ?>/img/promocje/napis_46.png"
+];
+var counter = 1;  // Start at number 2 since the HTML tag has the first
+
+function switchImage() {
+    if (counter == myImages.length) {
+        counter = 0;  
+    }
+    $('#myImage').attr('src', myImages[counter]);
+    counter += 1;
+
+    
+}
+
+$(document).ready(function() {
+    setInterval(switchImage, 2000); 
+});
+
+</script>

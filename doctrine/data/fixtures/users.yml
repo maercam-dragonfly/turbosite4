@@ -1,0 +1,13 @@
+Application_Model_User:
+  admin:
+    login: franek
+    ## sha1(ala12345)
+    password: 9f2b4744dca0af3cd59d1668257b43290b80059a
+    email: marcin.wrona1@wp.pl
+    Role: admin
+  owner:
+    login: grzegorz
+    ## sha1(fg51h2k)
+    password: ffd01382998e648b6071b744ba2046222d8a7219
+    email: gregoryp@wp.pl
+    Role: writer

@@ -1,0 +1,173 @@
+
+<link href="/css/jquery.bxslider.css" rel="stylesheet" />
+<style>
+    .rotator_content{
+    background-repeat: no-repeat; 
+    margin-left: 0px;
+    margin-top: -5px;
+    float: left;
+    width: 1200px;
+    height: 379px;
+    } 
+</style>
+
+<div id="slider-code"> 
+    <div class="viewport">
+        <div class="bx-wrapper">
+
+            <div class="bx-window">
+
+                <ul class="overview"> 
+                    
+                    <li style="list-style: none outside none; position: absolute; top: 0px; left: 0px; z-index: 1; opacity: 1;" class="">
+                        <a href="/">
+                            <div class="rotator_content" style="background: url('/img/layout/banery/2025_auto_na_strone_z_promocja_baner_200.png');">
+                                <div id="slider_text_top">
+                                    Hyundai i20
+                                </div>
+                                <div id="slider_text_bottom">
+                                    Samochody identyczne </br>jak na egzaminie państwowym
+                                </div>
+                            </div>
+                        </a> 
+                    </li>
+                    
+                    <li style="list-style: none outside none; position: absolute; top: 0px; left: 0px; z-index: 1; opacity: 1;" class="">
+                        <a href="/aktualnosci/Najlepszy-Instruktor-Nauki-Jazdy-2016---Grzegorz-Palasz.html">
+                            <div class="rotator_content" style="background: url('/img/layout/banery/konkurs_2016_.png');">
+                                <div id="slider_text_top">
+                                    Grzegorz Pałasz
+                                </div>
+                                <div id="slider_text_bottom">
+                                    Najlepszy Instruktor </br>Nauki Jazdy 2016 roku
+                                </div>
+                            </div>
+                        </a> 
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    <li style="list-style: none outside none; position: absolute; top: 0px; left: 0px; z-index: 1; opacity: 1;" class="">
+                        <a href="/aktualnosci/PROMOCJA---pelna-baza-pytan-w-cenie-kursu.html">
+                            <div class="rotator_content" style="background: url('/img/layout/banery/teoria_baner_2016_multi2.png');">
+                                <div id="slider_text_top">
+                                    PEŁNA BAZA PYTAŃ
+                                </div>
+                                <div id="slider_text_bottom">
+                                    z egzaminów państwowych </br>i MULTIMEDIALNY podręcznik SPS
+                                </div>
+                            </div>
+                        </a> 
+                    </li>
+
+                    
+                    
+                    <li style="list-style: none outside none; position: absolute; top: 0px; left: 0px; z-index: 1; opacity: 1;" class="">
+                        <a href="/">
+                            <div class="rotator_content" style="background: url('/img/layout/banery/word_baner_2021.png');">
+                                <div id="slider_text_top">
+                                    JAZDA PRÓBNA 
+                                </div>
+                                <div id="slider_text_bottom">
+                                    po placu egzaminacyjnym </br>WORD w Rzeszowie
+                                </div> 
+                            </div>
+                        </a> 
+                    </li>
+                              
+                                            
+                    <li style="list-style: none outside none; position: absolute; top: 0px; left: 0px; z-index: 1; opacity: 0;" class="">
+                        <a href="https://www.youtube.com/channel/UCA67NuQCDlgsc6tHyVJOn0w?sub_confirmation=1">
+                            <div class="rotator_content" style="background: url('/img/layout/banery/film_baner2.png');">
+                                <div id="slider_text_top">
+                                    Filmy instruktażowe
+                                </div>
+                                <div id="slider_text_bottom">
+                                    Jedyne w Rzeszowie </br>Poznaj lepiej trasy egzaminacyjne
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="bx-captions"></div> 
+
+        </div>
+
+    </div>
+
+    <div class="pager bx-pager">
+        
+    </div>
+
+</div>
+
+
+
+<script type="text/javascript">			
+   jQuery(document).ready(function(){				
+		var paginator=true;			var slider = jQuery('.overview').bxSlider({
+			    mode: 'fade',
+			    captions: true,
+			    auto: true,
+			    controls: false,
+			    pause: 10000,
+			    speed: 1000,
+			    pager: paginator,
+			    pagerSelector: '.pager'
+			  });			
+
+
+		  jQuery('.pager a').click(function(){
+		   var thumbIndex = $('.pager a').index(this);
+		    slider.stopShow();
+		    slider.goToSlide(thumbIndex);
+		    slider.startShow();
+		    jQuery('.pager a').removeClass('pager-active');
+		    jQuery(this).addClass('pager-active');
+		    return false;
+		  });
+
+		  jQuery('.pager a:first').addClass('pager-active');
+		});	
+     /*           
+    (function(a) {
+        a.fn.bxSlider = function(b) {
+            function Z(b, c, d, e) {
+                var f = [];
+                var g = d;
+                var h = false;
+                if (e == "backward") {
+                    b = a.makeArray(b);
+                    b.reverse()
+                }
+                while (g > 0) {
+                    a.each(b, function(b, d) {
+                        if (g > 0) {
+                            if (!h) {
+                                if (b == c) {
+                                    h = true;
+                                    f.push(a(this).clone());
+                                    g--
+                                }
+                            }
+                            else {
+                                f.push(a(this).clone());
+                                g--
+                            }
+                        }
+                        else {
+                            return false
+                        }
+                    })
+                }
+                return f
+            }
+        }   
+    })          */
+                        
+</script>
+

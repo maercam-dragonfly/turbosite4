@@ -1,0 +1,22 @@
+<a href="article/add">Dodaj</a>
+<?php
+
+foreach($this->articles as $article) {
+    $data = strtotime($article->date);
+    ?>
+
+    <div class="artukul">
+        <h2><a href="<?php echo $this->url(array('module' => 'admin', 'controller' => 'article', 'action' => 'edit')).'/'.$article->slug ?>"><?php echo $article->title ?></a></h2>
+        <div class="data">
+            <small class="dzien"><?php echo date("d",$data) ?></small>
+            <small class="miesac"><?php echo date("m",$data) ?></small>
+            <small class="rok"><?php echo date("Y",$data) ?></small>
+        </div>
+        <div class="tresc">
+            <?php echo substr($article->content,0,600).'...' ?>
+        </div>
+       <a href="<?php echo $this->url(array('module' => 'admin', 'controller' => 'article', 'action' => 'edit')).'/'.$article->slug ?>">Edytuj</a>
+       <a href="<?php echo $this->url(array('module' => 'admin', 'controller' => 'article', 'action' => 'delete')).'/'.$article->slug ?>">Usuń</a>
+    </div><!--artykuł-->
+    <?php
+}

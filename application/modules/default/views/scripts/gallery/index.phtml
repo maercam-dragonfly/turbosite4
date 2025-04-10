@@ -1,0 +1,23 @@
+<?php
+$this->headLink()->appendStylesheet('/css/turbo.gallery.css')
+        ->appendStylesheet('http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css');
+$this->headScript()->appendFile('/js/jquery.form.js');
+$galleries = $this->galleries;
+?>
+<?php
+foreach ($galleries as $gallery) {
+    /* @var $gallery Application_Model_Gallery */
+    ?>
+    <a class="mini" href="<?php echo $this->url(array('action' => 'category', 'slug' => $gallery->getSlug())); ?>" rel="group1" >
+        <div class="mininatura">  
+            <img border="0" src="<?php echo $gallery->getSampleMiniPhoto(); ?>" />
+            <p><?php echo $gallery->getGalleryName(); ?></p> 
+        </div>
+    </a>
+    <?php
+}
+?>
+
+
+<?php
+     

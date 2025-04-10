@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/DataDict
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/DataDict/Exception.php
+END
+Mssql.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/DataDict/Mssql.php
+END
+Sqlite.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/DataDict/Sqlite.php
+END
+Mysql.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/DataDict/Mysql.php
+END
+Oracle.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/DataDict/Oracle.php
+END
+Pgsql.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/turbo/!svn/ver/2/trunk/library/Doctrine/DataDict/Pgsql.php
+END

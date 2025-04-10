@@ -1,0 +1,145 @@
+<?php
+
+class admin_ArticleController extends My_Controller_Action
+{
+    public function init()
+    {
+        parent::init();
+        Zend_Layout::startMvc();
+    }
+
+    public function indexAction()
+    {
+        $this->view->title = 'Zarządzanie artykułami';
+        $this->view->articles = Doctrine_Query::create()
+                                ->from('Application_Model_Article a')
+                                ->orderBy('a.date DESC')
+                                ->execute(); 
+        // action body
+        
+    //    $mail = new My_Mail_Gmail();  
+     //   $mail->mailNewPassword('marcin.wrona1@wp.pl', 'lalala'); 
+     //   echo 'franek';
+//        
+//        $mail = new Zend_Mail();
+//
+//$mail->setBodyText('This is the text of the mail.')
+//    ->addTo('marcin.wrona1@wp.pl', 'Some Recipient')
+//    ->setSubject('TestSubject')
+//    ->send();
+    }
+   public function addAction(){
+    $this->view->title = 'Dodaj artykuł';
+    require_once APPLICATION_PATH . '/forms/Article.php';
+    $form = new Form_Article();
+ 
+    $postData = array();
+ 
+    // czy formularz zostal wyslany
+    if($this->_request->isPost()) {
+        // pobranie danych post
+        $postData = $this->_request->getPost();
+ 
+        // walidacja danych post
+        if($form->isValid($postData)) {
+            // pobranie danych wyslanych z formularza
+            $formData = $form->getValues();
+            $data = $formData;
+            ++$data['category'];
+            $data['date'] = new Doctrine_Expression('NOW()');
+            $article = new Application_Model_Article;
+            $article->add($data);
+            $this->_helper->redirector->gotoRoute(
+				array(
+					'action' => ''
+					)
+					);
+        }
+    }
+    // uzupelnij formularz domyslnymi danymi
+    else {
+        // jest to tylko przyklad. nie jest wymagane uzupelnianie
+        // formularza domyslnymi wartosciami
+        //$postData['firstname'] = 'Jan';
+    }
+ 
+    // uzupelnienie formularza danymi
+    $form->populate($postData);
+ 
+    $this->view->form = $form;
+    
+   }
+
+   public function editAction(){
+       $this->view->title = 'Edytuj artykuł';
+        $filter = new Zend_Filter_StripTags();
+        $slug = $filter->filter($this->getRequest()->getParam('slug'));
+        $articles = Doctrine_Query::create()
+                                ->from('Application_Model_Article a')
+                                ->where('a.slug = ?',$slug)
+                                ->execute();
+        
+      
+        $article = $articles[0];
+    $form = new Form_Article();
+ 
+    $postData = array();
+ 
+    // czy formularz zostal wyslany
+    if($this->_request->isPost()) {
+        // pobranie danych post
+        $postData = $this->_request->getPost();
+ 
+        // walidacja danych post
+        if($form->isValid($postData)) {
+            // pobranie danych wyslanych z formularza
+            $formData = $form->getValues();
+            $q = Doctrine_Query::create()
+                    ->delete('Application_Model_Article a')
+                    ->where('a.slug = ?',$slug)
+                    ->execute();
+            $data = $formData;
+            ++$data['category'];
+            $data['date'] = $article['date'];
+            $editArticle = new Application_Model_Article;
+            $editArticle->add($data);
+            $this->_helper->redirector->gotoRoute(
+				array(
+					'action' => '',
+					'slug' => '')
+					);
+        }
+    }
+    // uzupelnij formularz domyslnymi danymi
+    else {
+        
+        $postData['title'] = $article->title;
+        $postData['content'] = $article->content;
+        $postData['category'] = $article->category_id;
+    }
+ 
+    // uzupelnienie formularza danymi
+    $form->populate($postData);
+    $this->view->form = $form;
+       
+   }
+   public function deleteAction(){
+       $this->view->title = 'Usuń artykuł';
+       
+       $filter = new Zend_Filter_StripTags();
+       $slug = $filter->filter($this->getRequest()->getParam('slug'));
+       
+       Zend_Debug::dump($slug);
+       $q = Doctrine_Query::create()
+                    ->delete('Application_Model_Article a')
+                    ->where('a.slug = ?',$slug)
+                    ->execute();
+       $this->_helper->redirector->gotoRoute(
+				array(
+					'action' => '',
+					'slug' => '')
+					);
+   }
+   
+}
+

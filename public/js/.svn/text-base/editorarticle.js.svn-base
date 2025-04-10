@@ -1,0 +1,23 @@
+ var b = new Array();
+    var editor = CodeMirror.fromTextArea(document.getElementById('content'), {
+        lineNumbers: true,
+        matchBrackets: true,
+        mode: 'text/html',
+        indentUnit: 4,
+        indentWithTabs: true,
+        enterMode: "keep",
+        tabMode: "shift",
+        onChange: function(){
+            editor.save();
+            var textarea = editor.getTextArea();
+            b['from'] = $(textarea);
+            b['where'] = '.tresc';
+            $(b['where']).html(b['from'].val());
+        },
+        extraKeys: {
+            "'>'": function(cm) { cm.closeTag(cm, '>'); },
+            "'/'": function(cm) { cm.closeTag(cm, '/'); }
+        },
+        lineWrapping:true,
+        theme: 'rubyblue'
+    });      

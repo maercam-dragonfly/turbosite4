@@ -1,0 +1,24 @@
+<small style="color:#fff;float:left;/*margin-top: 50px;*/margin-left: -80px;left: 80px;top: 0px;position: absolute;z-index: 20;padding: 10px;text-align: left;">
+           <?php $user = Zend_Auth::getInstance()->getIdentity();
+          $modul = Zend_Controller_Front::getInstance()->getRequest()->getModuleName();
+            if (null !== $user) {
+
+                echo 'Zalogowany jako <b>' . $user->login . '</b><br/>';
+                
+                if( $modul === 'default'){   
+                    echo '<a style="color:#fff; background-color: #333;" href="' . $this->url(array('controller' => 'index','action' => 'index'),'admin') . '">Panel admina</a>';
+                }
+                else{
+                    echo '<a style="color:#fff; background-color: #333;" href="' . $this->url(array('controller' => 'index','action' => 'index'),'default') . '">strona</a>';
+                
+                }
+                echo '<a style="color:#fff; background-color: #333;" href="' . $this->url(array('controller' => 'index','action' => 'logout'),'admin') . '">Wyloguj się</a>';
+            } else {
+                if( $modul !== 'default'){
+                echo '<a style="color:#fff background-color: #333;" href="' . $this->url(array('controller' => 'index','action' => 'login'),'admin') . '">Zaloguj się</a>';
+                }
+                
+            }
+                
+            ?>
+</small>

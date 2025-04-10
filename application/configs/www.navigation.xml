@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<confingdata>
+    <nav>
+            <home>
+                <label>Aktualności</label>
+                <uri>/</uri>
+            </home>
+            <onas>
+                <label>O nas</label>
+                <uri>/onas</uri>
+            </onas>
+            <filmy>
+                <label>Filmy</label>
+                <uri>/filmy</uri>
+            </filmy>
+            <bazawiedzy>
+                <label>Baza wiedzy</label>
+                <uri>/bazawiedzy</uri>
+            </bazawiedzy>
+            <zapisy>
+                <label>Zapisy</label>
+                <uri>/zapisy</uri>
+            </zapisy>
+            <szkolenie>
+                <label>Szkolenie</label>
+                <uri>/szkolenie</uri>
+            </szkolenie>
+            <!--<egzamin>
+                <label>Egzamin</label>
+                <uri>/egzamin</uri>
+            </egzamin>-->
+            <cennik>
+                <label>Cennik</label>
+                <uri>/cennik</uri>
+            </cennik>
+            <!--<promocje>
+                <label>Promocje</label>
+                <uri>/promocje</uri>
+                
+            </promocje>
+            -->
+            <!--<konkurs>
+                <label>Konkurs</label>
+                <uri>/konkurs</uri>
+            </konkurs>-->
+            <galeria>
+                <label>Galeria</label>
+                <uri>/galeria</uri>
+            </galeria>
+            <kariera>
+                <label>Kariera</label>
+                <uri>/kariera</uri>
+            </kariera> 
+            <kontakt>
+                <label>Kontakt</label>
+                <uri>/kontakt</uri>
+            </kontakt>
+    </nav>
+</confingdata>

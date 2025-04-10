@@ -1,0 +1,36 @@
+<style>
+    .katreczka{
+        -webkit-transform: matrix(1,0,0,1,0,0);
+        -moz-transform: matrix(1,0,0,1,0,0);
+        -ms-transform: matrix(1,0,0,1,0,0);
+        -o-transform: matrix(1,0,0,1,0,0);
+        transform: matrix(1,0,0,1,0,0);
+    }
+</style>
+
+<div class="katreczka">
+                                <dl>
+                                    <dt>
+                                        Najbliższy kurs
+                                                
+                                            </dt>
+                                            <dd class="_news">
+                                                Najbliższy kurs rozpocznie się: <h2>2.04.2012 r.</h2> o godz. 17<sup>00</sup>
+                                                <p>Zapraszamy!</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                   <div class="katreczka">
+                                    <dl>
+                                        <dt>
+                                            Promocje
+                                           
+                                        </dt>
+                                        <dd class="_news">
+                                            <p>Uczniowie i studenci <b>50 zł zniżki</b> na kurs!</p>
+                                            <p>Przy jednoczesnym zapisie 2 osób dla każdej po <b>1 godzinie jazdy gratis</b>!</p>
+                                            <p>Przy jednoczesnym zapisie 3 osób dla każdej po <b>2 godziny jazdy gratis</b>!</p>
+                                            <p>Jeżeli polecisz nas innej osobie, to oboje dostaniecie po <b>1 godzinie jazdy gratis</b>!</p>
+                                        </dd>
+                                    </dl>
+                                    </div>

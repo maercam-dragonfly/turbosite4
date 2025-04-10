@@ -1,0 +1,53 @@
+<?php
+foreach ($this->kateczkiFormArray as $value){
+    echo $value;
+}
+?> 
+<script type="text/javascript" src="../js/edytor.js" ></script>
+<script type="text/javascript">
+var editors = new Array();
+
+    $('textarea').each(function(){
+        var editor = CodeMirror.fromTextArea(this, {
+            lineNumbers: true,
+            matchBrackets: true,
+            mode: 'text/html',
+            indentUnit: 4,
+            indentWithTabs: true,
+            enterMode: "keep",
+            tabMode: "shift",
+            onChange: function(){
+                editor.save();
+                var textarea = editor.getTextArea();
+                b['from'] = $(textarea);
+                b['where'] = '#' +$(textarea).closest('form').attr('class') +' dd';
+                $(b['where']).html(b['from'].val());
+                },
+                
+  lineWrapping:true,
+  theme: 'rubyblue'
+        });
+        
+       
+      editors.push(editor);
+    });
+ala = new Array();
+var text = null;
+
+    $(':text').click(function(){
+    //alert('ala');
+        ala['from'] = $(this);
+        ala['where'] = '#' + $(this).closest('form').attr('class') +' dt';
+        text = ala['from'].val();
+        
+    })
+    function transfer(){
+        $(ala['where']).html(ala['from'].val()); 
+    }
+
+    $(document).keydown(transfer);
+    $(document).keyup(transfer);
+    $(document).keypress(transfer);
+    
+</script>
+<?php

@@ -1,0 +1,185 @@
+<?php echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    <head> 
+        <meta name="robots" content="all, index, follow" /> 
+        <meta name="description" content="OSK AUTO TURBO zaprasza na kursy PRAWA JAZDY kat. B w Rzeszowie. Cena kursu to nawet 1299 zł. Dodatkowo liczne PROMOCJE! Jazdy doszkalające: 1 godzina - 50 zł. Zapisz się już dziś! Tel.: 605 330 708, 693 776 163" />
+        <meta name="keywords" content="prawo jazdy rzeszów, nauka jazdy rzeszów, kurs prawa jazdy rzeszów, prawo jazdy, nauka jazdy, nauka jazdy łańcut, prawo jazdy łańcut, kursy prawa jazdy, kurs prawa jazdy kat. B, ośrodek szkolenia kierowców, szkoła jazdy, szkoła nauki jazdy, osk auto turbo, auto turbo rzeszów, prawo jazdy w rzeszowie, jazdy doszkalające rzeszów, szkoła jazdy rzeszów, szkoła jazdy, kursy doszkalające rzeszów, prawo jazdy rzeszów cennik, kurs prawa jazdy cennik" />
+        <meta name="type" content="descriptive" />
+        <meta name="coverage" content="global" /> 
+        <meta name="audience" content="all" />
+        <meta name="classification" content="global,all" /> 
+        <meta name="rating" content="general" />
+    
+        <?php 
+        echo $this->headMeta();
+        echo $this->headLink();
+        //echo '<link rel="alternate stylesheet" href="' . $this->baseUrl . '/css/styl_1.css" type="text/css" title="styl2"/>';
+        //echo '<link rel="alternate stylesheet" href="' . $this->baseUrl . '/css/styl_2.css" type="text/css" title="styl3"/>';
+        echo $this->JQuery();
+        echo $this->headScript();
+        ?>
+        <link href="/img/favicon.ico" rel="shortcut icon" />
+        <title>Prawo jazdy Rzeszów - OSK AUTO TURBO</title>
+        <?php if (APPLICATION_ENV != 'development') { ?>
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-31529993-1']);
+            _gaq.push(['_trackPageview']); 
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+       <?php }?>
+    </head>  
+    <body> 
+        <?php
+//        $this->dialogMessage = array();
+//        $this->dialogMessage['title'] = 'ala';
+//        $this->dialogMessage['text'] = array( 
+//            'imie' => 'Marcin',
+//            'nazwisko' => 'Wrona'
+//        );
+        echo $this->Message($this->dialogMessage);
+//        if(isset($this->dialogMessage)){
+//            echo $this->partial('partials/message.phtml', 'default',array('dialogMessage' => $this->dialogMessage));   
+//        }
+        ?>
+        <div id="container">
+            <?php echo $this->partial('partials/wyloguj.phtml', 'admin') ?>
+
+            <div id="header">     
+               <div id="baner"> 
+                <?php echo $this->partial('partials/banerki.phtml', 'default') ?>  
+            </div>
+                <div id="logo" style="height:190px;"> 
+                    <h1 class="title">OŚRODEK SZKOLENIA KIEROWCÓW</h1>
+                    <a href="/"><img  src="<?php $this->baseUrl ?>/img/layout/logo.png" alt="Auto Turbo" /></a>
+
+                </div>
+<!--
+                <div id="niebieski_przycisk">
+                    <a href="http://credo3.home.pl/Testy2013/quiz.html" class="niebieski_przycisk_link" target="_blank" title="Nowe testy 2013"></a>
+                </div>
+-->
+                <div id="adres">
+                    <ul class="adresikonki">
+                        <?php echo $this->partial('partials/adresTelefon.phtml', 'default') ?>
+                    </ul>
+                </div>
+
+
+            </div><!--end header-->
+            
+            <div id="wrapper_menu">
+                <div id="menu">
+                    <?php
+                    echo $this->navigation()
+                            ->menu()
+                            ->setPartial(array('partials/menu.phtml', 'default'));
+                    ?>
+                </div><!--end menu-->
+            </div><!--end wrapper_menu-->
+
+            <div id="informacja">
+                <?php echo $this->partial('partials/informacja.phtml', 'default') ?>
+            </div>
+            
+            <div id="wrapper_content">
+                <div id="main_content">
+                    <div id="content_padding">
+                        <div id="left">
+                            <h1><?php echo $this->title; ?></h1>
+                            <?php echo $this->layout()->content; ?>
+                        </div><!--end left-->
+                        <div id="right">
+
+                            <!--<div id="top_right">
+                            <?php echo $this->partial('partials/adres.phtml', 'default') ?>
+                            </div>-->
+                            <div class="karteczki">
+                                <?php echo $this->partial('partials/karteczki.phtml', 'default', array('karteczki' => $this->karteczki)) ?>
+                            </div>
+                            <div id="opinie">
+                                mm
+                                <?php echo $this->partial('partials/opinie.phtml', 'default') ?>
+                            </div>
+                            <div id="linki">
+                                <?php echo $this->partial('partials/linki.phtml', 'default') ?>
+                            </div>
+
+                            <!--
+                            <div id="testy">
+                            <?php echo $this->partial('partials/testy.phtml', 'default') ?> 
+                            </div>
+                            /-->
+
+                            <!--
+                             <div id="googleplus">
+                                 <a href="https://plus.google.com/108349613708349348102?prsrc=3" rel="publisher" style="text-decoration:none;">
+                                     Znajdź nas w Google+ 
+                                     <img src="https://ssl.gstatic.com/images/icons/gplus-32.png" alt="" style="border:0;width:32px;height:32px;"/>
+                                 </a>
+                             </div>
+                             /-->
+                            <div id="facebook">
+
+                                <?php
+                                if (APPLICATION_ENV != 'development') {
+                                    echo $this->partial('partials/facebook.phtml', 'default');
+                                }
+                                ?> 
+                            </div>
+                            </br>
+                            <div id="tweeter"> 
+                                <a href="https://twitter.com/share" class="twitter-share-button" data-via="oskautoturbo" data-lang="pl" data-size="large" data-related="oskautoturbo">Tweetnij</a>
+                                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                            </div>
+                            <div id="pacholki">
+                                <img src="/img/layout/pacholki_male.png" />
+                            </div>
+                        </div><!--end right-->
+                        <div style="clear:both;"></div>
+                    </div><!--end content_padding-->
+                </div><!--end content-->
+            </div><!--end wrapper_content-->       
+        </div><!--end container-->
+
+        
+        
+        
+        
+        <div id="bottom">
+
+            <div id="footer" >
+                <div id="footer_left">
+                    <div id="menu_bottom">
+                        <?php
+                        echo $this->navigation()
+                                ->menu()
+                                ->setPartial(array('partials/menu.phtml', 'default'));
+                        ?>
+                    </div>
+                </div>
+                <div id="footer_right">
+
+<?php echo $this->partial('partials/adres.phtml', 'default') ?>
+                </div>
+                <div id="footer_center">
+                    Copyright © <b>OSK AUTO TURBO</b>. Wszelkie prawa zastrzeżone.
+                </div>
+            </div><!--end footer-->
+        </div><!--end bottom-->
+
+        <!--
+        <a href="http://www.superprawojazdy.pl/opinie/?fk=pryJzkNrk" title="" class="opinieformbutton"> 
+        </a><script type="text/javascript" src="http://www.superprawojazdy.pl/opinie/button.js"></script>
+        -->
+    </body>
+</html>

@@ -1,0 +1,5 @@
+Application_Model_Category:
+  nowosci:
+    name: nowości
+  promocje:
+    name: promocje

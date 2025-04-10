@@ -1,0 +1,81 @@
+<div class="tresc">
+    <h2>Terminy kursów</h2>
+    <p>
+        Serdecznie zapraszamy na nowe kursy prawa jazdy kat. B. 
+        Zajęcia odbywają sie w sposób ciągły. Zapraszamy w każdy poniedziałek o godzinie 17.00.
+</p>
+<p>Zajęcia teoretyczne odbywają się w poniedziałki, środy i piątki o godz. 17.00 w siedzibie naszej szkoły.</p>
+ 
+<h2>Zapisy</h2>
+<p>Zapisu na kurs można dokonać:
+<ul>
+    <li>w biurze naszego ośrodka</li>
+    <li>telefonicznie</li>
+    <li>mailowo</li>
+    <li>lub za pomocą formularza, który znajduje się <a href="#zapisy">tutaj</a></li>
+</ul>
+</p>
+
+<p>
+    Po zapisaniu się na kurs drogą mailową, bądź za pomocą formularz dostaną państwo od Nas potwierdzenie na maila o zapisie.
+</p>
+<p>
+    Przed rozpoczęciem zajęć teoretycznych uczestnik kursu powinien złożyć w biurze naszej szkoły nasępujące dokumenty:
+<ul>
+    <li>dokument stwierdzający tożsamość osoby szkolonej: dowód osobisty, paszport lub karta stałego pobytu (do wglądu) lub legitymacja szkolna w przypadku osób, które nie ukończyły 18 roku życia</li>
+    <!--<li>kserokopia dokumentu stwierdzającego tożsamość osoby szkolonej</li>-->
+    <li>pisemna zgoda rodziców lub opiekunów prawnych, jeżeli osoba szkolona rozpoczyna szkolenie przed ukończeniem 18-tego roku życia. Druk zgody rodziców lub opiekunów prawnych jest dostępny w biurze OSK Auto Turbo, lub <b>tutaj</b></li>
+    <li>oryginał orzeczenia lekarskiego stwierdzającego brak przeciwwskazań zdrowotnych do kierowania pojazdami określonej kategorii, jeżeli był wcześniej wydany (w przypadku braku badania lekarskie można zrobić na miejscu)</li>
+    <!--<li>kopia orzeczenia lekarskiego stwierdzającego brak przeciwwskazań zdrowotnych do kierowania pojazdami określonej kategorii</li>-->
+    <li>wypełniony wniosek o wydanie prawa jazdy – wniosek dostępny jest w biurze OSK Auto Turbo lub <a href="../doc/egzamin/wniosek.pdf">tutaj</a></li>
+    <li>dowód wpłaty za określony rodzaj szkolenia, opłata może zostać dokonana za pośrednictwem przelewu bankowego na konto firmowe naszego ośrodka, w tytule druku przelewu bankowego prosimy wpisać: opłata za kurs prawa jazdy kat. B, szkolenie podstawowe (rozszerzone)</li>
+</ul>
+</p>
+
+<h2 id="zapisy">Zapisy on-line</h2>
+<p>
+<?php
+    if(isset($this->form)){
+        echo $this->form;
+    }else{
+        
+    }
+    
+?>
+    <script type="text/javascript" >
+    jQuery(function($){
+        $('#telefon').mask("999-999-999");
+    });
+    </script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+    $('input,textarea').blur(function (){
+        var formElementId = $(this).parent().prev().find('label').attr('for');
+        //doValidation(formElementId);
+    })
+}) 
+function doValidation(id){
+    var url = '/validateform';
+    var data = {};
+    $('input').each(function(){
+        data[$(this).attr('name')] = $(this).val();
+    })
+    
+    $.post(url,data,function(resp){
+        $("#"+id).parent().find('.errors').remove();
+        $("#"+id).parent().append(getErrorHtml(resp[id],id));
+    },'json');
+}
+function getErrorHtml(formErrors,id){
+    var o = '<ul id="errors-"'+id+'" class="errors">';
+    for(errorKey in formErrors){
+        o += '<li>'+ formErrors[errorKey]+'</li>' ;
+    }
+    o+='</ul>';
+    return o;
+}
+</script>
+</p>
+</div>

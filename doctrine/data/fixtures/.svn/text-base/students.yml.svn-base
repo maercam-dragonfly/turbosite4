@@ -1,0 +1,28 @@
+Application_Model_Student:
+  student1:
+    imie: Anna
+    nazwisko: Pałasz
+    email: anna.maria.palasz@wp.pl
+    telefon: 123456789
+    created: '2012-02-06 00:01:00'
+    registered: false
+    activated: false
+    link: 12345678901234567890123
+  student2:
+    imie: Franek
+    nazwisko: Dolas
+    email: lala@gmail.com
+    telefon: 123456789
+    created: '2012-02-01 00:01:00'
+    registered: false
+    link: 123456789012345678903445
+  student3:
+    imie: Lala
+    nazwisko: Ola
+    email: asf.fr@gmail.com
+    telefon: 344543456
+    created: '2012-02-08 00:01:00'
+    registered: false
+    activated: false
+    link: 3456789031234567
+    

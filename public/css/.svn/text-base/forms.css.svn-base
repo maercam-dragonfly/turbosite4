@@ -1,0 +1,130 @@
+#zapisy{
+    width: 590px;
+}
+#zapisy #submit{
+    margin-top: 20px;
+}
+
+.element-group{
+     display: block;
+    
+ }
+ 
+ .element-group input, .element-group button{
+     background-color: #f0f0f0;
+     width: 250px;
+     text-align: left;
+     min-width: 250px;
+     margin-left: 3px;
+     margin-bottom: 3px;
+     margin-top: 3px;
+ }
+ 
+ .element-group textarea{
+     background-color: #f0f0f0;
+     width: 448px;
+     height: 130px;
+     text-align: left;
+     min-width: 250px;
+     margin-left: 3px;
+     margin-bottom: 3px;
+     margin-top: 3px;
+     border-left: 2px solid #888888;
+     border-top: 2px solid #888888;
+     -border: 1px solid #666666;
+     resize:none;
+ }
+ .element-group #category{
+     background-color: #f0f0f0;
+     width: 255px;
+     text-align: left;
+     margin-left: 3px;
+     margin-bottom: 3px;
+     margin-top: 3px;
+ }
+ 
+ .element-group label{
+     text-align: right;
+     width: 120px;
+     display: block;
+     float: left;
+     margin-right: 6px;
+     margin-bottom: 5px;
+     margin-top: 5px;
+}
+
+.element-group img{
+     -background-color: greenyellow;
+     width: 150px;
+     text-align: left;
+     display: block;
+     float: left;
+     margin-left: 0px;
+     margin-right: 6px;
+     margin-bottom: 5px;
+     margin-top: 5px;
+}
+
+.submit-group input{
+     -background-color: greenyellow;
+}
+
+.submit-group input, .submit-group button{
+     -background-color: greenyellow;
+     width: 100px;
+     text-align: center;
+     display: block;
+     float:right;
+     margin-left: 0px;
+     margin-right: 0px;
+     margin-bottom: 5px;
+     clear: both;
+    
+}
+.submit-group button{
+    float: left;
+}
+.tresc .element-group img{
+    display: block;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    box-shadow: none;
+}
+
+#txt_captcha-input{
+    clear:both;
+    display: block;
+    margin-left: 130px;
+    margin-top: 20px;
+    
+}
+
+.element-group .errors{
+    color: #f00;
+    list-style: none;
+    text-decoration: none;
+}
+.element-group .errors{
+    margin: 3px;
+    margin-left: 160px;
+    padding: 0px;
+    -background: yellow;
+}
+
+.element-group .errors{
+    color: #f00;
+    list-style: none;
+    text-decoration: none;
+}
+.element-group .errors{
+    margin: 3px;
+    margin-left: 160px;
+    padding: 0px;
+    -background: yellow;
+}
+#article_form{
+    -background: orange;
+}
+form{
+    clear: both;
+}

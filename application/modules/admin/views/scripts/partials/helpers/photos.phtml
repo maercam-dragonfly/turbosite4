@@ -1,0 +1,33 @@
+<?php
+$this->headLink()->appendStylesheet('/css/gallery.css')
+        ->appendStylesheet('http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css');
+$this->headScript()->appendFile('/js/jquery.form.js');
+$photos = $this->photos;
+?>
+<?php
+foreach ($photos as $photo) {
+    ?>
+
+    <div class="minifotka"> 
+        <a class="grouped_elements" href="<?php echo $photo['content']; ?>" rel="group1" > 
+            <img border="0" src="<?php echo $photo['mini'] ?>" />
+        </a> 
+         
+            
+            <div class="photo_name">
+                <span><?php echo $photo['name']; ?></span>
+                <img  src="/img/layout/partials/gallery/delete.png" alt="Usuń" />
+                <input type="hidden" value="<?php  if(isset($photo['id'])) echo $photo['id'];?>" />
+            </div>
+       
+    </div>
+    <?php
+}
+?>
+
+
+<?php
+     
+
+
+

@@ -1,0 +1,62 @@
+<?php
+$display = $this->display > $this->pagesCount ? $this->pagesCount : $this->display;
+$pagesWidth = $display * 32;
+$shiftLeft = -($this->currentPage - 1) * 32;
+$prevPage = $this->currentPage - 1;
+$nextPage = $this->currentPage + 1;
+?>
+<div id="pag" class="jPaginate" style="padding-left: 91px;margin: 0 auto;">
+    <div class="jPag-control-back">
+        <a href="<?php echo $this->urlProvider->getUrl(1); ?>" class="jPag-first jPaginate-css">Pierwszy</a>
+        <?php if ($this->currentPage != 1) { ?>
+            <a href="<?php echo $this->urlProvider->getUrl($prevPage); ?>"class="jPag-sprevious">«</a>
+        <?php } ?>
+    </div>
+    <div style="overflow-x: hidden; overflow-y: hidden; width: <?php echo $pagesWidth ?>px;">
+        <ul class="jPag-pages" style="width: 1000px;margin-left:<?php echo $shiftLeft; ?>px">
+
+            <?php
+            for ($i = 1; $i <= $this->pagesCount; ++$i) {
+                ?>
+                <li>
+                    <?php if ($i == $this->currentPage) { ?>
+                        <a class="jPag-current jPaginate-css-current">
+                            <?php echo $i; ?>
+                        </a>
+                        <?php
+                    } else {
+                        ?>
+                        <a class="jPaginate-css" href="<?php echo $this->urlProvider->getUrl($i); ?>">
+                            <?php echo $i; ?>
+                        </a>
+                        <?php
+                    }
+                }
+                ?>
+        </ul>
+    </div>
+    <div class="jPag-control-front" style="left: <?php echo $pagesWidth + 95 ?>px;">
+        <?php if ($this->currentPage != $this->pagesCount) { ?>
+            <a href="<?php echo $this->urlProvider->getUrl($nextPage); ?>" class="jPag-snext">»</a>
+        <?php } ?>
+        <a href="<?php echo $this->urlProvider->getUrl($this->pagesCount); ?>" class="jPag-last jPaginate-css">Ostatni</a>
+    </div>
+</div>
+<script type="text/javascript" >
+    $("#pag").paginate({
+        count                   : <?php echo $this->pagesCount; ?>,
+        start                   : <?php echo $this->currentPage; ?>,
+        display                 : <?php echo $this->display; ?>,
+        images			: false,
+        mouse			: 'press',
+        onChange     		: function(page){
+            document.location = "<?php echo $this->urlProvider->getUrl(''); ?>"+ page;
+        },
+        href : function(page){
+            return "<?php echo $this->urlProvider->getUrl(''); ?>"+ page;
+        }
+    });
+</script>
+
+
+

@@ -1,0 +1,941 @@
+<div class="tresc">
+
+
+    <div id="tv" style="background-image: url('../img/filmy/tv.png'); background-repeat:no-repeat; height: 580px;width: 700px; padding-top: 13px;">
+        <iframe style="overflow: hidden;"class="tv" name="tv" src="http://www.youtube.com/embed/YZP7YTEc3xU" frameborder="0" allowfullscreen></iframe>
+        <img  style="display: none; margin-left: 13px;" src="../img/filmy/str03.png" />
+    </div>
+
+
+    <!--<div id="opis">
+    -->
+    <h4 id="tytul">  </h4>
+    <!--
+    <p id="opisik">  </p>
+    
+</div>
+    -->
+    <table class="raty">
+
+        <tr>
+            <td class="pomar" style="width: 40px">Lp.</td>
+            <td class="pomar" style="width: 140px">Miniaturka</td>
+            <td class="pomar" style="width: 500px">Tytuł filmu</td>
+        </tr>
+        <tr>
+            <td class="pomar" colspan="3" style="width: 100%">Trasy egzaminacyjne z perspektywy kursanta</td>
+        </tr>
+
+
+        <tr>
+            <td class="szary" colspan="3" style="width: 100%">Ronda</td>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/PyCoxB39jcg" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/rondo_jp2_marszalkowska_lubelska_ok.jpg">
+                </a>
+            </td>
+            <td>
+                <a class="kamerka" href="http://www.youtube.com/embed/PyCoxB39jcg" target="tv" 
+                   content="opis 1"
+                   >Rondo im. Jana Pawła II - z ul. Marszałkowskiej w ul. Lubelską</a>
+            </td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/F3iII-zAfEo" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/rondo_jp2_rycerska_lubelska_ok.jpg">
+                </a>
+            </td>
+            <td>
+                <a class="kamerka" href="http://www.youtube.com/embed/F3iII-zAfEo" target="tv" 
+                   content="opis 1"
+                   >Rondo im. Jana Pawła II - z ul. Rycersiej w ul. Lubelską</a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>3.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/jP77lHvaHBM" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/rondo_jp2_warszawska_lubelska_ok.jpg">
+                </a>
+            </td>
+            <td>
+                <a class="kamerka" href="http://www.youtube.com/embed/jP77lHvaHBM" target="tv" 
+                   content="opis 1"
+                   >Rondo im. Jana Pawła II - z ul. Warszawskiej w ul. Lubelską</a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>4.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/xE9PL-HIsbw" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/rondo_jp2_warszawska_zawracanie_ok.jpg">
+                </a>
+            </td>
+            <td>
+                <a class="kamerka" href="http://www.youtube.com/embed/xE9PL-HIsbw" target="tv" 
+                   content="opis 1"
+                   >Rondo im. Jana Pawła II - zawracanie z ul. Warszawskiej</a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="szary" colspan="3" style="width: 100%">Skrzyżowania</td>
+        </tr>
+        
+        
+        <tr>
+            <td>5.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/dSlGpIc2L6E" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/kwadrat_smierci_ok.jpg">
+                </a>
+            </td>
+            <td>
+                <a class="kamerka" href="http://www.youtube.com/embed/dSlGpIc2L6E" target="tv" 
+                   content="opis 1"
+                   >"Kwadrat śmierci" - przejazd przez ul. Partyzantów, ul. Piękną, ul. Husarską i ul. Jasną</a>
+            </td>
+        </tr>
+        <tr>
+            <td>6.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/HTv1KHPMnrc" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/skrzyzowanie_krakowska_jalowego_ok.jpg">
+                </a>
+            </td>
+            <td>
+                <a class="kamerka" href="http://www.youtube.com/embed/HTv1KHPMnrc" target="tv" 
+                   content="opis 1"
+                   >Skrzyżowanie - przejazd z ul. Krakowskiej w ul. Ks. Jałowego</a>
+            </td>
+        </tr>
+        <tr>
+            <td>7.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/1afbockPRpw" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/skrzyzowanie_jalowego_wyspianskiego_ok.jpg">
+                </a>
+            </td>
+            <td>
+                <a class="kamerka" href="http://www.youtube.com/embed/1afbockPRpw" target="tv" 
+                   content="opis 1"
+                   >Skrzyżowanie - przejazd z ul. Ks. Jałowego w ul. Wyspiańskiego</a>
+            </td>
+        </tr>
+        <tr>
+            <td>8.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/NBNbk8kCpF8" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/skrzyzowanie_krakowska_wyspianskiego_ok.jpg">
+                </a>
+            </td>
+            <td>
+                <a class="kamerka" href="http://www.youtube.com/embed/NBNbk8kCpF8" target="tv" 
+                   content="opis 1" 
+                   >Skrzyżowanie - przejazd z ul. Krakowskiej w ul. Wyspiańskiego</a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>9.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/Qm1R33CU5js" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/pogwizdow_nowy_1_ok.jpg">
+                </a>
+            </td>
+            <td>
+                <a class="kamerka" href="http://www.youtube.com/embed/Qm1R33CU5js" target="tv" 
+                   content="opis 1"
+                   >Pogwizdów Nowy (1)</a>
+            </td>
+        </tr>
+        <tr>
+            <td>10.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/yEEs_l6vNrY" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/pogwizdow_nowy_2_ok.jpg">
+                </a>
+            </td>
+            <td>
+                <a class="kamerka" href="http://www.youtube.com/embed/yEEs_l6vNrY" target="tv" 
+                   content="opis 1"
+                   >Pogwizdów Nowy (2)</a>
+            </td>
+        </tr>
+        <tr>
+            <td>11.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/cFRD_AdncTA" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/pogwizdow_nowy_3_ok.jpg">
+                </a>
+            </td>
+            <td>
+                <a class="kamerka" href="http://www.youtube.com/embed/cFRD_AdncTA" target="tv" 
+                   content="opis 1"
+                   >Pogwizdów Nowy (3)</a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>12.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/wbe98MiU9pY" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/cieplinskiego_krakowska_ok.jpg">
+                </a>
+            </td>
+            <td>
+                <a class="kamerka" href="http://www.youtube.com/embed/wbe98MiU9pY" target="tv" 
+                   content="opis 1"
+                   > Skrzyżowanie z wyspą centralną - przejazd z al. Cieplińskiego w ul. Krakowską</a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>13.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/M5N_Ag5mqHg" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/krakowska_krakowska_ok.jpg">
+                </a>
+            </td>
+            <td> 
+                <a class="kamerka" href="http://www.youtube.com/embed/M5N_Ag5mqHg" target="tv" 
+                   content="opis 1"
+                   > Skrzyżowanie z wyspą centralną - zawracanie z ul. Krakowskiej</a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>14.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/KkTVct8Ee_U" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/krakowska_marszalkowska_ok.jpg">
+                </a>
+            </td>
+            <td>  
+                <a class="kamerka_new" href="http://www.youtube.com/embed/KkTVct8Ee_U" target="tv" 
+                   content="opis 1"
+                   > Skrzyżowanie z wyspą centralną - przejazd z ul. Krakowskiej w ul. Marszałkowską</a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>15.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/zSfUbkYrRRA" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/marszalkowska_krakowska_ok.jpg">
+                </a>
+            </td>
+            <td> 
+                <a class="kamerka_new" href="http://www.youtube.com/embed/zSfUbkYrRRA" target="tv" 
+                   content="opis 1"
+                   > Skrzyżowanie z wyspą centralną - przejazd z ul. Marszałkowskiej w ul. Krakowską</a>
+            </td>
+        </tr>
+        
+         <tr>
+            <td>16.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/SCK48pJzRQc" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/sportowa_ok.jpg">
+                </a>
+            </td>
+            <td> 
+                <a class="kamerka_new" href="http://www.youtube.com/embed/SCK48pJzRQc" target="tv" 
+                   content="opis 1"
+                   > Skrzyżowanie z wyspą centralną - ul. Sportowa</a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>17.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/vs6bs7TSM8s" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/sportowa2_ok.jpg">
+                </a>
+            </td>
+            <td> 
+                <a class="kamerka_new" href="http://www.youtube.com/embed/vs6bs7TSM8s" target="tv" 
+                   content="opis 1"
+                   > Skrzyżowanie z wyspą centralną - ul. Sportowa (2)</a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="szary" colspan="3" style="width: 100%">Zawrotki</td>
+        </tr>
+        
+        <tr>
+            <td>18.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/zq_I6COg5gU" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/zawracanie_warszawska_5_ok.jpg">
+                </a>
+            </td>
+            <td>
+                <a class="kamerka"href="http://www.youtube.com/embed/zq_I6COg5gU" target="tv" 
+                   content="opis 1"
+                   >Zawracanie na ul. Warszawskiej (5)</a>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>19.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/jc9ompqLkMA" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/skrzyzowania_pakoslawa_1_ok.jpg">
+                </a>
+            </td>
+            <td>
+                <a class="kamerka" href="http://www.youtube.com/embed/jc9ompqLkMA" target="tv" 
+                   content="opis 1"
+                   >Skrzyżowanie im. Pakosława - zawracanie (1)</a>
+            </td>
+        </tr>
+        <tr>
+            <td>20.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/E43OgQKQTgk" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/skrzyzowania_pakoslawa_2_ok.jpg">
+                </a>
+            </td>
+            <td>
+                <a class="kamerka" href="http://www.youtube.com/embed/E43OgQKQTgk" target="tv" 
+                   content="opis 1"
+                   >Skrzyżowanie im. Pakosława - zawracanie (2)</a>
+            </td>
+        </tr>
+        <tr>
+            <td>21.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/hURQixvGBAs" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/zawracanie_krakowska_ok.jpg">
+                </a>
+            </td>
+            <td>
+                <a class="kamerka" href="http://www.youtube.com/embed/hURQixvGBAs" target="tv" 
+                   content="opis 1"
+                   >Zawracanie na ul. Krakowskiej</a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>22.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/hOUJcZS69G4" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/zawracanie_lubelska_ok.jpg">
+                </a>
+            </td>
+            <td>
+                <a class="kamerka"href="http://www.youtube.com/embed/hOUJcZS69G4" target="tv" 
+                   content="opis 1"
+                   >Zawracanie na ul. Lubelskiej (1) - sygnalizacja S3</a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>23.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/70gFSZMPJ2o" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/zawracanie_lubelska2_ok.jpg">
+                </a>
+            </td>
+            <td>
+                <a class="kamerka"href="http://www.youtube.com/embed/70gFSZMPJ2o" target="tv" 
+                   content="opis 1"
+                   >Zawracanie na ul. Lubelskiej (2) - sygnalizacja S3</a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="szary" colspan="3" style="width: 100%">Przejazdy kolejowe</td>
+        </tr>
+        <tr>
+            <td>24.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/YZP7YTEc3xU" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/przejazd_kolejowy_ok.jpg">
+                </a>
+            </td>
+            <td>
+                <a class="kamerka" href="http://www.youtube.com/embed/YZP7YTEc3xU" target="tv" 
+                   content="opis 1"
+                   >Przejazd kolejowy</a>
+            </td>
+        </tr>
+        <tr>
+            <td>25.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/2E6XR5VtUzE" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/przejazd_kolejowy_milocinska_2_ok.jpg">
+                </a>
+            </td>
+            <td>
+                <a class="kamerka" href="http://www.youtube.com/embed/2E6XR5VtUzE" target="tv" 
+                   content="opis 1"
+                   >Przejazd kolejowy - ul. Miłocińska (1)</a>
+            </td>
+        </tr>
+        <tr>
+            <td>26.</td>
+            <td class="szary">
+                <a class="film_mini" href="http://www.youtube.com/embed/IFpzzMf5QPc" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/przejazd_kolejowy_milocinska_2_ok.jpg">
+                </a>
+            </td>
+            <td>
+                <a class="kamerka" href="http://www.youtube.com/embed/IFpzzMf5QPc" target="tv" 
+                   content="opis 1"
+                   >Przejazd kolejowy - ul. Miłocińska (2)</a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="pomar" colspan="3" style="width: 100%">Trasy egzaminacyjne z eLeczką AUTO TURBO w roli głównej</td>
+        </tr>
+
+        <tr>
+            <td class="szary" colspan="3" style="width: 100%">Ronda</td>
+        </tr>
+        <tr>             
+            <td>27.</td>
+            <td class="szary">                 
+                <a class="film_mini" href="http://www.youtube.com/embed/fK3YY56yFAA" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/rondo_jp2_marszalkowska_warszawska.jpg">
+                </a>          
+            </td>             
+            
+            
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/fK3YY56yFAA" target="tv" content="opis 1">Rondo im. Jana Pawła II - z ul. Marszałkowskiej w ul. Warszawską</a>             
+            </td>         
+        </tr>
+        <tr>       
+            <td>28.</td>
+            <td class="szary">                 
+                <a class="film_mini" href="http://www.youtube.com/embed/b22CIttygzU" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/rondo_jp2_zawracanie_warszawska.jpg">
+                </a>       
+            </td>             
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/b22CIttygzU" target="tv"
+                   content="opis 2"
+                   >Rondo im. Jana Pawła II - zawracanie z ul. Warszawskiej
+                </a>             
+            </td>         
+        </tr>
+        <tr>         
+            <td>29.</td>
+            <td class="szary">                 
+                <a class="film_mini" href="http://www.youtube.com/embed/PfEfBTEWEOQ" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/rondo_jp2_marszalkowska_lubelska.jpg">
+                </a>       
+            </td>             
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/PfEfBTEWEOQ" target="tv"
+                   content="opis 2"
+                   >Rondo im. Jana Pawła II - z ul. Marszałkowskiej w ul. Lubelską
+                </a>             
+            </td>         
+        </tr>
+        <tr>          
+            <td>30.</td>
+            <td class="szary">                 
+
+                <a class="film_mini" href="http://www.youtube.com/embed/dyE0QvoeNeU" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/rondo_jp2_lubelska_warszawska.jpg">
+                </a>            
+            </td>             
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/dyE0QvoeNeU" target="tv" 
+                   content="opis 1"
+                   >Rondo im. Jana Pawła II - z ul. Lubelskiej w ul. Warszawską</a>             
+            </td>         
+        </tr>
+        <tr>      
+            <td>31.</td>
+            <td class="szary">                 
+                <a class="film_mini" href="http://www.youtube.com/embed/Cby0oVuqh1M" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/rondo_jp2_zawracanie_lubelska.jpg">
+                </a>       
+            </td>             
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/Cby0oVuqh1M" target="tv" 
+                   content="opis 1"
+                   >Rondo im. Jana Pawła II - zawracanie z ul. Lubelskiej</a>             
+            </td>         
+        </tr>
+        <tr>       
+            <td>32.</td>
+            <td class="szary">                 
+                <a class="film_mini" href="http://www.youtube.com/embed/J7bTCW3ubns" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/rondo_jp2_warszawska_lubelska.jpg">
+                </a>       
+            </td>             
+
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/J7bTCW3ubns" target="tv" 
+                   content="opis 1"
+                   >Rondo im. Jana Pawła II - z ul. Warszawskiej w ul. Lubelską</a>             
+            </td>         
+        </tr>
+        <tr>         
+            <td>33.</td>
+            <td class="szary">                 
+                <a class="film_mini" href="http://www.youtube.com/embed/dRw7Fqqph8s" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/rondo_jp2_warszawska_marszalkowska.jpg">
+                </a>       
+            </td>             
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/dRw7Fqqph8s" target="tv" 
+                   content="opis 1"
+                   >Rondo im. Jana Pawła II - z ul. Warszawskiej w ul. Marszałkowską</a>             
+            </td>         
+        </tr>
+        <tr>     
+            <td>34.</td>
+            <td class="szary">                 
+                <a class="film_mini" href="http://www.youtube.com/embed/oZOMdo7Kl3g" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/rondo_jp2_rycerska_warszawska.jpg">
+                </a>        
+            </td>             
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/oZOMdo7Kl3g" target="tv" 
+                   content="opis 1"
+                   >Rondo im. Jana Pawła II - z ul. Rycerskiej w ul. Warszawską</a>             
+            </td>
+        </tr>
+
+        <tr>
+            <td class="szary" colspan="3" style="width: 100%">Skrzyżowania</td>
+        </tr>
+
+
+        <tr>       
+            <td>35.</td>
+            <td class="szary">                 
+                <a class="film_mini" href="http://www.youtube.com/embed/s8SS3gAe6YY" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/kwadrat_smierci.jpg">
+                </a>        
+            </td>             
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/s8SS3gAe6YY" target="tv" 
+                   content="opis 26""
+                   >"Kwadrat śmierci" - przejazd przez ul. Partyzantów, ul. Piękną, ul. Husarską i ul. Jasną</a>             
+            </td>
+        </tr>
+        <tr>      
+            <td>36.</td>
+            <td class="szary">                 
+<a class="film_mini" href="http://www.youtube.com/embed/NWA2Z2_F5yo" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/skrzyzowanie_jalowego_wyspianskiego.jpg">
+                </a>
+            </td>             
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/RbquLArBMJo" target="tv" 
+                   content="opis 26""
+                   >Skrzyżowanie - przejazd z ul. Ks. Jałowego w ul. Wyspiańskiego</a>             
+            </td>
+        </tr>
+        <tr>        
+            <td>37.</td>
+            <td class="szary">                 
+                <a class="film_mini" href="http://www.youtube.com/embed/RwKyZ8J32mY" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/skrzyzowanie_krakowska_wyspianskiego.jpg">
+                </a>       
+            </td>             
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/RwKyZ8J32mY" target="tv" 
+                   content="opis 26""
+                   >Skrzyżowanie - przejazd z ul. Krakowskiej w ul. Wyspiańskiego</a>             
+            </td>
+        </tr>
+        <tr>        
+            <td>38.</td>
+            <td class="szary">                 
+                <a class="film_mini" href="http://www.youtube.com/embed/f_BHwY69238" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/skrzyzowanie_reymonta_jalowego.jpg">
+                </a>       
+            </td>             
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/f_BHwY69238" target="tv" 
+                   content="opis 26""
+                   >Skrzyżowanie - przejazd z ul. Reymonta w ul. Ks. Jałowego</a>             
+            </td>
+        </tr>
+        <tr>     
+            <td>39.</td>
+            <td class="szary">                 
+                <a class="film_mini" href="http://www.youtube.com/embed/IksRp0djp-A" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/skrzyzowanie_wyspianskiego_jalowego.jpg">
+                </a>       
+            </td>             
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/IksRp0djp-A" target="tv" 
+                   content="opis 26""
+                   >Skrzyżowanie - przejazd z ul. Wyspiańskiego w ul. Ks. Jałowego</a>             
+            </td>
+        </tr>
+        <tr>       
+            <td>40.</td>
+            <td class="szary">                 
+                <a class="film_mini" href="http://www.youtube.com/embed/NWA2Z2_F5yo" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/skrzyzowanie_jalowego_krakowska.jpg">
+                </a>       
+            </td>             
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/NWA2Z2_F5yo" target="tv" 
+                   content="opis 26""
+                   >Skrzyżowanie - przejazd z ul. Ks. Jałowego w ul. Krakowską</a>             
+            </td>
+        </tr>
+        <tr>       
+            <td>41.</td>
+            <td class="szary">                 
+                <a class="film_mini" href="http://www.youtube.com/embed/sxbvS3TylK8" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/skrzyzowanie_jalowego_reymonta.jpg">
+                </a>   
+            </td>             
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/sxbvS3TylK8" target="tv" 
+                   content="opis 26""
+                   >Skrzyżowanie - przejazd z ul. Ks. Jałowego w ul. Reymonta</a>             
+            </td>
+        </tr>
+
+
+
+
+
+
+        <tr>
+            <td class="szary" colspan="3" style="width: 100%">Zawrotki</td>
+        </tr>
+
+
+        <tr>            
+            <td>42.</td>
+            <td class="szary">   
+                <a class="film_mini" href="http://www.youtube.com/embed/X0Bl7GRNEjg" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/zawracanie_warszawska_3.jpg">
+                </a> 
+            </td>             
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/X0Bl7GRNEjg" target="tv" 
+                   content="opis 1"
+                   >Zawracanie na ul. Warszawskiej (3)</a>             
+            </td>
+        </tr>
+        <tr>      
+            <td>43.</td>
+            <td class="szary">                 
+                <a class="film_mini" href="http://www.youtube.com/embed/67kejVjAjfE" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/zawracanie_warszawska_5.jpg">
+                </a>
+            </td>             
+            <td>                 
+                <a  class="kamerka" href="http://www.youtube.com/embed/67kejVjAjfE" target="tv" 
+                    content="opis 1"
+                    >Zawracanie na ul. Warszawskiej (5)</a>             
+            </td>
+        </tr>
+        <tr>       
+            <td>44.</td>
+            <td class="szary">                 
+                <a class="film_mini" href="http://www.youtube.com/embed/OQZL8CP33XM" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/zawracanie_lubelska_1.jpg">
+                </a>
+            </td>             
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/OQZL8CP33XM" target="tv" 
+                   content="opis 1"
+                   >Zawracanie na ul. Lubelskiej (1)</a>             
+            </td>
+        </tr>
+        <tr>          
+            <td>45.</td>
+            <td class="szary">                 
+                <a class="film_mini" href="http://www.youtube.com/embed/xuXhuYI_kK4" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/zawracanie_lubelska_2.jpg">
+                </a>
+            </td>             
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/xuXhuYI_kK4" target="tv" 
+                   content="opis 1"
+                   >Zawracanie na ul. Lubelskiej (2)</a>             
+            </td>
+        </tr>
+        <tr>       
+            <td>46.</td>
+            <td class="szary">                 
+                <a class="film_mini" href="http://www.youtube.com/embed/FTehBcvQtlE" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/skrzyzowanie_pakoslawa_zawracanie.jpg">
+                </a>
+            </td>             
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/FTehBcvQtlE" target="tv"
+                   content="opis 2"
+                   >Skrzyżowanie im. Pakosława - zawracanie</a>             
+            </td>
+        </tr>
+        <tr>             
+            <td>47.</td>
+            <td class="szary">                 
+                <a class="film_mini" href="http://www.youtube.com/embed/1SOy9VSy1Qg" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/pogwizdow_nowy.jpg">
+                </a>
+            </td>             
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/1SOy9VSy1Qg" target="tv"
+                   content="opis 2"
+                   >Pogwizdów Nowy - zawracanie</a>             
+            </td>
+        </tr>
+        <tr>     
+            <td>48.</td>
+            <td class="szary">                 
+                <a class="film_mini" href="http://www.youtube.com/embed/lPlZLuOWOjo" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/zawracanie_krakowska.jpg">
+                </a>
+            </td>             
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/lPlZLuOWOjo" target="tv"
+                   content="opis 2"
+                   >Zawracanie na ul. Krakowskiej</a>             
+            </td>
+        </tr>
+
+
+        <tr>
+            <td class="szary" colspan="3" style="width: 100%">Przejazdy kolejowe</td>
+        </tr>
+
+
+ 
+
+        <tr>             
+            <td>49.</td>
+            <td class="szary">                 
+                <a class="film_mini" href="http://www.youtube.com/embed/T4zxh19cPZg" target="tv" content="opis 1">
+                    <img class="foto_film_mini" title="miniaturka" src="../img/filmy/miniaturki/przejazd_kolejowy.jpg">
+                </a>
+            </td>             
+            <td>                 
+                <a class="kamerka" href="http://www.youtube.com/embed/T4zxh19cPZg" target="tv" 
+                   content="opis 1"
+                   >Przejazd kolejowy</a>             
+            </td>
+        </tr>
+
+
+    </table>
+
+
+    <!--
+<h2>Trasy egzaminacyjne z perspektywy kursanta</h2>
+<div class="youtube">
+   
+    <ul>   
+        <li><a class="kamerka_new" href="http://www.youtube.com/embed/zq_I6COg5gU" target="tv" 
+               content="opis 1"
+               >Zawracanie na ul. Warszawskiej (5)</a>
+        </li>
+        <li><a class="kamerka_new" href="http://www.youtube.com/embed/jc9ompqLkMA" target="tv" 
+               content="opis 1"
+               >Skrzyżowanie im. Pakosława - zawracanie (1)</a>
+        </li>
+        <li><a class="kamerka_new" href="http://www.youtube.com/embed/E43OgQKQTgk" target="tv" 
+               content="opis 1"
+               >Skrzyżowanie im. Pakosława - zawracanie (2)</a>
+        </li>
+        <li><a class="kamerka_new" href="http://www.youtube.com/embed/hURQixvGBAs" target="tv" 
+               content="opis 1"
+               >Zawracanie na ul. Krakowskiej</a>
+        </li>
+        <li><a class="kamerka_new" href="http://www.youtube.com/embed/dSlGpIc2L6E" target="tv" 
+               content="opis 1"
+               >"Kwadrat śmierci" - przejazd przez ul. Partyzantów, ul. Piękną, ul. Husarską i ul. Jasną</a>
+        </li>
+        <li><a class="kamerka" href="http://www.youtube.com/embed/YZP7YTEc3xU" target="tv" 
+               content="opis 1"
+               >Przejazd kolejowy - ul. Miłocińska</a>
+        </li>
+        <li><a class="kamerka_new" href="http://www.youtube.com/embed/2E6XR5VtUzE" target="tv" 
+               content="opis 1"
+               >Przejazd kolejowy - ul. Miłocińska (1)</a>
+        </li>
+        <li><a class="kamerka_new" href="http://www.youtube.com/embed/IFpzzMf5QPc" target="tv" 
+               content="opis 1"
+               >Przejazd kolejowy - ul. Miłocińska (2)</a>
+        </li>
+        <li><a class="kamerka_new" href="http://www.youtube.com/embed/Qm1R33CU5js" target="tv" 
+               content="opis 1"
+               >Pogwizdów Nowy (1)</a>
+        </li>
+        <li><a class="kamerka_new" href="http://www.youtube.com/embed/yEEs_l6vNrY" target="tv" 
+               content="opis 1"
+               >Pogwizdów Nowy (2)</a>
+        </li>
+        <li><a class="kamerka_new" href="http://www.youtube.com/embed/cFRD_AdncTA" target="tv" 
+               content="opis 1"
+               >Pogwizdów Nowy (3)</a>
+        </li>
+        
+    </ul>
+    
+</div>
+    
+    
+<h2>Ronda</h2>
+<div class="youtube">
+   
+    <ul>           
+        <li><a class="kamerka" href="http://www.youtube.com/embed/fK3YY56yFAA" target="tv" 
+               content="opis 1"
+               >Rondo im. Jana Pawła II - z ul. Marszałkowskiej w ul. Warszawską</a></li>
+        <li><a class="kamerka" href="http://www.youtube.com/embed/b22CIttygzU" target="tv"
+               content="opis 2"
+               >Rondo im. Jana Pawła II - zawracanie z ul. Warszawskiej</a></li>
+        <li><a class="kamerka" href="http://www.youtube.com/embed/PfEfBTEWEOQ" target="tv"
+               content="opis 2"
+               >Rondo im. Jana Pawła II - z ul. Marszałkowskiej w ul. Lubelską</a></li>
+        <li><a class="kamerka" href="http://www.youtube.com/embed/dyE0QvoeNeU" target="tv" 
+               content="opis 1"
+               >Rondo im. Jana Pawła II - z ul. Lubelskiej w ul. Warszawską</a></li>
+        <li><a class="kamerka" href="http://www.youtube.com/embed/Cby0oVuqh1M" target="tv" 
+               content="opis 1"
+               >Rondo im. Jana Pawła II - zawracanie z ul. Lubelskiej</a></li>
+        <li><a class="kamerka" href="http://www.youtube.com/embed/J7bTCW3ubns" target="tv" 
+               content="opis 1"
+               >Rondo im. Jana Pawła II - z ul. Warszawskiej w ul. Lubelską</a></li>
+        <li><a class="kamerka" href="http://www.youtube.com/embed/dRw7Fqqph8s" target="tv" 
+               content="opis 1"
+               >Rondo im. Jana Pawła II - z ul. Warszawskiej w ul. Marszałkowską</a></li>
+        <li><a class="kamerka" href="http://www.youtube.com/embed/oZOMdo7Kl3g" target="tv" 
+               content="opis 1"
+               >Rondo im. Jana Pawła II - z ul. Rycerskiej w ul. Warszawską</a></li>
+    </ul>
+    
+</div>
+    
+    <h2>Skrzyżowania</h2> 
+    <div class="youtube">
+
+        <ul>
+            <li><a class="kamerka" href="http://www.youtube.com/embed/s8SS3gAe6YY" target="tv" 
+                   content="opis 26""
+                   >"Kwadrat śmierci" - przejazd przez ul. Partyzantów, ul. Piękną, ul. Husarską i ul. Jasną</a></li>
+            <li><a class="kamerka" href="http://www.youtube.com/embed/RbquLArBMJo" target="tv" 
+                   content="opis 26""
+                   >Skrzyżowanie - przejazd z ul. Ks. Jałowego w ul. Wyspiańskiego</a></li>
+            <li><a class="kamerka" href="http://www.youtube.com/embed/RwKyZ8J32mY" target="tv" 
+                   content="opis 26""
+                   >Skrzyżowanie - przejazd z ul. Krakowskiej w ul. Wyspiańskiego</a></li>
+            <li><a class="kamerka" href="http://www.youtube.com/embed/f_BHwY69238" target="tv" 
+                   content="opis 26""
+                   >Skrzyżowanie - przejazd z ul. Reymonta w ul. Ks. Jałowego</a></li>
+            <li><a class="kamerka" href="http://www.youtube.com/embed/IksRp0djp-A" target="tv" 
+                   content="opis 26""
+                   >Skrzyżowanie - przejazd z ul. Wyspiańskiego w ul. Ks. Jałowego</a></li>
+            <li><a class="kamerka" href="http://www.youtube.com/embed/NWA2Z2_F5yo" target="tv" 
+                   content="opis 26""
+                   >Skrzyżowanie - przejazd z ul. Ks. Jałowego w ul. Krakowską</a></li>
+            <li><a class="kamerka" href="http://www.youtube.com/embed/sxbvS3TylK8" target="tv" 
+                   content="opis 26""
+                   >Skrzyżowanie - przejazd z ul. Ks. Jałowego w ul. Reymonta</a></li>
+        </ul>
+
+    </div>
+    
+    <h2>Zawrotki</h2>
+    <div class="youtube">
+
+        <ul>           
+            <li><a class="kamerka" href="http://www.youtube.com/embed/X0Bl7GRNEjg" target="tv" 
+                   content="opis 1"
+                   >Zawracanie na ul. Warszawskiej (3)</a></li>
+            <li><a class="kamerka" href="http://www.youtube.com/embed/67kejVjAjfE" target="tv" 
+                   content="opis 1"
+                   >Zawracanie na ul. Warszawskiej (5)</a></li>
+            <li><a class="kamerka" href="http://www.youtube.com/embed/OQZL8CP33XM" target="tv" 
+                   content="opis 1"
+                   >Zawracanie na ul. Lubelskiej (1)</a></li>
+            <li><a class="kamerka" href="http://www.youtube.com/embed/xuXhuYI_kK4" target="tv" 
+                   content="opis 1"
+                   >Zawracanie na ul. Lubelskiej (2)</a></li>
+            <li><a class="kamerka" href="http://www.youtube.com/embed/FTehBcvQtlE" target="tv"
+                   content="opis 2"
+                   >Skrzyżowanie im. Pakosława - zawracanie</a></li>
+            <li><a class="kamerka" href="http://www.youtube.com/embed/1SOy9VSy1Qg" target="tv"
+                   content="opis 2"
+                   >Pogwizdów Nowy - zawracanie</a></li>
+            <li><a class="kamerka" href="http://www.youtube.com/embed/lPlZLuOWOjo" target="tv"
+                   content="opis 2"
+                   >Zawracanie na ul. Krakowskiej</a></li>
+        </ul>
+
+    </div>
+
+    <h2>Przejazdy kolejowe</h2>
+    <div class="youtube">
+
+        <ul>           
+            <li><a class="kamerka" href="http://www.youtube.com/embed/T4zxh19cPZg" target="tv" 
+                   content="opis 1"
+                   >Przejazd kolejowy</a></li>
+        </ul>
+
+    </div>
+
+    -->
+    
+</div>
+
+<script type="text/javascript" >
+    function jumpScroll() {
+        window.scroll(0,485); // horizontal and vertical scroll targets
+    }
+    $('.kamerka_szary').click(function(e){ 
+        
+        tytul = "";
+        tytul = $(this).text();
+        //// opisik = "";
+        // $('#tytul').text(tytul);
+        ////  $('#opisik').text(opisik);
+        //$('#opis').attr('style', "background-color: #fff;");
+        //$('#tytul').attr('style', "background-color: #fff;");
+        //$('#tv iframe').slideUp('slow');
+        //$('#tv img').slideDown('slow');
+        jumpScroll();
+        return false;
+    });
+    
+    
+    $('.kamerka, .kamerka_new, .film_mini').click(function(e){
+        $('#tv iframe').attr('src',$(this).attr('href'));
+        
+        tytul = $(this).text();
+        ////  opisik = $(this).attr('content');
+        //  $('#opis').attr('style', "background-color: #ffd;");
+        //  $('#tytul').attr('style', "background-color: #ffb;");
+        //  $('#tytul').text(tytul);
+        //  $('#opisik').text(opisik);
+        
+        //alert(cont);
+        
+        $('#tv img').slideUp('slow');
+        $('#tv iframe').slideDown('slow');
+        jumpScroll();
+        return false;
+    });
+    
+    
+</script>
+

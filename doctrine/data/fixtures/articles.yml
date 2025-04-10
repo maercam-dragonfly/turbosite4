@@ -1,0 +1,16 @@
+Application_Model_Article:
+  artykul_1:
+    title: Otwarcie O.S.K. Auto Turbo
+    slug: Otwarcie-O-S-K--Auto-Turbo
+    content: |
+      <p>Nowe przepisy miały zostać wprowadzone już 11 lutego 2012. Jak się jednak okazało, nie wszystkie ośrodki egzaminacyjne były na to odpowiednio przygotowane. 
+      </p>
+      <p>Ostatecznie, 
+      Sejm przyjął nowelizację ustawy, która zmienia termin wejścia w życie nowych przepisów na 
+      <b>19 stycznia 2013 roku</b>.
+      Jednak czas nadejścia nowych przepisów nieuchronnie się zbliża wielkimi krokami. 
+      </p>
+      <p>Przypomnijmy, że nowy egzamin będzie składał się z dwóch części, przy czym pierwsza z nich obejmować będzie 20 pytań z wiedzy ogólnej, a druga 12 pytań z wiedzy szczegółowej dotyczącej specjalistycznej ka­tegorii prawa jazdy. Dodatkowo, kandydaci na kierowców nie będą mogli zmieniać zaznaczonych wcześniej odpowiedzi, a baza pytań zostanie zwiększona do ok. 3,5 tysiąca.
+      </p> 
+    date: '2012-00-24 00:01:00'
+    Category: [nowosci]

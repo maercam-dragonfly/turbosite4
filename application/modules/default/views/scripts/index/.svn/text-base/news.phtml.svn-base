@@ -1,0 +1,13 @@
+<?php $data = strtotime($this->article->date);?>
+    <div class="artukul">
+        <h2><?php echo $this->article->title ?></h2>
+        <div class="data">
+            <small class="dzien"><?php echo date("d",$data) ?></small>
+            <small class="miesac"><?php echo date("m",$data) ?></small>
+            <small class="rok"><?php echo date("Y",$data) ?></small>
+        </div>
+        <p class="tresc">
+            <?php echo $this->article->content; ?>
+        </p>
+        <a href='/'>Powrót</a>
+    </div><!--artykuł-->

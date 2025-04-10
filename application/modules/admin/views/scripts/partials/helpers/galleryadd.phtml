@@ -1,0 +1,124 @@
+<?php
+$this->headLink()
+        ->appendStylesheet('/css/forms.css');
+$this->headScript()
+        ->appendFile('/js/jquery.form.js')
+        ->appendFile('/js/turbo.utils.js');
+?>
+
+<form id="addGalery" method="post">
+    <div>
+        <div class="element-group">
+            <label><?php echo $this->gallery['add_label']; ?></label>
+            <input  type="text" name="name_gallery" value="<?php echo $this->gallery['name']; ?>"/>
+        </div>
+        <input class="id_gallery" name="id_gallery" type="hidden" value="<?php echo $this->gallery['id']; ?>"/>
+        <div class="submit-group">
+            <input id="addGalerySubmit" type="submit" value="<?php echo $this->gallery['submit_label']; ?>" />
+        </div>
+        <?php echo $this->Gallery($this->gallery); ?>
+    </div>
+</form>
+<?php if ($this->gallery['add_files']) { ?>
+    <form id="photosForm" method="post" style="display: none" enctype="multipart/form-data" >
+        <input class="field_photos" name="files[]" type="file" multiple="multiple" />
+        <input class="id_gallery" name="id_gallery" type="hidden" value="<?php echo $this->gallery['id']; ?>"/>
+        <input  type="submit" />
+    </form>
+
+    <script type="text/javascript">
+            
+        $('#addGalerySubmit').click(function(){
+            $("#addGalery").ajaxSubmit({
+                url: '<?php echo $this->gallery['save_url'] ?>', 
+                type: 'post',
+                success: saveGaleryResponse
+            });
+            return false;
+        });
+            
+        function saveGaleryResponse(responseText, statusText, xhr, $form)  {
+            alert(responseText);
+        }
+        /**************************************************************/
+        var id = <?php echo ($this->gallery['id'] ? '"'.$this->gallery['id'].'"': 'null')?>;
+        $('.empty-content td').click(function(){
+            $('.field_photos').click();
+            return false;
+        });
+                            
+        $('input[type=file]').change(function() { 
+            if(id == null){
+                id = getUniqueId();
+                $('.id_gallery').val(id);
+            }
+                                
+            $("#photosForm").ajaxSubmit({
+                url: '<?php echo $this->gallery['upload_url'] ?>', 
+                type: 'post',
+                success: showResponse
+            });
+                                
+                               
+                                
+        });
+        $(".photo_name img").click(deleteImage);
+
+          
+             
+               
+        function showResponse(responseText, statusText, xhr, $form)  { 
+            var last = $('#photosAdded:last');
+            if(last.html()== null){
+                $('#photosAdded').html(responseText);
+            }
+            else{
+                last.append(responseText);
+            }
+            $(".photo_name img").click(deleteImage);
+        }
+            
+        function deleteImage(){
+            var name = $(this).parent().children('span').html();
+                
+            var image = $(this).parent().parent();
+            $('body').remove('#dialog-confirm');
+            $('body').append(' \
+    <div id="dialog-confirm" title="Uwaga"> \
+    <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span> \
+      Zostanie to całkowicie usunięte. Jesteś pewny? \
+    </p> \
+    </div>');
+            $( "#dialog-confirm" ).dialog({
+                resizable: false,
+                modal: true,
+                buttons: {
+                    "OK": function() {
+                        $.post('<?php echo $this->gallery['delete_url']; ?>',
+                        {'name':name,
+                            'id_gallery': id  }, 
+                        function(){
+                            image.remove();
+                               
+                        });
+                    
+                        $( this ).dialog( "close" );
+                    },
+                    "Anuluj": function() {
+                        $( this ).dialog( "close" );
+                    }
+                }
+              
+            });
+                
+            
+        }
+    </script>
+    <script type="text/javascript">
+    $("a.grouped_elements").fancybox();
+</script>
+    <?php
+}
+
+
+

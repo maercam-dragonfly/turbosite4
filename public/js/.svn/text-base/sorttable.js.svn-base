@@ -1,0 +1,18 @@
+
+function tablesort(){
+    var lista = $("#lista");
+    if(lista.length != 0 ){
+        lista.tablesorter(
+            {
+                widthFixed: true,
+                widgets: ['zebra'],
+                headers: {
+                    6: {
+                        sorter: false
+                    } 
+                }
+            }
+        )
+        
+    }
+}
