@@ -90,7 +90,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
                         '/',
                         array(
                             'controller' => 'index',
-                            'action' => 'list',
+                            'action' => 'index',
                             'page' => 1
                         )
         );

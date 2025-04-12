@@ -72,7 +72,7 @@
             </div>
         </div>
         <!-- Spinner End -->
-        <?php echo $this->partial('partials/wyloguj.phtml', 'admin') ?>
+        <?php //echo $this->partial('partials/wyloguj.phtml', 'admin') ?>
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
             <a href="index.html" class="navbar-brand d-flex align-items-center px-2 px-lg-3">
@@ -90,42 +90,6 @@
                     <?php
                       echo $this->navigation()->menu()->setPartial(array('partials/menu.phtml', 'default'));
                     ?>
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
-######
                 </div>
                 <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i class="fa fa-phone-alt ms-3"></i>  Zadzwoń</a>
             </div>
@@ -135,35 +99,45 @@
                     <h1><?php echo $this->title; ?></h1>
                         <?php echo $this->layout()->content; ?>
                 </div>
-					
-			<footer>
-				<div id="bottom_padding">
-					<div id="bottom_content">
-						<div id="bottom_left">
-							<div id="menu_bottom">
-								<?php
-									echo $this->navigation()
-										->menu()
-										->setPartial(array('partials/menu.phtml', 'default'));
-								?>
-							</div>
-						</div>
-					
-						<div id="bottom_right">
-							<?php echo $this->partial('partials/adres.phtml', 'default') ?>
-						</div>
-						
-						<div id="bottom_copyright">
-							Copyright © <b>OSK AUTO TURBO</b>. Wszelkie prawa zastrzeżone.
-						</div>
-					</div> 
-				</div>
-			</footer>
-        <div id="wys">
-            <div id="wewnatrz" style="float: left; width: 216px; margin-left: 0px;"> 
-                <iframe allowtransparency="true" src="//www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/pages/OSK-AutoTurbo/291499654272964&amp;width=190&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=false&amp;height=378" style="border: medium none ; overflow: hidden; width: 190px; height: 378px; background-color: rgb(243, 247, 255);" frameborder="0" scrolling="no">
-                </iframe>
+			<div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">AUTO TURBO</a>, Wszelkie prawa zastrzeżone.
+    
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            <!--Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>-->
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="/#">O nas</a>
+                                <a href="">Cookies</a>
+                                <a href="">Pomoc</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div> 
         </div>
+    	</div>
+        <!-- Footer End -->
+    
+    
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    
+    
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
     </body>
+
 </html>
