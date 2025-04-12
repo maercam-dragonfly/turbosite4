@@ -63,10 +63,10 @@
 					<label>Praktyczne</label>
 					<uri>/szkoleniepraktyczne</uri>
 				</szkoleniepraktyczne>
-				<nasiinstruktorzy>
+				<szkolenieinstruktorzy>
 					<label>Nasi instruktorzy</label>
-					<uri>/nasiinstruktorzy</uri>
-				</nasiinstruktorzy>
+					<uri>/szkolenieinstruktorzy</uri>
+				</szkolenieinstruktorzy>
 			</pages>
         </szkolenie>
 		<bazawiedzy>

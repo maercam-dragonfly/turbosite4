@@ -10,7 +10,7 @@ class IndexController extends My_Controller_Action {
     }
 
     public function listAction() {
-        $this->view->title = "Aktualności";
+        //$this->view->title = "Aktualności";
         $this->view->mainTitle = "Prawo jazdy Rzeszów - OSK AUTO TURBO";
         # We don't want to render Layout
         //  $this->_helper->layout()->disableLayout();
@@ -85,7 +85,7 @@ class IndexController extends My_Controller_Action {
             throw new Zend_Controller_Action_Exception('Strona nie istnieje', 404);
         }
 
-        $this->view->title = "Aktualności";
+        //$this->view->title = "Aktualności";
         $this->view->mainTitle = "Prawo jazdy Rzeszów - OSK AUTO TURBO";
         $this->view->articles = Doctrine_Query::create()
                 ->from('Application_Model_Article a')
@@ -230,6 +230,51 @@ class IndexController extends My_Controller_Action {
         $this->view->title = "Baza wiedzy";
         $this->view->mainTitle = "Baza wiedzy - OSK AUTO TURBO";
     }
+	
+	    public function opinieAction() {
+        // action body
+        $this->view->mainTitle = "Opinie - OSK AUTO TURBO";
+    }
+	
+	    public function cennikkursyAction() {
+        // action body
+        $this->view->mainTitle = "Cennik - OSK AUTO TURBO";
+    }
+
+	    public function cennikjazdyAction() {
+        // action body
+        $this->view->mainTitle = "Cennik - OSK AUTO TURBO";
+    }
+	
+	public function cennikpromocjeAction() {
+        // action body
+        $this->view->mainTitle = "Cennik - OSK AUTO TURBO";
+    }
+
+	public function zapisyjakrozpoczacAction() {
+        // action body
+        $this->view->mainTitle = "Jak rozpocząć? - OSK AUTO TURBO";
+    }
+	
+	public function zapisynakursAction() {
+        // action body
+        $this->view->mainTitle = "Zapisy - OSK AUTO TURBO";
+    }
+	
+	public function szkolenieteoretyczneAction() {
+        // action body
+        $this->view->mainTitle = "Szkolenie teoretyczne - OSK AUTO TURBO";
+    }
+	
+		public function szkoleniepraktyczneAction() {
+        // action body
+        $this->view->mainTitle = "Szkolenie praktyczne - OSK AUTO TURBO";
+    }
+	
+		public function szkolenieinstruktorzyAction() {
+        // action body
+        $this->view->mainTitle = "Nasi instruktorzy - OSK AUTO TURBO";
+    }
 
     public function filmyAction() {
         // action body
@@ -322,33 +367,34 @@ class IndexController extends My_Controller_Action {
 
     public function galeriaAction() {
         // action body
-        $this->view->title = "Galeria";
-        $this->view->path_img = '/img/gallery/';
-        $this->view->path_mini = $this->view->path_img . 'mini/';
-        My_StaticLibrary::generateGalery('.' . $this->view->path_img, '.' . $this->view->path_mini);
+        //$this->view->title = "Galeria";
+		$this->view->mainTitle = "Galeria - OSK AUTO TURBO";
+        //$this->view->path_img = '/img/gallery/';
+        //$this->view->path_mini = $this->view->path_img . 'mini/';
+        //My_StaticLibrary::generateGalery('.' . $this->view->path_img, '.' . //$this->view->path_mini);
         //$images = array();
-        $dir = new DirectoryIterator('.' . $this->view->path_img);
+        //$dir = new DirectoryIterator('.' . $this->view->path_img);
 
-        foreach ($dir as $file) {
+        //foreach ($dir as $file) {
             // Pomiń pozycje "." oraz ".."
-            if ($file->isDot()) {
-                continue;
-            }
-            if (!$file->isDir()) {
+        //    if ($file->isDot()) {
+        //        continue;
+        //    }
+        //    if (!$file->isDir()) {
 
-                $name_roz = explode('.', $file);
-                $min_name = $name_roz[0] . '.th.' . $name_roz[1];
+        //        $name_roz = explode('.', $file);
+        //        $min_name = $name_roz[0] . '.th.' . $name_roz[1];
 
-                if (file_exists('.' . $this->view->path_mini . $min_name)) {
+         //       if (file_exists('.' . $this->view->path_mini . $min_name)) {
 
-                    $images[$this->view->path_img . $file->__toString()]['mini'] = $this->view->path_mini . $min_name;
-                    $images[$this->view->path_img . $file->__toString()]['title'] = $name_roz[0];
-                }
-                else
-                    continue;
-            }
-        }
-        $this->view->images = $images;
+        //            $images[$this->view->path_img . $file->__toString()]['mini'] = $this->view->path_mini . $min_name;
+         //           $images[$this->view->path_img . $file->__toString()]['title'] = $name_roz[0];
+        //        }
+        //        else
+        //            continue;
+        //    }
+        //}
+        //$this->view->images = $images;
     }
 
     public function karieraAction() {
@@ -359,12 +405,11 @@ class IndexController extends My_Controller_Action {
      
     public function kontaktAction() {
         // action body
-        $this->view->title = "Kontakt";
         $this->view->mainTitle = "Kontakt - OSK AUTO TURBO";
     }
 
     public function newsAction() {
-        $this->view->title = "Aktualności";
+        //$this->view->title = "Aktualności";
         $this->view->mainTitle = "Prawo jazdy Rzeszów - OSK AUTO TURBO";
         $filter = new Zend_Filter_StripTags();
         $slug = $filter->filter($this->getRequest()->getParam('slug'));

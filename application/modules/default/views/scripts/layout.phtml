@@ -75,7 +75,7 @@
         <?php //echo $this->partial('partials/wyloguj.phtml', 'admin') ?>
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-            <a href="index.html" class="navbar-brand d-flex align-items-center px-2 px-lg-3">
+            <a href="/" class="navbar-brand d-flex align-items-center px-2 px-lg-3">
                 <img class="img-fluid" src="img/logo_auto_turbo.svg " alt="">
                 <div class="navbar-brand_column flex-column">
                     <h2 class="m-0 text-primary">AUTO TURBO</h2>
@@ -95,32 +95,109 @@
             </div>
         </nav>
         <!-- Navbar End -->
-                <div>
+               
+			    <div>
                     <h1><?php echo $this->title; ?></h1>
                         <?php echo $this->layout()->content; ?>
                 </div>
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">AUTO TURBO</a>, Wszelkie prawa zastrzeżone.
-    
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            <!--Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>-->
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="/#">O nas</a>
-                                <a href="">Cookies</a>
-                                <a href="">Pomoc</a>
-                                <a href="">FQAs</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-        </div>
-        </div>
+				
+		<!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer pt-2 wow fadeIn" data-wow-delay="0.1s">
+			<div class="container-fluid-padding-top">
+				<div class="container py-5">
+					<div class="row g-5 pb-3">
+					
+						<!-- footer LINKI--- START--------------->
+						<div class="col-lg-3 col-md-6">
+							<h4 class="text-white mb-3">Linki</h4>
+							<a class="btn btn-link" href="https://info-car.pl/new/prawo-jazdy/zapisz-sie-na-egzamin-na-prawo-jazdy">Zapisy na egzamin ON-LINE</a>
+							<a class="btn btn-link" href="https://www.word.rzeszow.pl/">WORD Rzeszów</a>
+							<a class="btn btn-link" href="https://info-car.pl/new/prawo-jazdy/sprawdz-status-prawa-jazdy">Odbiór prawa jazdy</a>
+						</div>
+						<!-- footer LINKI--END------------------->
+						
+						<!-- footer KONTAKT--- START--------------->
+						<div class="col-lg-3 col-md-6">
+							<h4 class="text-white mb-3">Kontakt</h4>
+							<p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>35-005 Rzeszów, Bardowskiego 1C</p>
+							<p class="mb-2"><i class="fa fa-phone-alt me-3"></i>605 330 708, 693 776 163</p>
+							<p class="mb-2"><i class="fa fa-envelope me-3"></i>oskautoturbo@gmail.com</p>
+							<div class="d-flex pt-2">
+								<a class="btn btn-outline-light btn-social" href="https://www.youtube.com/c/PrawojazdyAUTOTURBOGrzegorzPa%C5%82asz/videos"><i class="fab fa-youtube"></i></a>
+								<a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@oskautoturbo"><i class="fab fa-tiktok"></i></a>
+								<a class="btn btn-outline-light btn-social" href="https://www.facebook.com/prawojazdyautoturbo"><i class="fab fa-facebook-f"></i></a>
+								<a class="btn btn-outline-light btn-social" href="https://www.instagram.com/prawojazdyautoturbo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+							</div>
+						</div>
+						<!-- footer KONTAKT--- END--------------->
+						
+						<!-- footer GALERIA--- START--------------->
+						<div class="col-lg-3 col-md-6">
+							<h4 class="text-white mb-3">Galeria</h4>
+							<div class="row g-2 pt-2">
+								<div class="col-4">
+									<img class="img-fluid bg-light p-1" src="img/galeria/auto_turbo_plac_manewrowy.jpg" alt="">
+								</div>
+								<div class="col-4">
+									<img class="img-fluid bg-light p-1" src="img/galeria/auto_turbo_sala_wykladowa.jpg" alt="">
+								</div>
+								<div class="col-4">
+									<img class="img-fluid bg-light p-1" src="img/galeria/auto_turbo_zdjecie_01.jpg" alt="">
+								</div>
+								<div class="col-4">
+									<img class="img-fluid bg-light p-1" src="img/galeria/auto_turbo_zdjecie_02.jpg" alt="">
+								</div>
+								<div class="col-4">
+									<img class="img-fluid bg-light p-1" src="img/galeria/auto_turbo_zdjecie_03.jpg" alt="">
+								</div>
+								<div class="col-4">
+									<img class="img-fluid bg-light p-1" src="img/galeria/auto_turbo_zdjecie_04.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<!-- footer GALERIA--- END--------------->
+						
+						<!-- footer OPINIE O NAS--- START--------------->
+						<div class="col-lg-3 col-md-6">
+							<h4 class="text-white mb-3">Opinie o nas</h4>
+							<a class="btn btn-link" href="https://www.superprawojazdy.pl/osk-auto-turbo,9598.htm">Superprawojazdy.pl</a>
+							<a class="btn btn-link" href="https://www.prawo-jazdy-360.pl/ranking-szkol-jazdy/osrodek-szkolenia-kierowcow-auto-turbo-grzegorz-palasz/rzeszow">prawojazdy360.pl</a>
+							<a class="btn btn-link" href="https://g.co/kgs/QFkZTSm">Opinie Google</a>
+							<a class="btn btn-link" href="https://www.facebook.com/prawojazdyautoturbo">Opinie Facebook</a>
+				   
+						</div>
+						<!-- footer OPINIE O NAS--- END--------------->
+						
+					</div>	
+					
+					
+					<div class="container">
+						<div class="copyright">
+							<div class="row">
+								<div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+									&copy; <a class="border-bottom" href="#">AUTO TURBO</a>, Wszelkie prawa zastrzeżone.
+			
+									<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+									<!--Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>-->
+								</div>
+								<div class="col-md-6 text-center text-md-end">
+									<div class="footer-menu">
+										<a href="/#">O nas</a>
+										<a href="">Cookies</a>
+										<a href="">Pomoc</a>
+										<a href="">FQAs</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> 
+				
+				
+				
+				
+				</div>
+			</div>
+		</div>
         <!-- Footer End -->
     
     
