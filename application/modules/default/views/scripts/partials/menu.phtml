@@ -1,15 +1,12 @@
-
-    <?php foreach($this->container as $page):?>
-	<div class="nav-item dropdown">
-	<a <?php  ;?> href="<?php echo $page->href;?>" class="nav-link dropdown-toggle me-4" data-bs-toggle="dropdown" <?php echo'>'; echo $page->label;?></a>
-	<?php if ($page->hasPages()): ?>
-	<div class="dropdown-menu fade-down m-0">
-		<?php foreach ($page->getPages() as $subpage): ?>
-		<a href="<?php echo $subpage->getHref(); ?>">
-        <?php echo $this->escape($subpage->getLabel()); ?>
-        </a>
+<?php foreach($this->container as $page):?>
+<div class="nav-item dropdown">
+    <a href="<?php echo $page->href;?>" class="nav-link dropdown-toggle me-4" data-bs-toggle="dropdown" <?php echo'>'; echo $page->label;?></a>
+    <?php if ($page->hasPages()): ?>
+    <div class="dropdown-menu fade-down m-0">
+        <?php foreach ($page->getPages() as $subpage): ?>
+        <a href="<?php echo $subpage->getHref(); ?>"><?php echo $this->escape($subpage->getLabel()); ?></a>
         <?php endforeach; ?>
-	</div>
-	<?php endif; ?>
-	</div>
+    </div>
+    <?php endif; ?>
+    </div>
     <?php endforeach; ?>
