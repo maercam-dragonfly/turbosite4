@@ -228,6 +228,11 @@ class IndexController extends My_Controller_Action {
         // action body
         $this->view->title = "Kontakt";
     }
+	
+	    public function galerianowaAction() {
+        // action body
+        $this->view->title = "Galeria";
+    }
 
     public function newsAction() {
         $this->view->title = "Aktualności";

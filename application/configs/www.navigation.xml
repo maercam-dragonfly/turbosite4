@@ -13,10 +13,10 @@
 					<label>Opinie</label>
 					<uri>/opinie</uri>
 				</opinie>
-				<galeria>
+				<galerianowa>
 					<label>Galeria</label>
-					<uri>/galeria</uri>
-				</galeria>
+					<uri>/galerianowa</uri>
+				</galerianowa>
 			</pages>
         </onas>
 		<cennik>

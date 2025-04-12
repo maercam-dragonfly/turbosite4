@@ -407,6 +407,11 @@ class IndexController extends My_Controller_Action {
         // action body
         $this->view->mainTitle = "Kontakt - OSK AUTO TURBO";
     }
+	
+	public function galerianowaAction() {
+        // action body
+        $this->view->title = "Galeria";
+    }
 
     public function newsAction() {
         //$this->view->title = "Aktualności";

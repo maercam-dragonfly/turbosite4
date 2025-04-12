@@ -93,6 +93,52 @@
             </div>
 			<!------------- koniec przycisków na dole ------->
 			
+			
+			
+			
+<div class="container py-5">
+  <h2 class="text-center mb-4">Automatyczna Galeria</h2>
+  <div class="row gallery g-3">
+
+    <?php
+      $folder = 'img/galeria/strona_galeria/galeria_duze/';
+      $dozwolone_rozszerzenia = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+
+      // Sprawdź czy folder istnieje
+      if (is_dir($folder)) {
+        foreach (scandir($folder) as $plik) {
+          $sciezka = $folder . $plik;
+          $ext = pathinfo($plik, PATHINFO_EXTENSION);
+          $nazwaBezRozszerzenia = pathinfo($plik, PATHINFO_FILENAME);
+
+          if (in_array(strtolower($ext), $dozwolone_rozszerzenia)) {
+            echo '
+            <div class="col-6 col-md-4 col-lg-3">
+              <a href="' . $sciezka . '" data-lightbox="galeria" data-title="' . htmlspecialchars($nazwaBezRozszerzenia) . '">
+                <img src="' . $sciezka . '" alt="' . htmlspecialchars($nazwaBezRozszerzenia) . '" class="img-fluid">
+              </a>
+            </div>';
+          }
+        }
+      } else {
+        echo '<p>Nie znaleziono folderu z galerią.</p>';
+      }
+    ?>
+
+  </div>
+</div>
+
+<!-- Lightbox CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+
+<!-- Lightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+			
+			
+			
+			
+			
 
 		</div>
 		

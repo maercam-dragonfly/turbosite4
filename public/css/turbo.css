@@ -206,3 +206,10 @@
 	padding-bottom: 30 px;
 	margin: 10 px;
 }
+
+@media (max-width: 768px) {
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+}

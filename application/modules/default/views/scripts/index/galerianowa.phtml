@@ -1,0 +1,102 @@
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 page_header_galeria">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">Galeria</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="zapisyjakrozpoczac">Jak rozpocząć?</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="zapisynakurs">Zapisy</a></li>
+							<li class="breadcrumb-item"><a class="text-white" href="szkolenieinstruktorzy">Nasi instruktorzy</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- GALERIA ----------------------- Start -->
+    <div class="container-xxl py-5">
+        
+		<div class="container">
+		
+			<div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Galeria</h6>
+                <h1 class="mb-5">Galeria</h1>
+            </div>
+			
+			<div class="container py-5">
+			  <div class="row gallery g-3">
+
+				<?php
+				  $folder = 'img/galeria/strona_galeria/galeria_duze/';
+				  $dozwolone_rozszerzenia = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+
+				  // Sprawdź czy folder istnieje
+				  if (is_dir($folder)) {
+					foreach (scandir($folder) as $plik) {
+					  $sciezka = $folder . $plik;
+					  $ext = pathinfo($plik, PATHINFO_EXTENSION);
+					  $nazwaBezRozszerzenia = pathinfo($plik, PATHINFO_FILENAME);
+
+					  if (in_array(strtolower($ext), $dozwolone_rozszerzenia)) {
+						echo '
+						<div class="col-6 col-md-4 col-lg-3">
+						  <a href="' . $sciezka . '" data-lightbox="galeria" data-title="' . htmlspecialchars($nazwaBezRozszerzenia) . '">
+							<img src="' . $sciezka . '" alt="' . htmlspecialchars($nazwaBezRozszerzenia) . '" class="img-fluid">
+						  </a>
+						</div>';
+					  }
+					}
+				  } else {
+					echo '<p>Nie znaleziono folderu z galerią.</p>';
+				  }
+				?>
+
+			  </div>
+			</div>
+
+<!-- Lightbox CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+
+<!-- Lightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+			
+			
+			
+
+			<!-- przyciski na dole------------------>
+			<div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+				<div class="row g-4 border-top mt-5">
+					<div class="col-lg-3 col-md-6" data-wow-delay="0.1s">
+						<div class="col-lg-3 col-sm-6 wow fadeInUp w-100" data-wow-delay="0.1s">
+							<a class="btn btn-primary py-3 px-5 mt-2 w-100" href="cennik_kursy.html">CENNIK - Kursy</a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6" data-wow-delay="0.1s">
+						<div class="col-lg-3 col-sm-6 wow fadeInUp w-100" data-wow-delay="0.1s">
+							<a class="btn btn-primary py-3 px-5 mt-2 w-100" href="cennik_jazdy.html">CENNIK - Jazdy</a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6" data-wow-delay="0.1s">
+						<div class="col-lg-3 col-sm-6 wow fadeInUp w-100" data-wow-delay="0.1s">
+							<a class="btn btn-primary py-3 px-5 mt-2 w-100" href="tel:+48605330708"><i class="fa fa-phone-alt ms-3"></i> Zadzwoń</a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6" data-wow-delay="0.1s">
+						<div class="col-lg-3 col-sm-6 wow fadeInUp w-100" data-wow-delay="0.1s">
+							<a class="btn btn-primary py-3 px-5 mt-2 w-100" href="zapisy_na_kurs.html">Zapisz się</a>
+						</div>
+					</div>
+				</div>
+            </div>
+			<!------------- koniec przycisków na dole ------->
+
+		</div>
+		
+    </div>
+    <!-- GALERIA ---------------------------------------- End -->
