@@ -227,7 +227,7 @@ class IndexController extends My_Controller_Action {
 
     public function bazawiedzyAction() {
         // action body
-        $this->view->title = "Baza wiedzy";
+        //$this->view->title = "Baza wiedzy";
         $this->view->mainTitle = "Baza wiedzy - OSK AUTO TURBO";
     }
 	
@@ -278,7 +278,7 @@ class IndexController extends My_Controller_Action {
 
     public function filmyAction() {
         // action body
-        $this->view->title = "Filmy";
+        //$this->view->title = "Filmy";
         $this->view->mainTitle = "Filmy - OSK AUTO TURBO";
     }
 
