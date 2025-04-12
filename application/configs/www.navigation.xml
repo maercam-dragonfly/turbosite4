@@ -1,59 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<confingdata>
+<config>
     <nav>
-            <home>
-                <label>Aktualności</label>
-                <uri>/</uri>
-            </home>
-            <onas>
-                <label>O nas</label>
-                <uri>/onas</uri>
-            </onas>
-            <filmy>
-                <label>Filmy</label>
-                <uri>/filmy</uri>
-            </filmy>
-            <bazawiedzy>
-                <label>Baza wiedzy</label>
-                <uri>/bazawiedzy</uri>
-            </bazawiedzy>
-            <zapisy>
-                <label>Zapisy</label>
-                <uri>/zapisy</uri>
-            </zapisy>
-            <szkolenie>
-                <label>Szkolenie</label>
-                <uri>/szkolenie</uri>
-            </szkolenie>
-            <!--<egzamin>
-                <label>Egzamin</label>
-                <uri>/egzamin</uri>
-            </egzamin>-->
-            <cennik>
-                <label>Cennik</label>
-                <uri>/cennik</uri>
-            </cennik>
-            <!--<promocje>
-                <label>Promocje</label>
-                <uri>/promocje</uri>
-                
-            </promocje>
-            -->
-            <!--<konkurs>
-                <label>Konkurs</label>
-                <uri>/konkurs</uri>
-            </konkurs>-->
-            <galeria>
-                <label>Galeria</label>
-                <uri>/galeria</uri>
-            </galeria>
-            <kariera>
-                <label>Kariera</label>
-                <uri>/kariera</uri>
-            </kariera> 
-            <kontakt>
-                <label>Kontakt</label>
-                <uri>/kontakt</uri>
-            </kontakt>
+        <onas>
+			<label>O nas</label>
+			<uri>/</uri>
+			<pages>
+				<home>
+					<label>Dlaczego my?</label>
+					<uri>/</uri>
+				</home>
+				<opinie>
+					<label>Opinie</label>
+					<uri>/opinie</uri>
+				</opinie>
+				<galeria>
+					<label>Galeria</label>
+					<uri>/galeria</uri>
+				</galeria>
+			</pages>
+        </onas>
+		<cennik>
+			<label>Cennik</label>
+			<uri>/cennik</uri>
+			<pages>
+				<cennikkursy>
+					<label>Kursy</label>
+					<uri>/cennikkursy</uri>
+				</cennikkursy>
+				<cennikjazdy>
+					<label>Jazdy</label>
+					<uri>/cennikjazdy</uri>
+				</cennikjazdy>
+				<cennikpromocje>
+					<label>Promocje</label>
+					<uri>/cennikpromocje</uri>
+				</cennikpromocje>
+			</pages>
+        </cennik>
+		<zapisy>
+			<label>Zapisy</label>
+			<uri>/zapisy</uri>
+			<pages>
+				<zapisyjakrozpoczac>
+					<label>Jak rozpocząc?</label>
+					<uri>/zapisyjakrozpoczac</uri>
+				</zapisyjakrozpoczac>
+				<zapisynakurs>
+					<label>Zapisy na kurs</label>
+					<uri>/zapisynakurs</uri>
+				</zapisynakurs>
+			</pages>
+        </zapisy>
+		<szkolenie>
+			<label>Szkolenie</label>
+			<uri>/szkolenie</uri>
+			<pages>
+				<szkolenieteoretyczne>
+					<label>Teoretyczne</label>
+					<uri>/szkolenieteoretyczne</uri>
+				</szkolenieteoretyczne>
+				<szkoleniepraktyczne>
+					<label>Praktyczne</label>
+					<uri>/szkoleniepraktyczne</uri>
+				</szkoleniepraktyczne>
+				<nasiinstruktorzy>
+					<label>Nasi instruktorzy</label>
+					<uri>/nasiinstruktorzy</uri>
+				</nasiinstruktorzy>
+			</pages>
+        </szkolenie>
+		<bazawiedzy>
+			<label>Baza wiedzy</label>
+			<uri>/bazawiedzy</uri>
+			<pages>
+				<przedegzaminem>
+					<label>Przed egazminem</label>
+					<uri>/bazawiedzy</uri>
+				</przedegzaminem>
+				<filmy>
+					<label>Filmy</label>
+					<uri>/filmy</uri>
+				</filmy>
+			</pages>
+        </bazawiedzy>
+        <kontakt>
+            <label>Kontakt</label>
+            <uri>/kontakt</uri>
+        </kontakt>
     </nav>
-</confingdata>
+</config>

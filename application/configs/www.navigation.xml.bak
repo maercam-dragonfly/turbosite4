@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <nav>
+        <onas>
+			<label>O nas</label>
+			<uri>/</uri>
+			<pages>
+				<home>
+					<label>Dlaczego my?</label>
+					<uri>/</uri>
+				</home>
+				<opinie>
+					<label>Opinie</label>
+					<uri>/opinie</uri>
+				</opinie>
+				<galeria>
+					<label>Galeria</label>
+					<uri>/galeria</uri>
+				</galeria>
+			</pages>
+        </onas>
+		<cennik>
+			<label>Cennik</label>
+			<uri>/</uri>
+			<pages>
+				<cennikkursy>
+					<label>Kursy</label>
+					<uri>/cennikkursy</uri>
+				</cennikkursy>
+				<cennikjazdy>
+					<label>Jazdy</label>
+					<uri>/cennikjazdy</uri>
+				</cennikjazdy>
+				<cennikpromocje>
+					<label>Promocje</label>
+					<uri>/cennikpromocje</uri>
+				</cennikpromocje>
+			</pages>
+        </cennik>
+		<zapisy>
+			<label>Zapisy</label>
+			<uri>/</uri>
+			<pages>
+				<zapisyjakrozpoczac>
+					<label>Jak rozpocząc?</label>
+					<uri>/zapisyjakrozpoczac</uri>
+				</zapisyjakrozpoczac>
+				<zapisynakurs>
+					<label>Zapisy na kurs</label>
+					<uri>/zapisynakurs</uri>
+				</zapisynakurs>
+			</pages>
+        </zapisy>
+		<szkolenie>
+			<label>Szkolenie</label>
+			<uri>/</uri>
+			<pages>
+				<szkolenieteoretyczne>
+					<label>Teoretyczne</label>
+					<uri>/szkolenieteoretyczne</uri>
+				</szkolenieteoretyczne>
+				<szkoleniepraktyczne>
+					<label>Praktyczne</label>
+					<uri>/szkoleniepraktyczne</uri>
+				</szkoleniepraktyczne>
+				<nasiinstruktorzy>
+					<label>Nasi instruktorzy</label>
+					<uri>/nasiinstruktorzy</uri>
+				</nasiinstruktorzy>
+			</pages>
+        </szkolenie>
+		<bazawiedzy>
+			<label>Baza wiedzy</label>
+			<uri>/</uri>
+			<pages>
+				<przedegzaminem>
+					<label>Przed egazminem</label>
+					<uri>/bazawiedzy</uri>
+				</przedegzaminem>
+				<filmy>
+					<label>Filmy</label>
+					<uri>/filmy</uri>
+				</filmy>
+			</pages>
+        </bazawiedzy>
+        <kontakt>
+            <label>Kontakt</label>
+            <uri>/kontakt</uri>
+        </kontakt>
+    </nav>
+</config>

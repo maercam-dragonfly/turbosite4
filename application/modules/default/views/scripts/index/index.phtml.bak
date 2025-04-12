@@ -1,0 +1,27 @@
+
+<?php
+
+foreach($this->articles as $article) {
+    $data = strtotime($article->date);
+    ?>
+
+    <div class="artukul">
+        <h2><a href="<?php echo $this->escape($this->baseUrl('aktualnosci/'.$article->slug)).'.html'?>"><?php echo $article->title ?></a></h2>
+        <div class="data">
+            <small class="dzien"><?php echo date("d",$data) ?>aaaa</small>
+            <small class="miesac"><?php echo date("m",$data) ?></small>
+            <small class="rok"><?php echo date("Y",$data) ?></small>
+        </div>
+        <div class="tresc">
+		AAAAAAAAAAAAAAAAA
+            <?php echo $article->content;?>
+        </div>
+        <a href="<?php echo $this->baseUrl('aktualnosci/'.$article->slug).'.html'?>">Więcej</a> 
+    </div><!--artykuł-->
+    <?php
+}
+
+
+
+
+

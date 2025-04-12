@@ -1,0 +1,208 @@
+
+.btn-primary:hover
+{
+	color:#000;
+	background-color:#ff8d43;
+	border-color:#ff8d43
+}
+
+.map-container {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+.map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+	
+.container-fluid-padding-top {
+	margin: 0px;
+}
+
+.page_header_kontakt {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/banery_podstrony/auto_turbo_baner_kontakt.jpg);
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page_header_cennik_kursy{
+	background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/banery_podstrony/auto_turbo_baner_cennik_kursy.jpg);
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page_header_cennik_jazdy{
+	background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/banery_podstrony/auto_turbo_baner_cennik_jazdy.jpg);
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page_header_cennik_promocje{
+	background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/banery_podstrony/auto_turbo_baner_cennik_promocje.jpg);
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page_header_zapisy_jak_rozpoczac{
+	background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/banery_podstrony/auto_turbo_zapisy_jak_rozpoczac.jpg);
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page_header_zapisy_na_kurs{
+	background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/banery_podstrony/auto_turbo_zapisy_jak_na_kurs.jpg);
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page_header_szkolenie_teoretyczne{
+	background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/banery_podstrony/auto_turbo_szkolenie_teoretyczne.jpg);
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page_header_szkolenie_praktyczne{
+	background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/banery_podstrony/auto_turbo_szkolenie_praktyczne.jpg);
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page_header_szkolenie_instruktorzy{
+	background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/banery_podstrony/auto_turbo_szkolenie_instruktorzy.jpg);
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page_header_baza_wiedzy{
+	background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/banery_podstrony/auto_turbo_baner_baza_wiedzy.jpg);
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page_header_filmy{
+	background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/banery_podstrony/auto_turbo_baner_filmy.jpg);
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page_header_opinie{
+	background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/banery_podstrony/auto_turbo_baner_opinie.jpg);
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page_header_galeria{
+	background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/banery_podstrony/auto_turbo_baner_galeria.jpg);
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+//PROMOCJE
+
+.offer {
+    font-size: 1.1em;
+    color: #ff6400;
+    font-weight: bold;
+}
+
+//blyski w promocjach------------------------------
+
+
+    .conteiner_flash {
+      display: flex;
+      gap: 40px;
+    }
+
+    .item_flash {
+      position: relative;
+      padding: 1px 1px;
+      text-decoration: none;
+      --font-weight: bold;
+      border: 1px solid transparent;
+      z-index: 0;
+    }
+
+    .item_flash::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #ff6400;
+      box-sizing: border-box;
+      z-index: -1;
+
+      /* Magic part */
+      mask: linear-gradient(90deg, #0000 30%, #000 50%, #0000 70%) repeat;
+      mask-size: 200%;
+      animation: borderFlow 3s linear infinite;
+    }
+
+
+    @keyframes borderFlow {
+      0% { mask-position: 0%; }
+      100% { mask-position: 400%; }
+    }
+	
+	//--------------------------------- konic błysków
+	
+	
+	//ikonki z numerkami-----------------------------
+	
+	.circle {
+    position: relative;
+    display: inline-block;
+}
+
+.fa-circle {
+    font-size: 50px;
+    color: #007bff;
+}
+
+.number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+//----------------------------------------- konied ikonki z numerkami-----------------------------
+	
+.team-item-border {
+    border: 2px solid black;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 10px auto;
+    aspect-ratio: 16 / 9;
+}
+
+.video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+}
+			
+.ramka {
+	background-color: #ff6400;
+	padding: 1px;
+}
+
+.ramka_1_px {
+	background-color: #ff6400;
+	padding: 1px;
+	padding-bottom: 30 px;
+	margin: 10 px;
+}

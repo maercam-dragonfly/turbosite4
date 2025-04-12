@@ -1,5 +1,16 @@
-<ul>
+<div>
     <?php foreach($this->container as $page):?>
-    <li><a <?php  ;?> href="<?php echo $page->href;?>" title="<?php echo $page->label;?>"  ><span <?php echo $page->isActive()?'class="active ">':'>'; echo $page->label;?></span></a></li>
+	<div class="nav-item dropdown">
+	<a <?php  ;?> href="<?php echo $page->href;?>" class="nav-link dropdown-toggle me-4" data-bs-toggle="dropdown" title="<?php echo $page->label;?>" <?php echo $page->isActive()?'class="active ">':'>'; echo $page->label;?></a>
+	<?php if ($page->hasPages()): ?>
+	<div class="dropdown-menu fade-down m-0">
+		<?php foreach ($page->getPages() as $subpage): ?>
+		<a href="<?php echo $subpage->getHref(); ?>">
+        <?php echo $this->escape($subpage->getLabel()); ?>
+        </a>
+        <?php endforeach; ?>
+	</div>
+	<?php endif; ?>
+	</div>
     <?php endforeach; ?>
-</ul>
+</div>

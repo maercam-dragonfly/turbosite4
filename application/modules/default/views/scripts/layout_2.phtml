@@ -1,0 +1,217 @@
+<?php echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    <head> 
+        <meta name="robots" content="all, index, follow" /> 
+        <meta name="description" content="OSK AUTO TURBO zaprasza na kursy PRAWA JAZDY kat. B w Rzeszowie. Wysoka zdawalność! Liczne PROMOCJE! Jazdy doszkalające: 1 godzina - 90 zł. Zapisz się już dziś! Tel.: 605 330 708, 693 776 163" />
+        <meta name="keywords" content="prawo jazdy rzeszów, nauka jazdy rzeszów, kurs prawa jazdy rzeszów, prawo jazdy, nauka jazdy, nauka jazdy łańcut, prawo jazdy łańcut, kursy prawa jazdy, kurs prawa jazdy kat. B, ośrodek szkolenia kierowców, szkoła jazdy, szkoła nauki jazdy, osk auto turbo, auto turbo rzeszów, prawo jazdy w rzeszowie, jazdy doszkalające rzeszów, szkoła jazdy rzeszów, szkoła jazdy, kursy doszkalające rzeszów, prawo jazdy rzeszów cennik, kurs prawa jazdy cennik" />
+        <meta name="type" content="descriptive" />
+        <meta name="coverage" content="global" /> 
+        <meta name="audience" content="all" />
+        <meta name="classification" content="global,all" /> 
+        <meta name="rating" content="general" />
+    
+        <?php 
+        echo $this->headMeta();
+        echo $this->headLink();
+        //echo '<link rel="alternate stylesheet" href="' . $this->baseUrl . '/css/styl_1.css" type="text/css" title="styl2"/>';
+        //echo '<link rel="alternate stylesheet" href="' . $this->baseUrl . '/css/styl_2.css" type="text/css" title="styl3"/>';
+        echo $this->JQuery();
+        echo $this->headScript();
+        ?>
+        <link href="/img/favicon.ico" rel="shortcut icon" />
+        <title><?php echo $this->mainTitle; ?></title>
+        
+        <?php if (APPLICATION_ENV != 'development') { ?>
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-31529993-1']);
+            _gaq.push(['_trackPageview']); 
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+       <?php }?>
+        
+        
+        
+        <!--facebook-->
+        <script type="text/javascript">
+$(function(){
+$("#wys").css("left","-216px");
+$("#wys").hover(
+function () {
+$("#wys").animate({left: "0px"}, 400 );
+$(this).addClass("zamknij");
+}, function () {
+$("#wys").animate({left: "-216px"}, 400 );
+$(this).removeClass("zamknij"); }
+);
+});
+</script>
+        
+
+<!--[if lt IE 8]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js" type="text/javascript"></script>
+<![endif]
+
+
+<!--end facebook-->
+
+    </head>  
+    <body> 
+        
+
+        <?php
+//        $this->dialogMessage = array();
+//        $this->dialogMessage['title'] = 'ala';
+//        $this->dialogMessage['text'] = array( 
+//            'imie' => 'Marcin',
+//            'nazwisko' => 'Wrona'
+//        );
+        echo $this->Message($this->dialogMessage);
+//        if(isset($this->dialogMessage)){
+//            echo $this->partial('partials/message.phtml', 'default',array('dialogMessage' => $this->dialogMessage));   
+//        }
+        ?>
+        
+        <!------------------------------------------------------------------------->
+        
+        <div id="header_background">
+            <header>
+                <?php echo $this->partial('partials/wyloguj.phtml', 'admin') ?>
+		<div id="header-image-back"></div>
+                    <div id="header-content">
+			<div id="logo"></div>
+                        <h1 class="title">Prawo jazdy Rzeszów</h1>
+			<h1 class="title title-osk">OSK AUTO TURBO</h1>
+			
+                        <nav class="nav-top">
+                            <?php 
+                            echo $this->navigation()
+                            ->menu()
+                            ->setPartial(array('partials/menu.phtml', 'default'));
+                            ?>
+                        </nav>
+                        <div id="gwiazda">
+                            <?php echo $this->partial('partials/gwiazda.phtml', 'default') ?>
+                        </div>
+                        <div id="baner"> 
+                            <?php echo $this->partial('partials/banerki.phtml', 'default') ?> 
+                        </div>
+                        <div id="baner_buttons">
+                            <?php echo $this->partial('partials/baner_buttons.phtml', 'default') ?>
+                        </div>
+			<div id="info">
+                            <?php echo $this->partial('partials/informacja.phtml', 'default') ?>
+                        </div>
+                    </div>
+                    <div id="header-image-front"></div>
+            </header>
+            
+        </div>
+			
+	<div id="content-padding">
+            <div id="content_new">
+                <div id="left_new">
+                    <h1><?php echo $this->title; ?></h1>
+                        <?php echo $this->layout()->content; ?>
+                </div>
+					
+		<div id="right_new">
+                    <div id="lead-boxy">
+                        <?php echo $this->partial('partials/lead_boxy.phtml', 'default', array('karteczki' => $this->karteczki)) ?>
+                    </div>
+
+                    
+                    <div id="opinie">
+                        <?php echo $this->partial('partials/opinie.phtml', 'default') ?>
+                    </div>
+					<div id="social_media">
+                        <?php echo $this->partial('partials/social_media.phtml', 'default') ?>
+                    </div>
+                    <div id="linki">
+                        <?php echo $this->partial('partials/linki.phtml', 'default') ?>
+                    </div>
+                    <div id="facebook">
+                        <?php
+                                if (APPLICATION_ENV != 'development') {
+                                    echo $this->partial('partials/facebook.phtml', 'default');
+                                }
+                                ?> 
+                    </div> 
+                   
+                    
+                    
+                </div>
+                <div class="clear">
+                    
+                </div>
+                
+            </div>
+            <!----------------------------------->
+        </div>
+			<footer>
+			
+				<div id="bottom_padding">
+					<div id="bottom_content">
+						<div id="bottom_left">
+                                                    <div id="menu_bottom">
+                                                        <?php
+                                                        echo $this->navigation()
+                                                                ->menu()
+                                                                ->setPartial(array('partials/menu.phtml', 'default'));
+                                                        ?>
+                                                    </div>
+                                                </div>
+					
+						<div id="bottom_right">
+							<?php echo $this->partial('partials/adres.phtml', 'default') ?>
+						</div>
+						
+						<div id="bottom_copyright">
+							Copyright © <b>OSK AUTO TURBO</b>. Wszelkie prawa zastrzeżone.
+						</div>
+					</div> 
+				</div>
+			</footer>
+        
+        <!------------------------------------------------------------------------->
+
+
+            <!--
+            
+            <div id="aaheader">     
+               <div id="baner"> 
+                <?php echo $this->partial('partials/banerki.phtml', 'default') ?>  
+            </div>
+            </div>
+            
+            -->
+           
+
+
+        <!--
+        <a href="http://www.superprawojazdy.pl/opinie/?fk=pryJzkNrk" title="" class="opinieformbutton"> 
+        </a><script type="text/javascript" src="http://www.superprawojazdy.pl/opinie/button.js"></script>
+        -->
+        
+        
+        <div id="wys">
+            <div id="wewnatrz" style="float: left; width: 216px; margin-left: 0px;"> 
+                <iframe allowtransparency="true" src="//www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/pages/OSK-AutoTurbo/291499654272964&amp;width=190&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=false&amp;height=378" style="border: medium none ; overflow: hidden; width: 190px; height: 378px; background-color: rgb(243, 247, 255);" frameborder="0" scrolling="no">
+                </iframe>
+            </div> 
+        </div>
+        
+ 
+    </body>
+    
+    
+</html>
