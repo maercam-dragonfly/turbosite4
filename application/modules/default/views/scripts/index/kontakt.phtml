@@ -148,7 +148,9 @@
                     </div>
 					
 					<h5>Masz pytania? Napisz:</h5>
-                    <form>
+                    
+					<!--
+					<form>
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
@@ -158,8 +160,14 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="phone" placeholder="Telefon">
-                                    <label for="email">Telefon</label>
+                                    <input type="phone" class="form-control" id="phone" placeholder="Telefon">
+                                    <label for="phone">Telefon</label>
+                                </div>
+                            </div>
+							<div class="col-md-12">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="mail" placeholder="mail">
+                                    <label for="email">Adres e-mail</label>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -179,6 +187,49 @@
                             </div>
                         </div>
                     </form>
+					-->
+					
+					<form id="contactForm">
+					  <div class="row g-3">
+						<div class="col-md-6">
+						  <div class="form-floating">
+							<input type="text" class="form-control" id="name" name="name" placeholder="Imię i nazwisko" required>
+							<label for="name">Imię i nazwisko</label>
+						  </div>
+						</div>
+						<div class="col-md-6">
+						  <div class="form-floating">
+							<input type="tel" class="form-control" id="phone" name="phone" placeholder="Telefon">
+							<label for="phone">Telefon</label>
+						  </div>
+						</div>
+						<div class="col-md-12">
+						  <div class="form-floating">
+							<input type="email" class="form-control" id="mail" name="email" placeholder="mail" required>
+							<label for="mail">Adres e-mail</label>
+						  </div>
+						</div>
+						<div class="col-12">
+						  <div class="form-floating">
+							<input type="text" class="form-control" id="subject" name="subject" placeholder="Temat">
+							<label for="subject">Temat</label>
+						  </div>
+						</div>
+						<div class="col-12">
+						  <div class="form-floating">
+							<textarea class="form-control" placeholder="Wiadomość" id="message" name="message" style="height: 150px" required></textarea>
+							<label for="message">Wiadomość</label>
+						  </div>
+						</div>
+						<div class="col-12">
+						  <button class="btn btn-primary w-100 py-3" type="submit">Wyślij wiadomość</button>
+						</div>
+						<div class="col-12">
+						  <div id="formAlert" class="mt-3 text-center fw-bold"></div>
+						</div>
+					  </div>
+					</form>
+
                 </div>
             </div>
 			
@@ -199,6 +250,5 @@
 		<!----------- koniec PDF z regulaminem ---------------->
 
    </div>
-	
 	
 	
