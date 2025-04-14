@@ -137,7 +137,6 @@ class IndexController extends My_Controller_Action {
         if ($this->_request->isPost()) {
             // pobranie danych post
             $postData = $this->_request->getPost();
-			var_dump($postData);
             if (isset($postData['txt_captcha']['id'])) {
                 $captcha = $postData['txt_captcha']['id'];
             }
