@@ -51,7 +51,6 @@ class My_CourseTypes
 		} else {
 			return '';
 		}
-        
     }  
     
     /**
