@@ -16,7 +16,7 @@ class IndexController extends My_Controller_Action {
             throw new Zend_Controller_Action_Exception('Strona nie istnieje', 404);
         }
 
-        $this->view->title = "Aktualności";
+        //$this->view->title = "Aktualności";
         $this->view->articles = Doctrine_Query::create()
                 ->from('Application_Model_Article a')
                 ->orderBy('a.date DESC')
@@ -235,7 +235,7 @@ class IndexController extends My_Controller_Action {
     }
 
     public function newsAction() {
-        $this->view->title = "Aktualności";
+        //$this->view->title = "Aktualności";
         $filter = new Zend_Filter_StripTags();
         $slug = $filter->filter($this->getRequest()->getParam('slug'));
 

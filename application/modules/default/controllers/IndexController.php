@@ -11,7 +11,7 @@ class IndexController extends My_Controller_Action {
 
     public function listAction() {
         //$this->view->title = "Aktualności";
-        $this->view->mainTitle = "Prawo jazdy Rzeszów - OSK AUTO TURBO";
+        //$this->view->mainTitle = "Prawo jazdy Rzeszów - OSK AUTO TURBO";
         # We don't want to render Layout
         //  $this->_helper->layout()->disableLayout();
         # rendering view is also not necessary
