@@ -216,10 +216,10 @@ Zend_Debug::dump($errors);
             $form->populate($data);
             $dialogMessage['title'] = 'Otrzymaliśmy Twoją wiadomość. </br>Skontaktujemy się jak najszybciej w celu ustalenia szczegółów. </br></br> Twoje dane, które otrzymaliśmy:';
             $dialogMessage['text'] = array();
-            $dialogMessage['text']['Imię:'] = $formData['imie'];
-            $dialogMessage['text']['Nazwisko:'] = $formData['nazwisko'];
-            $dialogMessage['text']['E-mail:'] = $formData['email'];
-            $dialogMessage['text']['Telefon:'] = $formData['telefon'];
+            $dialogMessage['text']['Imię'] = $formData['imie'];
+            $dialogMessage['text']['Nazwisko'] = $formData['nazwisko'];
+            $dialogMessage['text']['E-mail'] = $formData['email'];
+            $dialogMessage['text']['Telefon'] = $formData['telefon'];
             $this->view->dialogMessage = $dialogMessage;
         }
         $this->view->form = $form;
