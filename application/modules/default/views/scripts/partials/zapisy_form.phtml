@@ -1,0 +1,65 @@
+                    <form method="post">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="imie" name="imie" placeholder="Imię">
+                                    <label for="imie">Imię</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="nazwisko" name="nazwisko" placeholder="Nazwisko">
+                                    <label for="nazwisko">Nazwisko</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="telefon" name="telefon" placeholder="Telefon">
+                                    <label for="telefon">Telefon</label>
+                                </div>
+                            </div>
+							
+							<div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="email" name="email" placeholder="E-mail">
+                                    <label for="email">E-mail</label>
+                                </div>
+                            </div>
+
+							<div class="col-12">
+								<div class="form-floating">
+								<select class="form-select" id="rodzaj_kursu" name="rodzaj_kursu">
+									<option value="">Wybierz rodzaj kursu</option>
+									<option value="0">Kurs prawa jazdy kat. B</option>
+									<option value="1">Jazdy doszkalające</option>
+								</select>
+								</div>
+							</div>
+
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="uwagi" style="height: 100px"></textarea>
+                                    <label for="uwagi">Dodatkowe informacje (opcjonalnie)</label>
+                                </div>
+                            </div>
+							<div class="col-12">
+                                <div class="form-floating">
+								
+                                    <?php if(isset($this->element->txt_captcha)) {
+										echo $this->element->txt_captcha->render();
+										}else{
+											echo APPLICATION_ENV;
+										}
+										?>
+                                </div>
+                            </div>
+						
+							
+							
+                            <div class="col-12">
+							
+							    <input type="submit" class="btn btn-primary w-100 py-3" id="zapisz" value="Zapisz się">
+                                <!-- <button class="btn btn-primary w-100 py-3" type="submit">Zapisz się</button> -->
+                            </div>
+                        </div>
+                    </form>
