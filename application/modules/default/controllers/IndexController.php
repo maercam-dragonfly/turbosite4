@@ -155,16 +155,19 @@ class IndexController extends My_Controller_Action {
 				echo "ALA2<br/>";
                 if (count($email) != 0) {
                     $form->email->addError('Osoba o podanym e-mail już istnieje');
-                } else {
+					$dialogMessage['title'] = 'Niestety nie możesz sie zapisać </br>Osoba o podanym e-mail już została wcześniej zapisana';
+					$this->view->dialogMessage = $dialogMessage;
 					echo "ALA3<br/>";
+                } else {
+					echo "ALA4<br/>";
                     $formData['created'] = new Doctrine_Expression('NOW()');
                     $formData['registered'] = new Doctrine_Exception('FALSE');
                     $student->add($formData);
-					echo "ALA4<br/>";
-                    $nameContentMail
-                            = My_CourseTypes::getMailContentNameByCourseTypeId($formData['rodzaj_kursu']);
+					echo "ALA5<br/>";
+                    $nameContentMail = My_CourseTypes::getMailContentNameByCourseTypeId($formData['rodzaj_kursu']);
 
                     $mail = new Zend_Mail('UTF-8');
+					
                     $body = $this->view->partial($nameContentMail, array(
                         'imie' => $student->imie,
                         'nazwisko' => $student->nazwisko,
@@ -175,10 +178,16 @@ class IndexController extends My_Controller_Action {
                     $mail->addTo($student->email)
                             ->setSubject($subject)
                             ->setBodyHtml($body);
+					$mail->setFrom('oskautoturbo@gmail.com', 'OSK AUTO TURBO');		
+					try {
                     $mail->send();
+					} catch (Exception $e) {
+						echo "<pre>Błąd przy wysyłce maila: " . $e->getMessage() . "</pre>";
+					}
+					
                     $flag = false;
                 }
-
+				echo "ALA6<br/>";
 
                 // operacje na danych
                 //Zend_Debug::dump($formData);
@@ -200,12 +209,12 @@ class IndexController extends My_Controller_Action {
             $form->populate($postData);
         } else {
             $form->populate($data);
-            $dialogMessage['title'] = 'Zostałeś zapisany na kurs';
+            $dialogMessage['title'] = 'Otrzymaliśmy Twoją wiadomość. </br>Skontaktujemy się jak najszybciej w celu ustalenia szczegółów. </br></br> Twoje dane, które otrzymaliśmy:';
             $dialogMessage['text'] = array();
-            $dialogMessage['text']['imię'] = $formData['imie'];
-            $dialogMessage['text']['nazwisko'] = $formData['nazwisko'];
-            $dialogMessage['text']['e-mail'] = $formData['email'];
-            $dialogMessage['text']['telefon'] = $formData['telefon'];
+            $dialogMessage['text']['Imię:'] = $formData['imie'];
+            $dialogMessage['text']['Nazwisko:'] = $formData['nazwisko'];
+            $dialogMessage['text']['E-mail:'] = $formData['email'];
+            $dialogMessage['text']['Telefon:'] = $formData['telefon'];
             $this->view->dialogMessage = $dialogMessage;
         }
         $this->view->form = $form;

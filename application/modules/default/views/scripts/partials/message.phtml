@@ -28,13 +28,14 @@
         -box-shadow: #222 5px 5px 20px 0px;
     }
     .dialog .buttons button{
-        -background-color:#fff;
-        -border: 1px solid #000;
         border: 0px;
-        padding:3px;
-        width:70px;
+        padding: 3px;
+        width: 170px;
         display: inline;
         float: none;
+		background-color: #ff6400;
+		border-radius: 30px 30px 30px 30px;
+		color: #fff;
 
 
     }
@@ -44,12 +45,20 @@
     .buttons{
         text-align:center;
         margin:0 auto;
-        background-color: #FFE5BE;
+        background-color: #fff;
         padding-bottom: 3px;
     }
     .dialog{
         width: 390px;
     }
+	
+	.message_title {
+		background-color: #fff;
+		padding: 3 px;
+		color: #000;
+	}
+	
+
 
 </style>
 <div id="layout_message"> 
@@ -57,7 +66,7 @@
         <div class="padding_message">
             <div class="karteczka dialog" >
                 <dl>
-                    <dt id="message-title">
+                    <dt id="message-title" class="message_title">
                         <?php echo $this->dialogMessage['title'] ?>
                     </dt>
                     <dd class="_news">

@@ -227,7 +227,7 @@ karteczka dialog button, #menu ul a:link, #menu ul a:visited {
     font-weight: bold;
 }
 
-karteczka dialog button:hover, #menu ul a:hover {
+.karteczka dialog button:hover, #menu ul a:hover {
     color: #FF6400;
     text-shadow: #333  0.1em 0.1em 0.1em;
 }

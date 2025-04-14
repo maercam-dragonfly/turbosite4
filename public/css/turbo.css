@@ -214,3 +214,18 @@
     height: auto;
   }
 }
+
+.dialog {
+	background-color: #fff;
+	padding: 10px;
+}
+
+.buttons{
+	background-color: #fff;
+}
+
+.dialog button{
+	background-color: #ff6400;
+	border-radius: 30px 30px 30px 30px;
+	color: #fff;
+}
