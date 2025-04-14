@@ -189,6 +189,9 @@
                     </form>
 					-->
 					
+					
+					
+					<!--
 					<form id="contactForm">
 					  <div class="row g-3">
 						<div class="col-md-6">
@@ -227,8 +230,71 @@
 						<div class="col-12">
 						  <div id="formAlert" class="mt-3 text-center fw-bold"></div>
 						</div>
+
 					  </div>
-					</form>
+					</form>-->
+
+
+
+					                      <?php
+    if(isset($this->form)){
+        echo $this->form;
+    }else{
+        
+    } 
+    
+?>
+    <script type="text/javascript" >
+    jQuery(function($){
+        $('#telefon').mask("999-999-999");
+    });
+    </script>
+<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+--><script type="text/javascript">
+   
+   /* $('#zapisy').validate();
+    $('#zapisy').submit(function(){
+         alert('ala');
+         $('#zapisy').valid();
+        return false;
+    })*/
+$(function(){
+
+    $('input,textarea').change(function (){
+        
+        var formElementId = $(this).parent().find('label').attr('for');
+        //alert(formElementId);
+        //doValidation(formElementId);
+    })
+}) 
+function doValidation(id){
+    var url = '/validateform';
+    var data = {};
+    $('input').each(function(){
+        data[$(this).attr('name')] = $(this).val();
+    })
+    
+    $.post(url,data,function(resp){
+        $("#"+id).parent().find('.errors').remove();
+        $("#"+id).parent().append(getErrorHtml(resp[id],id));
+    },'json');
+}
+function getErrorHtml(formErrors,id){
+    var o = '<ul id="errors-"'+id+'" class="errors">';
+    for(errorKey in formErrors){
+        o += '<li>'+ formErrors[errorKey]+'</li>' ;
+    }
+    o+='</ul>';
+    return o;
+}
+</script>
+					  
+					  
+					  
+					  
+					  
+
+
 
                 </div>
             </div>

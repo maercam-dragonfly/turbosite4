@@ -229,3 +229,9 @@
 	border-radius: 30px 30px 30px 30px;
 	color: #fff;
 }
+
+.errors li{
+	color: red;
+	list-style-type: none;
+    padding-left: 0;
+}

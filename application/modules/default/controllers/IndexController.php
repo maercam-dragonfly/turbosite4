@@ -199,7 +199,7 @@ class IndexController extends My_Controller_Action {
 				
 				$dialogMessage['title'] = $errorMessages;
 				$dialogMessage['text'] = array();
-				$this->view->dialogMessage = $dialogMessage;
+				//$this->view->dialogMessage = $dialogMessage;
 			}		
         }
         // uzupelnij formularz domyslnymi danymi
@@ -419,6 +419,7 @@ class IndexController extends My_Controller_Action {
      
     public function kontaktAction() {
         // action body
+		$this->zapisynakursAction();
         $this->view->mainTitle = "Kontakt - OSK AUTO TURBO";
     }
 	
