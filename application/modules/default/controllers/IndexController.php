@@ -153,12 +153,7 @@ class IndexController extends My_Controller_Action {
                         ->where('s.email = ?', $formData['email'])
                         ->fetchArray();
 				echo "ALA2<br/>";
-                if (count($email) != 0) {
-                    $form->email->addError('Osoba o podanym e-mail już istnieje');
-					$dialogMessage['title'] = 'Niestety nie możesz sie zapisać </br>Osoba o podanym e-mail już została wcześniej zapisana';
-					$this->view->dialogMessage = $dialogMessage;
-					echo "ALA3<br/>";
-                } else {
+
 					echo "ALA4<br/>";
                     $formData['created'] = new Doctrine_Expression('NOW()');
                     $formData['registered'] = new Doctrine_Exception('FALSE');
@@ -186,15 +181,25 @@ class IndexController extends My_Controller_Action {
 					}
 					
                     $flag = false;
-                }
+                
 				echo "ALA6<br/>";
 
                 // operacje na danych
                 //Zend_Debug::dump($formData);
             }  else {
 
-            $errors = $form->getMessages();
-			Zend_Debug::dump($errors); // ← wyświetli błędy (jeśli masz włączony Zend_Debug)
+				$errors = $form->getMessages();
+
+				$errorMessages = '';
+				foreach ($errors as $fieldErrors) {
+					foreach ($fieldErrors as $msg) {
+						$errorMessages .= $msg . '<br>';
+					}
+				}
+				
+				$dialogMessage['title'] = $errorMessages;
+				$dialogMessage['text'] = array();
+				$this->view->dialogMessage = $dialogMessage;
 			}		
         }
         // uzupelnij formularz domyslnymi danymi
