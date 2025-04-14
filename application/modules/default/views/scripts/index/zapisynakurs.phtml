@@ -33,48 +33,58 @@
 				<div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.1s" style="min-height: 350px;">
 				
 				<h5>Zapisz się teraz:</h5>
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="imie" placeholder="Imię">
-                                    <label for="imie">Imię</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="nazwisko" placeholder="Nazwisko">
-                                    <label for="nazwisko">Nazwisko</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="telefon" placeholder="Telefon">
-                                    <label for="telefon">Telefon</label>
-                                </div>
-                            </div>
+                    <?php
+    if(isset($this->form)){
+        echo $this->form;
+    }else{
+        
+    } 
+    
+?>
+    <script type="text/javascript" >
+    jQuery(function($){
+        $('#telefon').mask("999-999-999");
+    });
+    </script>
+<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+--><script type="text/javascript">
+   
+   /* $('#zapisy').validate();
+    $('#zapisy').submit(function(){
+         alert('ala');
+         $('#zapisy').valid();
+        return false;
+    })*/
+$(function(){
 
-							<div class="col-12">
-								<div class="form-floating">
-								<select class="form-select" id="rodzaj_kursu">
-									<option value="">Wybierz rodzaj kursu</option>
-									<option value="rodzaj_kursu_kurs">Kurs prawa jazdy kat. B</option>
-									<option value="rodzaj_kursu_jazdy">Jazdy doszkalające</option>
-								</select>
-								</div>
-							</div>
-
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="uwagi" style="height: 100px"></textarea>
-                                    <label for="uwagi">Dodatkowe informacje (opcjonalnie)</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Zapisz się</button>
-                            </div>
-                        </div>
-                    </form>
+    $('input,textarea').change(function (){
+        
+        var formElementId = $(this).parent().find('label').attr('for');
+        //alert(formElementId);
+        //doValidation(formElementId);
+    })
+}) 
+function doValidation(id){
+    var url = '/validateform';
+    var data = {};
+    $('input').each(function(){
+        data[$(this).attr('name')] = $(this).val();
+    })
+    
+    $.post(url,data,function(resp){
+        $("#"+id).parent().find('.errors').remove();
+        $("#"+id).parent().append(getErrorHtml(resp[id],id));
+    },'json');
+}
+function getErrorHtml(formErrors,id){
+    var o = '<ul id="errors-"'+id+'" class="errors">';
+    for(errorKey in formErrors){
+        o += '<li>'+ formErrors[errorKey]+'</li>' ;
+    }
+    o+='</ul>';
+    return o;
+}
+</script>
 				</div>
 				
 				<div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.1s" style="min-height: 350px;">

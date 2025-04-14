@@ -38,11 +38,6 @@ class Form_BaseZapisy extends Zend_Form {
         $this->addElement($submit);
         $this->addElement($reset);
         
-        
-        
-        
-        
-        
         $imie->setLabel('Imię*')
                 ->setRequired(true)
                 ->addValidator(new Zend_Validate_NotEmpty(), true)
@@ -107,6 +102,11 @@ class Form_BaseZapisy extends Zend_Form {
         $reset->setLabel('Wyczyść');
         //ustawienie dekoratorów formularza
         $this->clearDecorators();
+		
+		$this->setDecorators(array(
+    array('ViewScript', array('viewScript' => 'partials/zapisy_form.phtml'))
+));
+		/*
         $this->addDecorator('FormElements')
                 ->addDecorator('HtmlTag', array('tag' => 'div'))
                 ->addDecorator('Form');
@@ -126,7 +126,7 @@ class Form_BaseZapisy extends Zend_Form {
         $reset->setDecorators(array(
             array('ViewHelper'),
             array('HtmlTag', array('tag' => 'div', 'class' => 'submit-group reset-group'))
-        ));
+        ));*/
 
         //ustawienie walidatorów formularza
         $imie->getValidator('NotEmpty')->setMessages(array(

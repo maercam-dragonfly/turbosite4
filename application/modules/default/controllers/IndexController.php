@@ -116,11 +116,10 @@ class IndexController extends My_Controller_Action {
         $this->view->mainTitle = "Szkolenie - nauka jazdy Rzeszów - OSK AUTO TURBO";
     }
 
-    public function zapisyAction() {
-        // action body
-        $this->view->title = "Zapisy";
-        $this->view->mainTitle = "Zapisy - nauka jazdy Rzeszów - OSK AUTO TURBO";
+    public function zapisynakursAction() {
 
+        $this->view->mainTitle = "Zapisy - nauka jazdy Rzeszów - OSK AUTO TURBO";
+		$this->view->mainTitle = "Zapisy - OSK AUTO TURBO";
 
         $form = new Form_ZapisyOnline();
         $rodzaj_kursu = $form->getElement('rodzaj_kursu');
@@ -138,12 +137,14 @@ class IndexController extends My_Controller_Action {
         if ($this->_request->isPost()) {
             // pobranie danych post
             $postData = $this->_request->getPost();
+			var_dump($postData);
             if (isset($postData['txt_captcha']['id'])) {
                 $captcha = $postData['txt_captcha']['id'];
             }
-            //echo APPLICATION_PATH;
+
             // walidacja danych post
             if ($form->isValid($postData)) {
+                echo "ALA1<br/>";
                 // pobranie danych wyslanych z formularza
                 $formData = $form->getValues();
                 $student = new Application_Model_Student();
@@ -151,14 +152,15 @@ class IndexController extends My_Controller_Action {
                         ->from('Application_Model_Student s')
                         ->where('s.email = ?', $formData['email'])
                         ->fetchArray();
-
+				echo "ALA2<br/>";
                 if (count($email) != 0) {
                     $form->email->addError('Osoba o podanym e-mail już istnieje');
                 } else {
+					echo "ALA3<br/>";
                     $formData['created'] = new Doctrine_Expression('NOW()');
                     $formData['registered'] = new Doctrine_Exception('FALSE');
                     $student->add($formData);
-
+					echo "ALA4<br/>";
                     $nameContentMail
                             = My_CourseTypes::getMailContentNameByCourseTypeId($formData['rodzaj_kursu']);
 
@@ -180,7 +182,11 @@ class IndexController extends My_Controller_Action {
 
                 // operacje na danych
                 //Zend_Debug::dump($formData);
-            }
+            }  else {
+
+            $errors = $form->getMessages();
+			Zend_Debug::dump($errors); // ← wyświetli błędy (jeśli masz włączony Zend_Debug)
+			}		
         }
         // uzupelnij formularz domyslnymi danymi
         else {
@@ -203,7 +209,6 @@ class IndexController extends My_Controller_Action {
             $this->view->dialogMessage = $dialogMessage;
         }
         $this->view->form = $form;
-
         // uzupelnienie formularza danymi
     }
 
@@ -254,11 +259,6 @@ class IndexController extends My_Controller_Action {
 	public function zapisyjakrozpoczacAction() {
         // action body
         $this->view->mainTitle = "Jak rozpocząć? - OSK AUTO TURBO";
-    }
-	
-	public function zapisynakursAction() {
-        // action body
-        $this->view->mainTitle = "Zapisy - OSK AUTO TURBO";
     }
 	
 	public function szkolenieteoretyczneAction() {

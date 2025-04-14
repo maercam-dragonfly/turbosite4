@@ -8,7 +8,6 @@ class Form_ZapisyOnline extends Form_BaseZapisy{
     public function init()
     {
         parent::init();
-        
         $captchaImage = new Zend_Captcha_Image();
         $captchaImage->setFont(APPLICATION_PATH . '/data/arial.ttf')
                      ->setFontSize(36)
