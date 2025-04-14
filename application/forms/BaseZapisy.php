@@ -106,6 +106,12 @@ class Form_BaseZapisy extends Zend_Form {
 		$this->setDecorators(array(
     array('ViewScript', array('viewScript' => 'partials/zapisy_form.phtml'))
 ));
+
+$this->setElementDecorators(array(
+
+            array('Errors')
+
+        ));
 		/*
         $this->addDecorator('FormElements')
                 ->addDecorator('HtmlTag', array('tag' => 'div'))

@@ -189,7 +189,7 @@ class IndexController extends My_Controller_Action {
             }  else {
 
 				$errors = $form->getMessages();
-
+Zend_Debug::dump($errors);
 				$errorMessages = '';
 				foreach ($errors as $fieldErrors) {
 					foreach ($fieldErrors as $msg) {

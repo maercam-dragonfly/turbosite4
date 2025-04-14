@@ -7,7 +7,7 @@
       <th>e-mail</th>
       <th>telefon</th>
       <th>utworzony</th>
-      <th>R</th>
+      <th>rodzaj</th>
       <th> </th>
       </tr>
 </thead>
@@ -21,7 +21,7 @@ foreach($this->students as $student) {
         <td><?php echo $student->email;?></td>
         <td><?php echo $student->telefon;?></td>
         <td><?php echo date("d-m-Y",strtotime( $student->created) );?></td>
-        <td><?php echo $student->registered?'TAK':'NIE';?></td>
+        <td><?php echo My_CourseTypes::getCourseTypeByMappingId($student->rodzaj_kursu);?></td>
        <td>
        <a href="<?php echo $this->url(array('module' => 'admin', 'controller' => 'zapisy', 'action' => 'edit')).'/'.$student->id?>">Edytuj</a>
        <a href="<?php echo $this->url(array('module' => 'admin', 'controller' => 'zapisy', 'action' => 'delete')).'/'.$student->id?>">Usuń</a>
