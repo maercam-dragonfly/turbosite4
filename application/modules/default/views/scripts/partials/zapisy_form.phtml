@@ -2,7 +2,9 @@
                         <div class="row g-3">
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="imie" name="imie" placeholder="Imię">
+									<?php $imie = $this->element->imie->getValue(); ?>
+                                    <input type="text" class="form-control" id="imie" name="imie" placeholder="Imię"
+									value="<?php echo htmlspecialchars($imie) ?>">
                                     <label for="imie">Imię</label>
 									<?php if ($this->element->imie->hasErrors()): ?>
 									<div class="error">
@@ -13,7 +15,9 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="nazwisko" name="nazwisko" placeholder="Nazwisko">
+								    <?php $nazwisko = $this->element->nazwisko->getValue(); ?>
+                                    <input type="text" class="form-control" id="nazwisko" name="nazwisko" placeholder="Nazwisko" 
+									value="<?php echo htmlspecialchars($nazwisko) ?>">
                                     <label for="nazwisko">Nazwisko</label>
 									<?php if ($this->element->nazwisko->hasErrors()): ?>
 									<div class="error">
@@ -24,7 +28,9 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="telefon" name="telefon" placeholder="Telefon">
+								    <?php $telefon = $this->element->telefon->getValue(); ?>
+                                    <input type="text" class="form-control" id="telefon" name="telefon" placeholder="Telefon" 
+									value="<?php echo htmlspecialchars($telefon) ?>">
                                     <label for="telefon">Telefon</label>
 									<?php if ($this->element->telefon->hasErrors()): ?>
 									<div class="error">
@@ -36,7 +42,9 @@
 							
 							<div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="email" name="email" placeholder="E-mail">
+									<?php $email = $this->element->email->getValue(); ?>
+                                    <input type="text" class="form-control" id="email" name="email" placeholder="E-mail"
+									value="<?php echo htmlspecialchars($email) ?>">
                                     <label for="email">E-mail</label>
 									<?php if ($this->element->email->hasErrors()): ?>
 									<div class="error">
@@ -59,7 +67,10 @@
 
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="uwagi" name="uwagi" style="height: 100px"></textarea>
+									<?php $uwagi = $this->element->uwagi->getValue(); ?>
+                                    <textarea class="form-control" placeholder="Leave a message here" id="uwagi" name="uwagi" style="height: 100px">
+									<?php echo htmlspecialchars($uwagi) ?>
+									</textarea>
                                     <label for="uwagi">Dodatkowe informacje (opcjonalnie)</label>
                                 </div>
                             </div>
