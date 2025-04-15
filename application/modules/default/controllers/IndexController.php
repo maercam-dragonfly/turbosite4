@@ -47,7 +47,8 @@ class IndexController extends My_Controller_Action {
     }
 	
 	public function zapisyAction(){
-		$this->render('zapisynakurs');
+		return $this->_helper->redirector->gotoSimple('zapisynakurs');
+		//return $this->_helper->redirector->gotoSimple('index', 'zapisynakurs');
 	}
 
     public function zapisynakursAction() {
