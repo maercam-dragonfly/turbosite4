@@ -28,14 +28,43 @@
 			<?php echo $this->partial('partials/cennikkursypartial.phtml', 'default') ?>
 
 			<!----------------------------------- koniec cen kursów ---------------------------------->
+			
+			<div class="course-item bg-light d-flex flex-column h-100 my-4">
+						<div class="text-left p-4 pb-0">
+							<h5>Koszty dodatkowe:</h5>
+							<div class="text-left py-2 pb-10">
+								<p class="mb-1"><i class="fa fa-medkit text-primary me-2"></i>Opłata za wydanie <b>orzeczenia lekarskiego</b> stwierdzającego brak przeciwwskazań zdrowotnych do kierowania pojazdami - platne u lekarza</p>
+								<p class="mb-1"><i class="fa fa-laptop text-primary me-2"></i>Opłata za <b>część teoretyczną państwowego egzaminu</b> na prawo jazdy kat. B - <b>56 zł</b> <a class="text-dark" href="https://www.word.rzeszow.pl/oplaty">(płatne w WORD)</a></p>
+								<p class="mb-1"><i class="fa fa-car text-primary me-2"></i>Opłata za <b>część praktyczną państwowego egzaminu</b> na prawo jazdy kat. B - <b>229 zł</b> <a class="text-dark" href="https://www.word.rzeszow.pl/oplaty">(płatne w WORD)</a></p>
+								<p class="mb-1"><i class="fa fa-id-card text-primary me-2"></i>Opłata za <b>wydanie prawa jazdy</b> - <b>100 zł</b> (płatne w Wydziale Komunikacji)</p>
+								<div class="wow fadeInUp text-left ms-4 fs-7" data-wow-delay="0.1s">
+									<a class="text-dark" href="http://www.oskautoturbo.pl/doci/cennik/ceny_wydania_prawa_jazdy.pdf"><i class="fa fa-file-pdf text-primary me-2"></i>Rozporządzenie Ministra Transportu, Budownictwa i Gospodarki Morskiej z dnia 11 stycznia 2013 r. w sprawie wysokości opłat za wydanie dokumentów stwierdzających uprawnienia do kierowania pojazdami</a>
+								</div>
+							</div>
+						</div>
+					</div>		
+			
+			
+			
 
 			<div class="py-5">
 			<?php echo $this->partial('partials/cennikpromocjepartial.phtml', 'default') ?>
 			</div>
 
+
+			<!----------- początek PDF z cennikiem ---------------->
+			<div class="container py-5">
+				<div class="row g-4 justify-content-center">
+					<p class="mb-0 border-bottom">Pliki do pobrania:</p>
+					<div class="wow fadeInUp" data-wow-delay="0.1s">
+						<a class="btn text-dark" href="../doci/cennik/Cennik.pdf"><i class="fa fa-file-pdf text-primary me-2"></i>Cennik OSK AUTO TURBO</a>
+					</div>
+				</div>
+			</div>
+			<!----------- koniec PDF z cennikiem ---------------->
+			
+			
 			<!-- przyciski na dole------------------>
-			
-			
 			<div class="text-center wow fadeInUp" data-wow-delay="0.1s">
 				<div class="row g-4 border-top mt-5">
 					<div class="col-lg-3 col-md-6" data-wow-delay="0.1s">
@@ -61,7 +90,7 @@
 				</div>
             </div>
 			<!------------- koniec przycisków na dole ------->
-
+			
 		</div>
 		
     </div>
