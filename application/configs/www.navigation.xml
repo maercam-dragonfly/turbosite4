@@ -7,7 +7,7 @@
 			<pages>
 				<home>
 					<label>Dlaczego my?</label>
-					<uri>/</uri>
+					<uri>/#dlaczego_my</uri>
 				</home>
 				<opinie>
 					<label>Opinie</label>

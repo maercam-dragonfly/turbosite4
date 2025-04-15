@@ -3,10 +3,10 @@
 class My_CourseTypes
 {
     const KatB = 'kurs prawa jazdy kat. B';
+	const JazdyUzpupel = 'jazdy uzupełniające';
+    const Pytanie = 'pytanie';
     const DodatkowyJazda = 'kurs dodatkowy (5h jazdy) + zaświadczenie';
     const DodatkowyTeoria = 'kurs dodatkowy (10h teorii) + zaświadczenie';
-    const JazdyUzpupel = 'jazdy uzupełniające';
-    const Pytanie = 'pytanie';
 	
 	private static $_mapping = [
     0 => 'kurs',
@@ -19,25 +19,25 @@ class My_CourseTypes
     public static function init(){
         self::$_courseTypes = array(
             self::KatB,
-			self::DodatkowyJazda,
-			self::DodatkowyTeoria,
-            self::JazdyUzpupel,
-			self::Pytanie
+			self::JazdyUzpupel,
+			self::Pytanie,
+            self::DodatkowyJazda,
+			self::DodatkowyTeoria
             );
     }
     private static $_courseMail = array(
         'zapisyKursKatBMail',
-        'zapisyKursDodatkowyJazdaMail',
-        'zapisyKursDotatkowyTeoriaMail',
         'zapisyJazdyUzupelniajaceMail',
-		'zapisyPytanieMail'
+        'zapisyPytanieMail',
+        'zapisyKursDotatkowyTeoriaMail', 
+		'zapisyKursDotatkowyTeoriaMail' 
     );
     private static $_courseTypesMailTitles = array(
-        'Zapis na kurs prawa jazdy',
+        'Zapis na kurs prawa jazdy - OSK AUTO TURBO',
+        'Zapis na jazdy doszkalające - OSK AUTO TURBO',
+        'Zadanie pytania - OSK AUTO TURBO',
         'Zapis na kurs dodatkowy',
-        'Zapis na kurs dodatkowy',
-        'Zapis na jazdy doszkalające',
-		'Zadanie pytania'
+		'Zapis na kurs dodatkowy'
     );
 
     public static function getAllCourseTypes(){
