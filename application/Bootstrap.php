@@ -114,7 +114,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
                             'action' => 'download'
                         )
         );
-
+/*
         $galleryRoute = new Zend_Controller_Router_Route(
                         'galeria/:action/:slug',
                         array(
@@ -124,7 +124,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
                             'slug' => null
                         )
         );
-
+*/
         $downloadRoute = new Zend_Controller_Router_Route(
                         'doc/:actionName/:filename',
                         array(
@@ -195,7 +195,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
         $router->addRoute('article', $artilceRoute);
         $router->addRoute('articlePaginate', $artilceRoutePage);
         $router->addRoute('indexRoute', $indexRoute);
-        $router->addRoute('gallery', $galleryRoute);
+       // $router->addRoute('gallery', $galleryRoute);
         /******************************************************* */
         $router->addRoute('admin', $adminRoute);
         //$router->addRoute('adminmigration',$migrationRoute); 

@@ -9,76 +9,6 @@ class IndexController extends My_Controller_Action {
         $this->_helper->layout()->setLayout('layout', 'default');
     }
 
-    public function listAction() {
-        //$this->view->title = "Aktualności";
-        //$this->view->mainTitle = "Prawo jazdy Rzeszów - OSK AUTO TURBO";
-        # We don't want to render Layout
-        //  $this->_helper->layout()->disableLayout();
-        # rendering view is also not necessary
-        //$this->_helper->viewRenderer->setNoRender();
-
-        $req = $this->getRequest();
-
-        # Pagination parameters
-
-        $currentPage = $req->get('page', 1);
-        $resultsPerPage = $req->getPost('rp', 6);
-
-        # Sorting parameters
-        $orderBy = $req->getPost('sortname', 'date');
-        $orderType = $req->getPost('sortorder', 'DESC');
-
-        # Query parameters - for Searching
-        $query = $req->getPost('query', '');
-        $qtype = $req->getPost('qtype', 'date');
-
-        # Creating Doctine pager object
-
-        $pager = new Doctrine_Pager(
-                                Doctrine_Query::create()
-                                ->from('Application_Model_Article a')
-                                ->orderby("$orderBy $orderType"),
-                        $currentPage, // Current page of request
-                        $resultsPerPage // (Optional) Number of results per page. Default is 10
-        );
-
-        $items = $pager->execute();
-
-
-        $this->view->currentPage = $currentPage;
-        $this->view->pagesCount = ceil($pager->getNumResults() / $pager->getMaxPerPage());
-
-        if ($this->view->currentPage > $this->view->pagesCount) {
-            throw new Zend_Controller_Action_Exception('Strona nie istnieje', 404);
-        }
-        $elements = array();
-        # We also have to format our data array that flexifrid could retrieve itt
-
-
-        foreach ($items as $item) {
-
-            $text = $item->content;
-            if (strlen($text) > 600) {
-                $text = substr($text, 0, 600) . '...';
-            }
-            $elements[] = array(
-                'id' => $item->id,
-                'title' => $item->title,
-                'date' => $item->date,
-                'content' => $text,
-                'slug' => $item->slug,
-                    // 'cell' => array_values($item->toArray())
-            );
-        }
-
-        $this->view->articles = $elements;
-        /*   echo Zend_Json::encode(array(
-          'page' => $currentPage,
-          'total' => $pager->getNumResults(),
-          'rows' => $elements
-          )); */
-    }
-
     public function indexAction() {
         // action body
         if ($this->getRequest()->getRequestUri() == '/public/') {
@@ -105,16 +35,20 @@ class IndexController extends My_Controller_Action {
     }
 
     public function onasAction() {
-        // action body
-        $this->view->title = "O nas";
-        $this->view->mainTitle = "O Nas - Ośrodek szkolenia kierowców Rzeszów - OSK AUTO TURBO";
+        $this->render('index');
     }
 
     public function szkolenieAction() {
-        // action body
-        $this->view->title = "Szkolenie";
-        $this->view->mainTitle = "Szkolenie - nauka jazdy Rzeszów - OSK AUTO TURBO";
+		$this->render('szkolenieteoretyczne');
     }
+	
+	public function egzaminAction() {
+		$this->render('szkolenieteoretyczne');
+    }
+	
+	public function zapisyAction(){
+		$this->render('zapisynakursAction');
+	}
 
     public function zapisynakursAction() {
 
@@ -224,22 +158,13 @@ class IndexController extends My_Controller_Action {
         // uzupelnienie formularza danymi
     }
 
-    public function egzaminAction() {
-        // action body
-        throw new Zend_Controller_Action_Exception('Strona nie istnieje', 404);
-        $this->view->title = "Egzamin";
-    }
-
     public function cennikAction() {
         // action body
-        $this->view->title = "Cennik";
-        $this->view->mainTitle = "Cennik - Prawo jazdy Rzeszów - OSK AUTO TURBO";
+        $this->render('cennikkursy');
     }
 
     public function promocjeAction() {
-        // action body
-        $this->view->title = "Promocje";
-        $this->view->mainTitle = "Promocje - Prawo jazdy Rzeszów - OSK AUTO TURBO";
+		$this->render('cennikpromocje');
     }
 
     public function bazawiedzyAction() {
@@ -248,17 +173,17 @@ class IndexController extends My_Controller_Action {
         $this->view->mainTitle = "Baza wiedzy - OSK AUTO TURBO";
     }
 	
-	    public function opinieAction() {
+	public function opinieAction() {
         // action body
         $this->view->mainTitle = "Opinie - OSK AUTO TURBO";
     }
 	
-	    public function cennikkursyAction() {
+	public function cennikkursyAction() {
         // action body
         $this->view->mainTitle = "Cennik - OSK AUTO TURBO";
     }
 
-	    public function cennikjazdyAction() {
+	public function cennikjazdyAction() {
         // action body
         $this->view->mainTitle = "Cennik - OSK AUTO TURBO";
     }
@@ -295,6 +220,9 @@ class IndexController extends My_Controller_Action {
     }
 
     public function konkursAction() {
+		throw new Zend_Controller_Action_Exception('Strona nie istnieje', 404);
+        
+		
         // action body
         $this->view->title = "Konkurs";
 
@@ -377,48 +305,21 @@ class IndexController extends My_Controller_Action {
         //$this->_flashMessenger = $this->_helper->getHelper('FlashMessenger');
     }
 
-    public function galeriaAction() {
-        // action body
-        //$this->view->title = "Galeria";
-		$this->view->mainTitle = "Galeria - OSK AUTO TURBO";
-        //$this->view->path_img = '/img/gallery/';
-        //$this->view->path_mini = $this->view->path_img . 'mini/';
-        //My_StaticLibrary::generateGalery('.' . $this->view->path_img, '.' . //$this->view->path_mini);
-        //$images = array();
-        //$dir = new DirectoryIterator('.' . $this->view->path_img);
-
-        //foreach ($dir as $file) {
-            // Pomiń pozycje "." oraz ".."
-        //    if ($file->isDot()) {
-        //        continue;
-        //    }
-        //    if (!$file->isDir()) {
-
-        //        $name_roz = explode('.', $file);
-        //        $min_name = $name_roz[0] . '.th.' . $name_roz[1];
-
-         //       if (file_exists('.' . $this->view->path_mini . $min_name)) {
-
-        //            $images[$this->view->path_img . $file->__toString()]['mini'] = $this->view->path_mini . $min_name;
-         //           $images[$this->view->path_img . $file->__toString()]['title'] = $name_roz[0];
-        //        }
-        //        else
-        //            continue;
-        //    }
-        //}
-        //$this->view->images = $images;
-    }
-
     public function karieraAction() {
         // action body
-        $this->view->title = "Oferty pracy";
-        $this->view->mainTitle = "Kariera - Ośrodek Szkolenia Kierowców AUTO TURBO";
+        //$this->view->title = "Oferty pracy";
+       // $this->view->mainTitle = "Kariera - Ośrodek Szkolenia Kierowców AUTO TURBO";
+		throw new Zend_Controller_Action_Exception('Strona nie istnieje', 404);
     } 
      
     public function kontaktAction() {
         // action body
 		$this->zapisynakursAction();
         $this->view->mainTitle = "Kontakt - OSK AUTO TURBO";
+    }
+	
+	public function galeriaAction() {
+        $this->render('galerianowa');
     }
 	
 	public function galerianowaAction() {
