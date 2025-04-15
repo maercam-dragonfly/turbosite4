@@ -1,5 +1,0 @@
-<?php
-    echo 'admin/view/scripts/index/index.phtml';
-    echo $this->form;
-    
-                                        

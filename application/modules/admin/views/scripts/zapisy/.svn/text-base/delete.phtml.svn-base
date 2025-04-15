@@ -1,8 +1,0 @@
-<h2>Czy na pewno chcesz usunąć?</h2>
-<p>
-    <?php
-    echo $this->student->imie.' '.$this->student->nazwisko;
-    ?>
-</p>
-<?php
-        echo $this->form;    
