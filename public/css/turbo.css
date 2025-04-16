@@ -243,3 +243,22 @@
     padding-left: 0;
 }
 
+@media (max-width: 991.98px) {
+  .mobilna-lista {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .mobilna-lista .kurs-item {
+    display: inline-block;
+    min-width: 85%;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+}
