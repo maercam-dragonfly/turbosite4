@@ -47,7 +47,8 @@ class IndexController extends My_Controller_Action {
     }
 	
 	public function zapisyAction(){
-		$this->render('zapisynakursAction');
+		return $this->_helper->redirector->gotoSimple('zapisynakurs');
+		//return $this->_helper->redirector->gotoSimple('index', 'zapisynakurs');
 	}
 
     public function zapisynakursAction() {
@@ -324,7 +325,7 @@ class IndexController extends My_Controller_Action {
 	
 	public function galerianowaAction() {
         // action body
-        $this->view->mainTitle = "Galeria - OSK AUTO TURBO";
+        //$this->view->mainTitle = "Galeria - OSK AUTO TURBO";
     }
 
     public function newsAction() {
