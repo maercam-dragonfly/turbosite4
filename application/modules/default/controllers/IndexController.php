@@ -78,7 +78,7 @@ class IndexController extends My_Controller_Action {
 
             // walidacja danych post
             if ($form->isValid($postData)) {
-                echo "ALA1<br/>";
+
                 // pobranie danych wyslanych z formularza
                 $formData = $form->getValues();
                 $student = new Application_Model_Student();
@@ -106,9 +106,15 @@ class IndexController extends My_Controller_Action {
                             ->setBodyHtml($body);
 					$mail->setFrom('oskautoturbo@gmail.com', 'OSK AUTO TURBO');		
 					
+					
+					$body_do_turbo = $subject. "<br><br>Nowa osoba:<br>" . $student->imie . " " . $student->nazwisko . "<br>telefon:" . $student->telefon . "<br>" . $student->email. "<br><br>" . $student->uwagi;
+					echo $body_do_turbo;
+			
+
+					
 					$mail_do_turbo->addTo('oskautoturbo@gmail.com')
                             ->setSubject($subject)
-                            ->setBodyHtml($student);
+                            ->setBodyHtml($body_do_turbo);
 					$mail_do_turbo->setFrom('oskautoturbo@gmail.com', 'OSK AUTO TURBO');
 							
 					try {
