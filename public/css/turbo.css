@@ -307,3 +307,7 @@
     font-size: 2rem; /* duże ekrany (lg) */
   }
 }
+
+html, body {
+  overflow-x: hidden !important;
+}
