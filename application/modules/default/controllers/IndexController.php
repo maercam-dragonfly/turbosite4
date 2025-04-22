@@ -86,16 +86,13 @@ class IndexController extends My_Controller_Action {
                         ->from('Application_Model_Student s')
                         ->where('s.email = ?', $formData['email'])
                         ->fetchArray();
-				echo "ALA2<br/>";
-
-					echo "ALA4<br/>";
                     $formData['created'] = new Doctrine_Expression('NOW()');
                     $formData['registered'] = new Doctrine_Exception('FALSE');
                     $student->add($formData);
-					echo "ALA5<br/>";
                     $nameContentMail = My_CourseTypes::getMailContentNameByCourseTypeId($formData['rodzaj_kursu']);
 
                     $mail = new Zend_Mail('UTF-8');
+					$mail_do_turbo = new Zend_Mail('UTF-8');
 					
                     $body = $this->view->partial($nameContentMail, array(
                         'imie' => $student->imie,
@@ -108,15 +105,25 @@ class IndexController extends My_Controller_Action {
                             ->setSubject($subject)
                             ->setBodyHtml($body);
 					$mail->setFrom('oskautoturbo@gmail.com', 'OSK AUTO TURBO');		
+					
+					$mail_do_turbo->addTo('oskautoturbo@gmail.com')
+                            ->setSubject($subject)
+                            ->setBodyHtml($student);
+					$mail_do_turbo->setFrom('oskautoturbo@gmail.com', 'OSK AUTO TURBO');
+							
 					try {
                     $mail->send();
+					} catch (Exception $e) {
+						echo "<pre>Błąd przy wysyłce maila: " . $e->getMessage() . "</pre>";
+					}
+					try {
+                    $mail_do_turbo->send();
 					} catch (Exception $e) {
 						echo "<pre>Błąd przy wysyłce maila: " . $e->getMessage() . "</pre>";
 					}
 					
                     $flag = false;
                 
-				echo "ALA6<br/>";
 
                 // operacje na danych
                 //Zend_Debug::dump($formData);
