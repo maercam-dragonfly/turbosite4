@@ -108,9 +108,6 @@ class IndexController extends My_Controller_Action {
 					
 					
 					$body_do_turbo = $subject. "<br><br>Nowa osoba:<br>" . $student->imie . " " . $student->nazwisko . "<br>telefon:" . $student->telefon . "<br>" . $student->email. "<br><br>" . $student->uwagi;
-					echo $body_do_turbo;
-			
-
 					
 					$mail_do_turbo->addTo('oskautoturbo@gmail.com')
                             ->setSubject($subject)
