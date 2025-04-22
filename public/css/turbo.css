@@ -308,6 +308,18 @@
   }
 }
 
-html, body {
+/*html, body {
   overflow-x: hidden !important;
+}*/
+
+/** {
+  outline: 3px solid blue !important;
+}
+
+body {
+  outline: 3px solid red !important;
+}*/
+
+.mapa_glowna {
+	overflow-x: hidden !important;
 }
