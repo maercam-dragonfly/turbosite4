@@ -323,3 +323,22 @@ body {
 .mapa_glowna {
 	overflow-x: hidden !important;
 }
+
+.equal-height-box {
+  position: relative;
+  width: 100%;
+  padding-top: 177.78%; /* proporcja 16:9 */
+  overflow: hidden;
+  background-color: #f8f9fa;
+}
+
+.equal-height-box iframe,
+.equal-height-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0;
+}
