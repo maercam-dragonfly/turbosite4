@@ -107,7 +107,7 @@ class IndexController extends My_Controller_Action {
 					$mail->setFrom('oskautoturbo@gmail.com', 'OSK AUTO TURBO');		
 					
 					
-					$body_do_turbo = $subject. "<br><br>Nowa osoba:<br>" . $student->imie . " " . $student->nazwisko . "<br>telefon:" . $student->telefon . "<br>" . $student->email. "<br><br>" . $student->uwagi;
+					$body_do_turbo = $subject. "<br><br>Nowa osoba:<br>" . $student->imie . " " . $student->nazwisko . "<br><br>telefon:<br>" . $student->telefon . "<br><br>" . $student->email. "<br><br>" . $student->uwagi;
 					
 					$mail_do_turbo->addTo('oskautoturbo@gmail.com')
                             ->setSubject($subject)
