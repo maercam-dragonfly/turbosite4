@@ -25,28 +25,33 @@
 		
 			<div class="text-center">
                 <h6 class="section-title bg-white text-center text-primary px-3">Galeria</h6>
-                <h1 class="mb-5">Galeria</h1>
+                <h1 class="mb-1">Galeria</h1>
             </div>
 			
 			<div class="container py-5">
 			  <div class="row gallery g-3">
 
+				<!-- GLightbox CSS -->
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+				<div class="row">
 				<?php
-				  $folder = 'img/galeria/strona_galeria/galeria_duze/';
+				  $folder_mini = 'img/galeria/strona_galeria/galeria_male/';
+				  $folder_duze = 'img/galeria/strona_galeria/galeria_duze/';
 				  $dozwolone_rozszerzenia = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
 
-				  // Sprawdź czy folder istnieje
-				  if (is_dir($folder)) {
-					foreach (scandir($folder) as $plik) {
-					  $sciezka = $folder . $plik;
+				  if (is_dir($folder_duze)) {
+					foreach (scandir($folder_duze) as $plik) {
+					  $sciezka_duze = $folder_duze . $plik;
+					  $sciezka_mini = $folder_mini . $plik;
 					  $ext = pathinfo($plik, PATHINFO_EXTENSION);
 					  $nazwaBezRozszerzenia = pathinfo($plik, PATHINFO_FILENAME);
 
 					  if (in_array(strtolower($ext), $dozwolone_rozszerzenia)) {
 						echo '
-						<div class="col-6 col-md-4 col-lg-3">
-						  <a href="' . $sciezka . '" data-lightbox="galeria" data-title="' . htmlspecialchars($nazwaBezRozszerzenia) . '">
-							<img src="/' . $sciezka . '" alt="' . htmlspecialchars($nazwaBezRozszerzenia) . '" class="img-fluid">
+						<div class="col-6 col-md-4 col-lg-3 mb-4">
+						  <a href="/' . $sciezka_duze . '" class="glightbox" data-gallery="galeria">
+							<img src="/' . $sciezka_mini . '" alt="' . htmlspecialchars($nazwaBezRozszerzenia) . '" class="img-fluid rounded shadow-sm" loading="lazy">
 						  </a>
 						</div>';
 					  }
@@ -55,17 +60,24 @@
 					echo '<p>Nie znaleziono folderu z galerią.</p>';
 				  }
 				?>
+				</div>
+
+				<!-- GLightbox JS -->
+				<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+				<script>
+				  const lightbox = GLightbox({
+					selector: '.glightbox',
+					touchNavigation: true,
+					loop: true,
+					zoomable: true,
+				  });
+				</script>
+
 
 			  </div>
 			</div>
 
-<!-- Lightbox CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
 
-<!-- Lightbox JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-
-			
 			
 			
 
