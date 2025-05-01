@@ -28,70 +28,52 @@
                 <h1 class="mb-5">Przed egzaminem</h1>
             </div>
 			<div class="row g-4">
-				<div class="col-lg-3 col-md-6">
-						<div class="bg-light">
-                            <a class="position-relative d-block overflow-hidden" href="">
-								<div class="equal-height-box">
-                                <img class="img-fluid" src="/img/baza_wiedzy_egzamin/01.png" alt="">
-								</div>
-                            </a>
-						</div>
-                </div>
-					 <div class="col-lg-3 col-md-6">
-						<div class="bg-light">
-							<a class="position-relative d-block overflow-hidden" href="">
-								<div class="equal-height-box">
-								<img class="img-fluid" src="/img/baza_wiedzy_egzamin/02.png" alt="">
-								</div>
-							</a>
-						</div>
-                    </div>
-                        <div class="col-lg-3 col-md-6">
-						<div class="bg-light">
-                            <a class="position-relative d-block overflow-hidden" href="">
-								<div class="equal-height-box">
-                                <img class="img-fluid" src="/img/baza_wiedzy_egzamin/03.png" alt="">
-								</div>
-                            </a>
-						</div>
-						</div>						
-						<div class="col-lg-3 col-md-6">
-						<div class="bg-light">
-                            <a class="position-relative d-block overflow-hidden" href="">
-								<div class="equal-height-box">
-                                <img class="img-fluid" src="/img/baza_wiedzy_egzamin/04.png" alt="">
-								</div>
-                            </a>
-                        </div>
-						</div>
-                        <div class="col-lg-3 col-md-6">
-						<div class="bg-light">
-                            <a class="position-relative d-block overflow-hidden" href="">
-								<div class="equal-height-box">
-                                <img class="img-fluid" src="/img/baza_wiedzy_egzamin/05.png" alt="">
-								</div>
-                            </a>
-                        </div>
-						</div>
-                        <div class="col-lg-3 col-md-6">
-						<div class="bg-light">
-                            <a class="position-relative d-block overflow-hidden" href="">
-								<div class="equal-height-box">
-                                <img class="img-fluid" src="/img/baza_wiedzy_egzamin/06.png" alt="">
-								</div>
-                            </a>
-						</div>           
-						</div>
-						<div class="col-lg-3 col-md-6">
-						<div class="bg-light">
-                            <a class="position-relative d-block overflow-hidden" href="">
-								<div class="equal-height-box">
-                                <img class="img-fluid" src="/img/baza_wiedzy_egzamin/07.png" alt="">
-								</div>
-                            </a>
-                        </div>
-						</div>
 
+				<!-- GLightbox CSS -->
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+				<div class="container d-flex justify-content-center">
+					<div class="row">
+					<?php
+					  $folder_mini = 'img/baza_wiedzy_egzamin/baza_wiedzy_male/';
+					  $folder_duze = 'img/baza_wiedzy_egzamin/baza_wiedzy_duze/';
+					  $dozwolone_rozszerzenia = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+
+					  if (is_dir($folder_duze)) {
+						foreach (scandir($folder_duze) as $plik) {
+						  $sciezka_duze = $folder_duze . $plik;
+						  $sciezka_mini = $folder_mini . $plik;
+						  $ext = pathinfo($plik, PATHINFO_EXTENSION);
+						  $nazwaBezRozszerzenia = pathinfo($plik, PATHINFO_FILENAME);
+
+						  if (in_array(strtolower($ext), $dozwolone_rozszerzenia)) {
+							echo '
+							<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+							  <a href="/' . $sciezka_duze . '" class="glightbox" data-gallery="galeria">
+								<img src="/' . $sciezka_mini . '" alt="' . htmlspecialchars($nazwaBezRozszerzenia) . '" class="img-fluid rounded shadow-sm" loading="lazy">
+							  </a>
+							</div>';
+						  }
+						}
+					  } else {
+						echo '<p>Nie znaleziono folderu z galerią.</p>';
+					  }
+					?>
+					</div>
+
+				<!-- GLightbox JS -->
+				<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+				<script>
+				  const lightbox = GLightbox({
+					selector: '.glightbox',
+					touchNavigation: true,
+					loop: true,
+					zoomable: true,
+				  });
+				</script>
+
+
+				</div>
 			</div>
 
 

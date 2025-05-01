@@ -34,32 +34,35 @@
 				<!-- GLightbox CSS -->
 				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
-				<div class="row">
-				<?php
-				  $folder_mini = 'img/galeria/strona_galeria/galeria_male/';
-				  $folder_duze = 'img/galeria/strona_galeria/galeria_duze/';
-				  $dozwolone_rozszerzenia = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+				<div class="container d-flex justify-content-center">
+					<div class="row">
+					<?php
+					  $folder_mini = 'img/galeria/strona_galeria/galeria_male/';
+					  $folder_duze = 'img/galeria/strona_galeria/galeria_duze/';
+					  $dozwolone_rozszerzenia = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
 
-				  if (is_dir($folder_duze)) {
-					foreach (scandir($folder_duze) as $plik) {
-					  $sciezka_duze = $folder_duze . $plik;
-					  $sciezka_mini = $folder_mini . $plik;
-					  $ext = pathinfo($plik, PATHINFO_EXTENSION);
-					  $nazwaBezRozszerzenia = pathinfo($plik, PATHINFO_FILENAME);
+					  if (is_dir($folder_duze)) {
+						foreach (scandir($folder_duze) as $plik) {
+						  $sciezka_duze = $folder_duze . $plik;
+						  $sciezka_mini = $folder_mini . $plik;
+						  $ext = pathinfo($plik, PATHINFO_EXTENSION);
+						  $nazwaBezRozszerzenia = pathinfo($plik, PATHINFO_FILENAME);
 
-					  if (in_array(strtolower($ext), $dozwolone_rozszerzenia)) {
-						echo '
-						<div class="col-6 col-md-4 col-lg-3 mb-4">
-						  <a href="/' . $sciezka_duze . '" class="glightbox" data-gallery="galeria">
-							<img src="/' . $sciezka_mini . '" alt="' . htmlspecialchars($nazwaBezRozszerzenia) . '" class="img-fluid rounded shadow-sm" loading="lazy">
-						  </a>
-						</div>';
+						  if (in_array(strtolower($ext), $dozwolone_rozszerzenia)) {
+							echo '
+							<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+							  <a href="/' . $sciezka_duze . '" class="glightbox" data-gallery="galeria">
+								<img src="/' . $sciezka_mini . '" alt="' . htmlspecialchars($nazwaBezRozszerzenia) . '" class="img-fluid rounded shadow-sm" loading="lazy">
+							  </a>
+							</div>';
+						  }
+						}
+					  } else {
+						echo '<p>Nie znaleziono folderu z galerią.</p>';
 					  }
-					}
-				  } else {
-					echo '<p>Nie znaleziono folderu z galerią.</p>';
-				  }
-				?>
+					?>
+					</div>
+				
 				</div>
 
 				<!-- GLightbox JS -->
