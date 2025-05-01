@@ -30,54 +30,11 @@
                 <h6 class="section-title bg-white text-center text-primary px-3">Opinie</h6>
 				<h1 class="mb-5">Tysiące osób poleca AUTO TURBO! Zobacz nasze opinie!</h1>
 				
-				
-				<div class="row g-4">
-					<div class="col-lg-3 col-md-6">
-						<div class="team-item">
-								<a class="position-relative d-block overflow-hidden" href="https://www.superprawojazdy.pl/osk-auto-turbo,9598.htm">
-									<img class="img-fluid" src="/img/opinie/auto_turbo_superprawojazdy.png" alt="">
-								</a>
-						</div>
-						<div class="d-flex border-top">
-                            <small class="flex-fill text-center py-2"><a href="https://www.superprawojazdy.pl/osk-auto-turbo,9598.htm" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;">Zobacz wiecej</a></small>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-						<div class="team-item">
-							<a class="position-relative d-block overflow-hidden" href="https://g.co/kgs/QFkZTSm">
-								<img class="img-fluid" src="/img/opinie/auto_turbo_google.png" alt="">
-							</a>
-						</div>
-						<div class="d-flex border-top">
-                            <small class="flex-fill text-center py-2"><a href="https://g.co/kgs/QFkZTSm" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;">Zobacz wiecej</a></small>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-						<div class="team-item">
-                            <a class="position-relative d-block overflow-hidden" href="https://www.prawo-jazdy-360.pl/ranking-szkol-jazdy/osrodek-szkolenia-kierowcow-auto-turbo-grzegorz-palasz/rzeszow">
-                                <img class="img-fluid" src="/img/opinie/auto_turbo_prawojazdy360.png" alt="">
-                            </a>
-						</div>
-						<div class="d-flex border-top">
-                            <small class="flex-fill text-center py-2"><a href="https://www.prawo-jazdy-360.pl/ranking-szkol-jazdy/osrodek-szkolenia-kierowcow-auto-turbo-grzegorz-palasz/rzeszow" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;">Zobacz wiecej</a></small>
-                        </div>
-					</div>						
-					<div class="col-lg-3 col-md-6">
-						<div class="team-item">
-                            <a class="position-relative d-block overflow-hidden" href="https://www.facebook.com/prawojazdyautoturbo">
-                                <img class="img-fluid" src="/img/opinie/auto_turbo_facebook.png" alt="">
-                            </a>
-                        </div>
-						<div class="d-flex border-top">
-                            <small class="flex-fill text-center py-2"><a href="https://www.facebook.com/prawojazdyautoturbo" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;">Zobacz wiecej</a></small>
-                        </div>
-					</div>
-
-
-				</div>
-
+				<?php echo $this->partial('partials/opiniepartials.phtml', 'default') ?>
 
             </div>
+			
+			
 			
 			<div class="text-center my-5">
 				<?php echo $this->partial('partials/opinieonas.phtml', 'default') ?>
