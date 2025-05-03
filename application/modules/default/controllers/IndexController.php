@@ -209,6 +209,11 @@ class IndexController extends My_Controller_Action {
         $this->view->mainTitle = "Jak rozpocząć? - OSK AUTO TURBO";
     }
 	
+	public function terminykursowAction() {
+        // action body
+        $this->view->mainTitle = "Terminy kursów - OSK AUTO TURBO";
+    }
+	
 	public function szkolenieteoretyczneAction() {
         // action body
         $this->view->mainTitle = "Szkolenie teoretyczne - OSK AUTO TURBO";
@@ -337,6 +342,11 @@ class IndexController extends My_Controller_Action {
         // action body
         //$this->view->mainTitle = "Galeria - OSK AUTO TURBO";
     }
+	
+	public function dlaczegomyAction() {
+		$this->view->mainTitle = "Dlaczego my? - OSK AUTO TURBO";   
+    }
+	
 
     public function newsAction() {
         //$this->view->title = "Aktualności";

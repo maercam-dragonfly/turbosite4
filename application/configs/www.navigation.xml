@@ -7,7 +7,7 @@
 			<pages>
 				<home>
 					<label>Dlaczego my?</label>
-					<uri>/#dlaczego_my</uri>
+					<uri>/dlaczegomy</uri>
 				</home>
 				<opinie>
 					<label>Opinie</label>
@@ -46,13 +46,17 @@
 			<uri>/zapisy</uri>
 			<pages>
 				<zapisyjakrozpoczac>
-					<label>Jak rozpocząc?</label>
+					<label>Jak rozpocząć?</label>
 					<uri>/zapisyjakrozpoczac</uri>
 				</zapisyjakrozpoczac>
 				<zapisynakurs>
 					<label>Zapisy na kurs</label>
 					<uri>/zapisynakurs</uri>
 				</zapisynakurs>
+				<najbliszeterminykursowwszystkie>
+					<label>Terminy kursów</label>
+					<uri>/terminykursow</uri>
+				</najbliszeterminykursowwszystkie>
 			</pages>
         </zapisy>
 		<szkolenie>

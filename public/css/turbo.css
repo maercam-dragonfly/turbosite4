@@ -109,6 +109,20 @@
     background-size: cover;
 }
 
+.page_header_terminy_kursow{
+	background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .4)), url(../img/banery_podstrony/auto_turbo_zapisy_terminy_kursow.jpg);
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page_header_dlaczego_my{
+	background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .4)), url(../img/banery_podstrony/auto_turbo_dlaczego_my.jpg);
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 //PROMOCJE
 
