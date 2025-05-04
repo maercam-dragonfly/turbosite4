@@ -44,7 +44,10 @@
         </div>
 		<div class="container">
             <div class="row g-4">
-                <?php echo $this->partial('partials/najblizszykurskarteczka.phtml', 'default') ?>
+				<?php echo $this->partial('partials/najblizszykurskarteczka.phtml', 'default', [
+						'calendarId' => $this->calendarId,
+						'apiKey' => $this->apiKey
+					]) ?>	
             </div>
     	</div>
 			

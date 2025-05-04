@@ -23,7 +23,10 @@
         <!-- NAJBLIŻSZE TERMINY KURSÓW ---------------------- Start -->
 		<div class="container">
 	
-			<?php echo $this->partial('partials/najbliszeterminykursowwszystkiepartial.phtml', 'default') ?>
+			<?php echo $this->partial('partials/najbliszeterminykursowwszystkiepartial.phtml', 'default', [
+						'calendarId' => $this->calendarId,
+						'apiKey' => $this->apiKey
+					]) ?>	
 
 		</div>
 

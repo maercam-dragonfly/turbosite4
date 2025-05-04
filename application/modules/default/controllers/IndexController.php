@@ -3,13 +3,19 @@
 class IndexController extends My_Controller_Action {
 
     public function init() {
+		$config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/application.ini', APPLICATION_ENV);
+		$this->view->calendarId = $config->google->calendar->id;
+		$this->view->apiKey     = $config->google->api->key;
+		
         /* Initialize action controller here */
         parent::init();
         Zend_Layout::startMvc();
-        $this->_helper->layout()->setLayout('layout', 'default');
+        $this->_helper->layout()->setLayout('layout', 'default');	
+		
     }
 
     public function indexAction() {
+				
         // action body
         if ($this->getRequest()->getRequestUri() == '/public/') {
             throw new Zend_Controller_Action_Exception('Strona nie istnieje', 404);
@@ -32,6 +38,9 @@ class IndexController extends My_Controller_Action {
 
             $article->content = $text;
         }
+		
+		
+		
     }
 
     public function onasAction() {

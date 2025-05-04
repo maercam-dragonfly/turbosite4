@@ -248,6 +248,8 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
         $this->bootstrap("frontController");
         $this->frontController->registerPlugin(new My_ModuleNavigation);
     }
+	
+
 
 }
 

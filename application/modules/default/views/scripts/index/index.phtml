@@ -117,8 +117,11 @@
                 </div>
 			
 
-    		<div class="container">
-                    <?php echo $this->partial('partials/najblizszykurskarteczka.phtml', 'default') ?>    			
+    		<div class="container">   
+					<?php echo $this->partial('partials/najblizszykurskarteczka.phtml', 'default', [
+						'calendarId' => $this->calendarId,
+						'apiKey' => $this->apiKey
+					]) ?>					
     		</div>
     	</div>
 		

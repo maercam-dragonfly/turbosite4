@@ -288,12 +288,15 @@
   
   <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const calendarId = 'c024b24f05198472aeed3516f88e43e4165e8e03aae15c9c4a048da46e962caf@group.calendar.google.com';
-    const apiKey = 'AIzaSyA9ncwaogRxEc4Cf5_tErTYJxOygTrZLUI';
-	
+
+    const calendarConfig = {
+        calendarId: <?= json_encode($this->calendarId) ?>,
+        apiKey: <?= json_encode($this->apiKey) ?>
+    };
+  
     const now = new Date().toISOString();
 
-    const url = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&singleEvents=true&orderBy=startTime&timeMin=${now}`;
+    const url = `https://www.googleapis.com/calendar/v3/calendars/${calendarConfig.calendarId}/events?key=${calendarConfig.apiKey}&singleEvents=true&orderBy=startTime&timeMin=${now}`;
 
     fetch(url)
         .then(response => response.json())
@@ -323,6 +326,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(err => console.error("Błąd ładowania kursu z kalendarza:", err));
 });
+
 </script>
 
 
