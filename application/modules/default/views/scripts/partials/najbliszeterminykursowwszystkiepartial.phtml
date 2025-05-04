@@ -4,10 +4,8 @@
 </div>
 
 <div class="container">
-    <div class="row g-4">
-			
-	<?php echo $this->partial('partials/najblizszykurskarteczka.phtml', 'default') ?>
-	
+<!--
+    <div class="row g-4">	
 		<div class="col-12 col-sm-6 col-lg-3">
 		  <div class="course-item bg-light text-center p-3 h-100 shadow-sm rounded-4 d-flex flex-column">
 			<h1 class="mb-2">14.05.2025 r.</h1>
@@ -177,5 +175,61 @@
 		</div>
 		
 	</div>
-
+-->
 </div>
+
+<!-- Kontener na kursy -->
+<div class="row g-4" id="kursy-container"></div>
+
+<script>
+  const apiKey = 'AIzaSyA9ncwaogRxEc4Cf5_tErTYJxOygTrZLUI';
+  const calendarId = 'c024b24f05198472aeed3516f88e43e4165e8e03aae15c9c4a048da46e962caf@group.calendar.google.com';
+  const maxResults = 20; // Pobieramy więcej, żeby przefiltrować tylko "KURS"
+
+  const kursyContainer = document.getElementById('kursy-container');
+
+  async function fetchKursy() {
+    const now = new Date().toISOString();
+    const url = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&timeMin=${now}&singleEvents=true&orderBy=startTime&maxResults=${maxResults}`;
+
+    const res = await fetch(url);
+    const data = await res.json();
+
+    const kursy = data.items
+      .filter(ev => ev.summary && ev.summary.toLowerCase().includes('kurs'))
+      .slice(0, 16); // tylko 4 najbliższe
+
+    kursy.forEach(event => {
+      const startDate = new Date(event.start.dateTime || event.start.date);
+      const dayName = startDate.toLocaleDateString('pl-PL', { weekday: 'long' });
+      const dateStr = startDate.toLocaleDateString('pl-PL');
+      const timeStr = startDate.toLocaleTimeString('pl-PL', { hour: '2-digit', minute: '2-digit' });
+
+      const html = `
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="course-item bg-light text-center p-3 h-100 shadow-sm rounded-4 d-flex flex-column">
+          <h1 class="mb-2">${dateStr} r.</h1>
+          <div class="mt-auto">
+            <div class="d-flex border-top border-primary-subtle pt-2 fs-6">
+              <div class="flex-fill text-center border-end border-primary-subtle px-2">
+                <i class="fa fa-calendar-day text-primary me-1"></i>${dayName.toUpperCase()}
+              </div>
+              <div class="flex-fill text-center px-2">
+                <i class="fa fa-clock text-primary me-1"></i>${timeStr}
+              </div>
+            </div>
+            <div class="d-flex border-top border-primary-subtle mt-2 pt-2">
+              <div class="flex-fill text-center">
+                <a href="/zapisynakurs" class="btn btn-sm btn-primary px-4 rounded-pill">Zapisz się</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      `;
+      kursyContainer.insertAdjacentHTML('beforeend', html);
+    });
+  }
+
+  fetchKursy();
+</script>
