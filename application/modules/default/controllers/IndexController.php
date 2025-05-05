@@ -59,6 +59,12 @@ class IndexController extends My_Controller_Action {
 		return $this->_helper->redirector->gotoSimple('zapisynakurs');
 		//return $this->_helper->redirector->gotoSimple('index', 'zapisynakurs');
 	}
+	
+	public function calendarapiAction(){
+		My_CalendarApi::getCalendarEntries();
+        $this->_helper->viewRenderer->setNoRender(true);
+        $this->_helper->layout->disableLayout();
+	}
 
     public function zapisynakursAction() {
 
