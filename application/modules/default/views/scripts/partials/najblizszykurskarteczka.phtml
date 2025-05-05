@@ -204,18 +204,11 @@
 	
 <script>
 
-	const calendarConfig = {
-    calendarId: <?= json_encode($this->calendarId) ?>,
-    apiKey: <?= json_encode($this->apiKey) ?>
-	};
-
-  const maxResults = 10; // Pobieramy więcej, żeby przefiltrować tylko "KURS"
-
   const kursyContainer = document.getElementById('kursy-container');
 
   async function fetchKursy() {
-    const now = new Date().toISOString();
-    const url = `https://www.googleapis.com/calendar/v3/calendars/${calendarConfig.calendarId}/events?key=${calendarConfig.apiKey}&timeMin=${now}&singleEvents=true&orderBy=startTime&maxResults=${maxResults}`;
+    
+    const url = '/calendarApi';
 
     const res = await fetch(url);
     const data = await res.json();

@@ -289,14 +289,7 @@
   <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    const calendarConfig = {
-        calendarId: <?= json_encode($this->calendarId) ?>,
-        apiKey: <?= json_encode($this->apiKey) ?>
-    };
-  
-    const now = new Date().toISOString();
-
-    const url = `https://www.googleapis.com/calendar/v3/calendars/${calendarConfig.calendarId}/events?key=${calendarConfig.apiKey}&singleEvents=true&orderBy=startTime&timeMin=${now}`;
+    const url = '/calendarApi';
 
     fetch(url)
         .then(response => response.json())

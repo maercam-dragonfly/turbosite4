@@ -10,7 +10,7 @@ class My_CalendarApi {
 		$date = new DateTime('now', new DateTimeZone('UTC'));
 		$now = $date->format('Y-m-d\TH:i:s') . 'Z';  // np. "2025-05-05T14:30:00Z"
 
-		$maxResults = '10';
+		$maxResults = '20';
 		$url = 'https://www.googleapis.com/calendar/v3/calendars/' 
 		. $calendarId  
 		.'/events?key='
