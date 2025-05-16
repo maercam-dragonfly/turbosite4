@@ -106,7 +106,12 @@
             </div>
         </div>
     </div>
-		
+		<!-- rankingi ---------------------------------- -->
+		<div class="container-xxl py-1 mt-0">
+    		<div class="container">   
+					<?php echo $this->partial('partials/rankingi.phtml', 'default') ?>					
+    		</div>
+    	</div>
 	
 		        <!-- NAJBLIŻSZE KURSY ---------------------------------- -->
         <div class="container-xxl py-5" id="najblizsze_kursy">
@@ -118,10 +123,7 @@
 			
 
     		<div class="container">   
-					<?php echo $this->partial('partials/najblizszykurskarteczka.phtml', 'default', [
-						'calendarId' => $this->calendarId,
-						'apiKey' => $this->apiKey
-					]) ?>					
+					<?php echo $this->partial('partials/najblizszykurskarteczka.phtml', 'default') ?>					
     		</div>
     	</div>
 		
