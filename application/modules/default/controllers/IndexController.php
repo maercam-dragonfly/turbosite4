@@ -224,6 +224,11 @@ class IndexController extends My_Controller_Action {
         $this->view->mainTitle = "Jak rozpocząć? - OSK AUTO TURBO";
     }
 	
+	public function prawojazdyod17latAction() {
+        // action body
+        $this->view->mainTitle = "Prawo jazdy od 17 lat - OSK AUTO TURBO";
+    }
+	
 	public function terminykursowAction() {
         // action body
         $this->view->mainTitle = "Terminy kursów - OSK AUTO TURBO";

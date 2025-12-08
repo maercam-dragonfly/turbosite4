@@ -53,6 +53,10 @@
 					<label>Zapisy na kurs</label>
 					<uri>/zapisynakurs</uri>
 				</zapisynakurs>
+				<prawojazdyod17lat>
+					<label>Prawo jazdy od 17 lat</label>
+					<uri>/prawojazdyod17lat</uri>
+				</prawojazdyod17lat>
 				<najbliszeterminykursowwszystkie>
 					<label>Terminy kursów</label>
 					<uri>/terminykursow</uri>
